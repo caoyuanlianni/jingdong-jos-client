@@ -2,7 +2,7 @@
 
 ## laravel
 ### 安装
-`composer require oyleanu/jingdong-jos-client`
+`composer require niugengyun/jingdong-jos-client`
 ### 配置
 * 执行 `php artisan vendor:publish --provider="NiuGengYun\JosClient\JosClientServiceProvider"` 生成配置文件
 * 编辑.env文件，设置JINGDONG_APP_KEY,JINGDONG_APP_SECRET,JINGDONG_LOG_PATH
