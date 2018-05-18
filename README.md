@@ -1,4 +1,4 @@
-# 京东API for laravel5.5
+# 京东API for laravel5.6
 
 ## laravel
 ### 安装
