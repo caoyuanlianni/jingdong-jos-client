@@ -1,7 +1,7 @@
 {
     "name": "niugengyun/jingdong-jos-client",
     "type": "library",
-    "description": "JingDong jos client(SDK) for laravel 5.5",
+    "description": "JingDong jos client(SDK) for laravel 5.6",
     "keywords": ["jingdong", "laravel", "sdk", "api"],
     "homepage": "https://github.com/niugengyun/jingdong-jos-client",
     "license": "MIT",
