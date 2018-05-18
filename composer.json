@@ -1,9 +1,9 @@
 {
-    "name": "oyleanu/jingdong-jos-client",
+    "name": "niugengyun/jingdong-jos-client",
     "type": "library",
     "description": "JingDong jos client(SDK) for laravel 5.5",
     "keywords": ["jingdong", "laravel", "sdk", "api"],
-    "homepage": "https://github.com/oyleanu/jingdong-jos-client",
+    "homepage": "https://github.com/niugengyun/jingdong-jos-client",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Oyleanu\\JosClient\\": "src/",
+            "NiuGengYun\\JosClient\\": "src/",
             "Jos\\": "src/Jos/"
         }
     }

@@ -1,5 +1,5 @@
 <?php
-namespace Oyleanu\JosClient;
+namespace NiuGengYun\JosClient;
 
 use Illuminate\Foundation\Application as LaravelApplication;
 use Laravel\Lumen\Application as LumenApplication;
@@ -51,7 +51,7 @@ class JosClientServiceProvider extends ServiceProvider
         $app->singleton('josclient.factory', function($app) {
             return new JosClientFactory();
         });
-        $app->alias('josclient.factory', 'Oyleanu\JosClient\JosClientFactory');
+        $app->alias('josclient.factory', 'NiuGengYun\JosClient\JosClientFactory');
     }
 
     /**
@@ -66,7 +66,7 @@ class JosClientServiceProvider extends ServiceProvider
             $factory = $app['josclient.factory'];
             return new JosClientManager($config, $factory);
         });
-        $app->alias('josclient', 'Oyleanu\JosClient\JosClientManager');
+        $app->alias('josclient', 'NiuGengYun\JosClient\JosClientManager');
     }
 
     /**

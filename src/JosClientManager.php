@@ -1,5 +1,5 @@
 <?php
-namespace Oyleanu\JosClient;
+namespace NiuGengYun\JosClient;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;

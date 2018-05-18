@@ -1,5 +1,5 @@
 <?php
-namespace Oyleanu\JosClient;
+namespace NiuGengYun\JosClient;
 
 use Jos\JosClient;
 

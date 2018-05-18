@@ -1,5 +1,5 @@
 <?php
-namespace Oyleanu\JosClient\Facades;
+namespace NiuGengYun\JosClient\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
