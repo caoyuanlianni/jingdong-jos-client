@@ -7,7 +7,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "niugengyn",
+            "name": "niugengyun",
             "email": "cnsecer@163.com"
         }
     ],
@@ -20,6 +20,13 @@
         "psr-4": {
             "NiuGengYun\\JosClient\\": "src/",
             "Jos\\": "src/Jos/"
+        }
+    },
+     "extra": {
+        "laravel": {
+            "providers": [
+                "NiuGengYun\\JosClient\\JosClientServiceProvider"
+            ]
         }
     }
 }
