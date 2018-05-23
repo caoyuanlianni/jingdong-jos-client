@@ -1,87 +1,69 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscAuditTimeoutCountRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.audit.timeout.count";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.audit.timeout.count";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $extJsonStr;
+    	                        
+	public function setExtJsonStr($extJsonStr){
+		$this->extJsonStr = $extJsonStr;
+         $this->apiParas["extJsonStr"] = $extJsonStr;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getExtJsonStr(){
+	  return $this->extJsonStr;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
-
-    private $operatePin;
-
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
-
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
-
-    private $operateNick;
-
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
-
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
-
-    private $extJsonStr;
-
-    public function setExtJsonStr($extJsonStr)
-    {
-        $this->extJsonStr             = $extJsonStr;
-        $this->apiParas["extJsonStr"] = $extJsonStr;
-    }
-
-    public function getExtJsonStr()
-    {
-        return $this->extJsonStr;
-    }
-
-}
+                            }
 
 
 

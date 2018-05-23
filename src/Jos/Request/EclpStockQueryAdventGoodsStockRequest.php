@@ -1,100 +1,80 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpStockQueryAdventGoodsStockRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.stock.queryAdventGoodsStock";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $deptNo;
+    	                        
+	public function setDeptNo($deptNo){
+		$this->deptNo = $deptNo;
+         $this->apiParas["deptNo"] = $deptNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.stock.queryAdventGoodsStock";
-    }
+	public function getDeptNo(){
+	  return $this->deptNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $warehouseNos;
+    	                        
+	public function setWarehouseNos($warehouseNos){
+		$this->warehouseNos = $warehouseNos;
+         $this->apiParas["warehouseNos"] = $warehouseNos;
+	}
 
-    public function check()
-    {
+	public function getWarehouseNos(){
+	  return $this->warehouseNos;
+	}
 
-    }
+                        	                   			private $goodsNos;
+    	                        
+	public function setGoodsNos($goodsNos){
+		$this->goodsNos = $goodsNos;
+         $this->apiParas["goodsNos"] = $goodsNos;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getGoodsNos(){
+	  return $this->goodsNos;
+	}
 
-    private $deptNo;
+                        	                   			private $currentPage;
+    	                        
+	public function setCurrentPage($currentPage){
+		$this->currentPage = $currentPage;
+         $this->apiParas["currentPage"] = $currentPage;
+	}
 
-    public function setDeptNo($deptNo)
-    {
-        $this->deptNo             = $deptNo;
-        $this->apiParas["deptNo"] = $deptNo;
-    }
+	public function getCurrentPage(){
+	  return $this->currentPage;
+	}
 
-    public function getDeptNo()
-    {
-        return $this->deptNo;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    private $warehouseNos;
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function setWarehouseNos($warehouseNos)
-    {
-        $this->warehouseNos             = $warehouseNos;
-        $this->apiParas["warehouseNos"] = $warehouseNos;
-    }
-
-    public function getWarehouseNos()
-    {
-        return $this->warehouseNos;
-    }
-
-    private $goodsNos;
-
-    public function setGoodsNos($goodsNos)
-    {
-        $this->goodsNos             = $goodsNos;
-        $this->apiParas["goodsNos"] = $goodsNos;
-    }
-
-    public function getGoodsNos()
-    {
-        return $this->goodsNos;
-    }
-
-    private $currentPage;
-
-    public function setCurrentPage($currentPage)
-    {
-        $this->currentPage             = $currentPage;
-        $this->apiParas["currentPage"] = $currentPage;
-    }
-
-    public function getCurrentPage()
-    {
-        return $this->currentPage;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                                                    	}
 
 
 

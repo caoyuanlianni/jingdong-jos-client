@@ -1,242 +1,195 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class MarketFuwuAddRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.market.fuwu.add";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $serviceCode;
+    	                        
+	public function setServiceCode($serviceCode){
+		$this->serviceCode = $serviceCode;
+         $this->apiParas["serviceCode"] = $serviceCode;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.market.fuwu.add";
-    }
+	public function getServiceCode(){
+	  return $this->serviceCode;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $serviceName;
+    	                        
+	public function setServiceName($serviceName){
+		$this->serviceName = $serviceName;
+         $this->apiParas["serviceName"] = $serviceName;
+	}
 
-    public function check()
-    {
+	public function getServiceName(){
+	  return $this->serviceName;
+	}
 
-    }
+                        	                   			private $serviceStatus;
+    	                                                            
+	public function setServiceStatus($serviceStatus){
+		$this->serviceStatus = $serviceStatus;
+         $this->apiParas["service_status"] = $serviceStatus;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getServiceStatus(){
+	  return $this->serviceStatus;
+	}
 
-    private $serviceCode;
+                        	                   			private $serviceDetailUrl;
+    	                        
+	public function setServiceDetailUrl($serviceDetailUrl){
+		$this->serviceDetailUrl = $serviceDetailUrl;
+         $this->apiParas["serviceDetailUrl"] = $serviceDetailUrl;
+	}
 
-    public function setServiceCode($serviceCode)
-    {
-        $this->serviceCode             = $serviceCode;
-        $this->apiParas["serviceCode"] = $serviceCode;
-    }
+	public function getServiceDetailUrl(){
+	  return $this->serviceDetailUrl;
+	}
 
-    public function getServiceCode()
-    {
-        return $this->serviceCode;
-    }
+                        	                   			private $serviceLogo;
+    	                        
+	public function setServiceLogo($serviceLogo){
+		$this->serviceLogo = $serviceLogo;
+         $this->apiParas["serviceLogo"] = $serviceLogo;
+	}
 
-    private $serviceName;
+	public function getServiceLogo(){
+	  return $this->serviceLogo;
+	}
 
-    public function setServiceName($serviceName)
-    {
-        $this->serviceName             = $serviceName;
-        $this->apiParas["serviceName"] = $serviceName;
-    }
+                        	                   			private $fwsPin;
+    	                        
+	public function setFwsPin($fwsPin){
+		$this->fwsPin = $fwsPin;
+         $this->apiParas["fwsPin"] = $fwsPin;
+	}
 
-    public function getServiceName()
-    {
-        return $this->serviceName;
-    }
+	public function getFwsPin(){
+	  return $this->fwsPin;
+	}
 
-    private $serviceStatus;
+                        	                   			private $fwsId;
+    	                        
+	public function setFwsId($fwsId){
+		$this->fwsId = $fwsId;
+         $this->apiParas["fwsId"] = $fwsId;
+	}
 
-    public function setServiceStatus($serviceStatus)
-    {
-        $this->serviceStatus              = $serviceStatus;
-        $this->apiParas["service_status"] = $serviceStatus;
-    }
+	public function getFwsId(){
+	  return $this->fwsId;
+	}
 
-    public function getServiceStatus()
-    {
-        return $this->serviceStatus;
-    }
+                        	                   			private $cid;
+    	                        
+	public function setCid($cid){
+		$this->cid = $cid;
+         $this->apiParas["cid"] = $cid;
+	}
 
-    private $serviceDetailUrl;
+	public function getCid(){
+	  return $this->cid;
+	}
 
-    public function setServiceDetailUrl($serviceDetailUrl)
-    {
-        $this->serviceDetailUrl             = $serviceDetailUrl;
-        $this->apiParas["serviceDetailUrl"] = $serviceDetailUrl;
-    }
+                        	                   			private $serviceType;
+    	                                                            
+	public function setServiceType($serviceType){
+		$this->serviceType = $serviceType;
+         $this->apiParas["service_type"] = $serviceType;
+	}
 
-    public function getServiceDetailUrl()
-    {
-        return $this->serviceDetailUrl;
-    }
+	public function getServiceType(){
+	  return $this->serviceType;
+	}
 
-    private $serviceLogo;
+                        	                   			private $appKey;
+    	                        
+	public function setAppKey($appKey){
+		$this->appKey = $appKey;
+         $this->apiParas["appKey"] = $appKey;
+	}
 
-    public function setServiceLogo($serviceLogo)
-    {
-        $this->serviceLogo             = $serviceLogo;
-        $this->apiParas["serviceLogo"] = $serviceLogo;
-    }
+	public function getAppKey(){
+	  return $this->appKey;
+	}
 
-    public function getServiceLogo()
-    {
-        return $this->serviceLogo;
-    }
+                                            		                                    	                   			private $itemCode;
+    	                        
+	public function setItemCode($itemCode){
+		$this->itemCode = $itemCode;
+         $this->apiParas["itemCode"] = $itemCode;
+	}
 
-    private $fwsPin;
+	public function getItemCode(){
+	  return $this->itemCode;
+	}
 
-    public function setFwsPin($fwsPin)
-    {
-        $this->fwsPin             = $fwsPin;
-        $this->apiParas["fwsPin"] = $fwsPin;
-    }
+                        	                   			private $chargeType;
+    	                        
+	public function setChargeType($chargeType){
+		$this->chargeType = $chargeType;
+         $this->apiParas["chargeType"] = $chargeType;
+	}
 
-    public function getFwsPin()
-    {
-        return $this->fwsPin;
-    }
+	public function getChargeType(){
+	  return $this->chargeType;
+	}
 
-    private $fwsId;
+                        	                   			private $itemVersion;
+    	                        
+	public function setItemVersion($itemVersion){
+		$this->itemVersion = $itemVersion;
+         $this->apiParas["itemVersion"] = $itemVersion;
+	}
 
-    public function setFwsId($fwsId)
-    {
-        $this->fwsId             = $fwsId;
-        $this->apiParas["fwsId"] = $fwsId;
-    }
+	public function getItemVersion(){
+	  return $this->itemVersion;
+	}
 
-    public function getFwsId()
-    {
-        return $this->fwsId;
-    }
+                                                                                                         	                        	                                                                                                                                                                                                                                                                                                               private $chargeDays;
+                              public function setChargeDays($chargeDays ){
+                 $this->chargeDays=$chargeDays;
+                 $this->apiParas["chargeDays"] = $chargeDays;
+              }
 
-    private $cid;
+              public function getChargeDays(){
+              	return $this->chargeDays;
+              }
+                                                                                                                                                                                                                                                                                                                                              private $pageDisplay;
+                              public function setPageDisplay($pageDisplay ){
+                 $this->pageDisplay=$pageDisplay;
+                 $this->apiParas["pageDisplay"] = $pageDisplay;
+              }
 
-    public function setCid($cid)
-    {
-        $this->cid             = $cid;
-        $this->apiParas["cid"] = $cid;
-    }
+              public function getPageDisplay(){
+              	return $this->pageDisplay;
+              }
+                                                                                                                                                                                                                                                                                                                                              private $price;
+                              public function setPrice($price ){
+                 $this->price=$price;
+                 $this->apiParas["price"] = $price;
+              }
 
-    public function getCid()
-    {
-        return $this->cid;
-    }
-
-    private $serviceType;
-
-    public function setServiceType($serviceType)
-    {
-        $this->serviceType              = $serviceType;
-        $this->apiParas["service_type"] = $serviceType;
-    }
-
-    public function getServiceType()
-    {
-        return $this->serviceType;
-    }
-
-    private $appKey;
-
-    public function setAppKey($appKey)
-    {
-        $this->appKey             = $appKey;
-        $this->apiParas["appKey"] = $appKey;
-    }
-
-    public function getAppKey()
-    {
-        return $this->appKey;
-    }
-
-    private $itemCode;
-
-    public function setItemCode($itemCode)
-    {
-        $this->itemCode             = $itemCode;
-        $this->apiParas["itemCode"] = $itemCode;
-    }
-
-    public function getItemCode()
-    {
-        return $this->itemCode;
-    }
-
-    private $chargeType;
-
-    public function setChargeType($chargeType)
-    {
-        $this->chargeType             = $chargeType;
-        $this->apiParas["chargeType"] = $chargeType;
-    }
-
-    public function getChargeType()
-    {
-        return $this->chargeType;
-    }
-
-    private $itemVersion;
-
-    public function setItemVersion($itemVersion)
-    {
-        $this->itemVersion             = $itemVersion;
-        $this->apiParas["itemVersion"] = $itemVersion;
-    }
-
-    public function getItemVersion()
-    {
-        return $this->itemVersion;
-    }
-
-    private $chargeDays;
-
-    public function setChargeDays($chargeDays)
-    {
-        $this->chargeDays             = $chargeDays;
-        $this->apiParas["chargeDays"] = $chargeDays;
-    }
-
-    public function getChargeDays()
-    {
-        return $this->chargeDays;
-    }
-
-    private $pageDisplay;
-
-    public function setPageDisplay($pageDisplay)
-    {
-        $this->pageDisplay             = $pageDisplay;
-        $this->apiParas["pageDisplay"] = $pageDisplay;
-    }
-
-    public function getPageDisplay()
-    {
-        return $this->pageDisplay;
-    }
-
-    private $price;
-
-    public function setPrice($price)
-    {
-        $this->price             = $price;
-        $this->apiParas["price"] = $price;
-    }
-
-    public function getPrice()
-    {
-        return $this->price;
-    }
-}
+              public function getPrice(){
+              	return $this->price;
+              }
+                                                                                                                }
 
 
 

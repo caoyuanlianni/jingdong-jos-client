@@ -1,100 +1,80 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscAuditReasonListRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.audit.reason.list";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.audit.reason.list";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $parentCode;
+    	                        
+	public function setParentCode($parentCode){
+		$this->parentCode = $parentCode;
+         $this->apiParas["parentCode"] = $parentCode;
+	}
 
-    private $operatePin;
+	public function getParentCode(){
+	  return $this->parentCode;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
-
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
-
-    private $operateNick;
-
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
-
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
-
-    private $serviceId;
-
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
-
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
-
-    private $parentCode;
-
-    public function setParentCode($parentCode)
-    {
-        $this->parentCode             = $parentCode;
-        $this->apiParas["parentCode"] = $parentCode;
-    }
-
-    public function getParentCode()
-    {
-        return $this->parentCode;
-    }
-
-}
+                            }
 
 
 

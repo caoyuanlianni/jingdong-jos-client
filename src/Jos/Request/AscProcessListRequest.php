@@ -1,282 +1,234 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscProcessListRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.process.list";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.process.list";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    private $operatePin;
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
+                        	                   			private $expressCode;
+    	                        
+	public function setExpressCode($expressCode){
+		$this->expressCode = $expressCode;
+         $this->apiParas["expressCode"] = $expressCode;
+	}
 
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
+	public function getExpressCode(){
+	  return $this->expressCode;
+	}
 
-    private $operateNick;
+                        	                   			private $applyTimeBegin;
+    	                        
+	public function setApplyTimeBegin($applyTimeBegin){
+		$this->applyTimeBegin = $applyTimeBegin;
+         $this->apiParas["applyTimeBegin"] = $applyTimeBegin;
+	}
 
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
+	public function getApplyTimeBegin(){
+	  return $this->applyTimeBegin;
+	}
 
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
+                        	                   			private $applyTimeEnd;
+    	                        
+	public function setApplyTimeEnd($applyTimeEnd){
+		$this->applyTimeEnd = $applyTimeEnd;
+         $this->apiParas["applyTimeEnd"] = $applyTimeEnd;
+	}
 
-    private $serviceId;
+	public function getApplyTimeEnd(){
+	  return $this->applyTimeEnd;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
+                        	                   			private $serviceStatus;
+    	                        
+	public function setServiceStatus($serviceStatus){
+		$this->serviceStatus = $serviceStatus;
+         $this->apiParas["serviceStatus"] = $serviceStatus;
+	}
 
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
+	public function getServiceStatus(){
+	  return $this->serviceStatus;
+	}
 
-    private $orderId;
+                        	                   			private $customerExpect;
+    	                        
+	public function setCustomerExpect($customerExpect){
+		$this->customerExpect = $customerExpect;
+         $this->apiParas["customerExpect"] = $customerExpect;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getCustomerExpect(){
+	  return $this->customerExpect;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $approveTimeBegin;
+    	                        
+	public function setApproveTimeBegin($approveTimeBegin){
+		$this->approveTimeBegin = $approveTimeBegin;
+         $this->apiParas["approveTimeBegin"] = $approveTimeBegin;
+	}
 
-    private $expressCode;
+	public function getApproveTimeBegin(){
+	  return $this->approveTimeBegin;
+	}
 
-    public function setExpressCode($expressCode)
-    {
-        $this->expressCode             = $expressCode;
-        $this->apiParas["expressCode"] = $expressCode;
-    }
+                        	                   			private $approveTimeEnd;
+    	                        
+	public function setApproveTimeEnd($approveTimeEnd){
+		$this->approveTimeEnd = $approveTimeEnd;
+         $this->apiParas["approveTimeEnd"] = $approveTimeEnd;
+	}
 
-    public function getExpressCode()
-    {
-        return $this->expressCode;
-    }
+	public function getApproveTimeEnd(){
+	  return $this->approveTimeEnd;
+	}
 
-    private $applyTimeBegin;
+                        	                   			private $jdInterveneFlag;
+    	                        
+	public function setJdInterveneFlag($jdInterveneFlag){
+		$this->jdInterveneFlag = $jdInterveneFlag;
+         $this->apiParas["jdInterveneFlag"] = $jdInterveneFlag;
+	}
 
-    public function setApplyTimeBegin($applyTimeBegin)
-    {
-        $this->applyTimeBegin             = $applyTimeBegin;
-        $this->apiParas["applyTimeBegin"] = $applyTimeBegin;
-    }
+	public function getJdInterveneFlag(){
+	  return $this->jdInterveneFlag;
+	}
 
-    public function getApplyTimeBegin()
-    {
-        return $this->applyTimeBegin;
-    }
+                        	                   			private $customerPin;
+    	                        
+	public function setCustomerPin($customerPin){
+		$this->customerPin = $customerPin;
+         $this->apiParas["customerPin"] = $customerPin;
+	}
 
-    private $applyTimeEnd;
+	public function getCustomerPin(){
+	  return $this->customerPin;
+	}
 
-    public function setApplyTimeEnd($applyTimeEnd)
-    {
-        $this->applyTimeEnd             = $applyTimeEnd;
-        $this->apiParas["applyTimeEnd"] = $applyTimeEnd;
-    }
+                        	                   			private $timeoutFlag;
+    	                        
+	public function setTimeoutFlag($timeoutFlag){
+		$this->timeoutFlag = $timeoutFlag;
+         $this->apiParas["timeoutFlag"] = $timeoutFlag;
+	}
 
-    public function getApplyTimeEnd()
-    {
-        return $this->applyTimeEnd;
-    }
+	public function getTimeoutFlag(){
+	  return $this->timeoutFlag;
+	}
 
-    private $serviceStatus;
+                        	                   			private $skuId;
+    	                        
+	public function setSkuId($skuId){
+		$this->skuId = $skuId;
+         $this->apiParas["skuId"] = $skuId;
+	}
 
-    public function setServiceStatus($serviceStatus)
-    {
-        $this->serviceStatus             = $serviceStatus;
-        $this->apiParas["serviceStatus"] = $serviceStatus;
-    }
+	public function getSkuId(){
+	  return $this->skuId;
+	}
 
-    public function getServiceStatus()
-    {
-        return $this->serviceStatus;
-    }
+                                            		                                    	                   			private $pageNumber;
+    	                        
+	public function setPageNumber($pageNumber){
+		$this->pageNumber = $pageNumber;
+         $this->apiParas["pageNumber"] = $pageNumber;
+	}
 
-    private $customerExpect;
+	public function getPageNumber(){
+	  return $this->pageNumber;
+	}
 
-    public function setCustomerExpect($customerExpect)
-    {
-        $this->customerExpect             = $customerExpect;
-        $this->apiParas["customerExpect"] = $customerExpect;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function getCustomerExpect()
-    {
-        return $this->customerExpect;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    private $approveTimeBegin;
+                                                    	                   			private $extJsonStr;
+    	                        
+	public function setExtJsonStr($extJsonStr){
+		$this->extJsonStr = $extJsonStr;
+         $this->apiParas["extJsonStr"] = $extJsonStr;
+	}
 
-    public function setApproveTimeBegin($approveTimeBegin)
-    {
-        $this->approveTimeBegin             = $approveTimeBegin;
-        $this->apiParas["approveTimeBegin"] = $approveTimeBegin;
-    }
+	public function getExtJsonStr(){
+	  return $this->extJsonStr;
+	}
 
-    public function getApproveTimeBegin()
-    {
-        return $this->approveTimeBegin;
-    }
-
-    private $approveTimeEnd;
-
-    public function setApproveTimeEnd($approveTimeEnd)
-    {
-        $this->approveTimeEnd             = $approveTimeEnd;
-        $this->apiParas["approveTimeEnd"] = $approveTimeEnd;
-    }
-
-    public function getApproveTimeEnd()
-    {
-        return $this->approveTimeEnd;
-    }
-
-    private $jdInterveneFlag;
-
-    public function setJdInterveneFlag($jdInterveneFlag)
-    {
-        $this->jdInterveneFlag             = $jdInterveneFlag;
-        $this->apiParas["jdInterveneFlag"] = $jdInterveneFlag;
-    }
-
-    public function getJdInterveneFlag()
-    {
-        return $this->jdInterveneFlag;
-    }
-
-    private $customerPin;
-
-    public function setCustomerPin($customerPin)
-    {
-        $this->customerPin             = $customerPin;
-        $this->apiParas["customerPin"] = $customerPin;
-    }
-
-    public function getCustomerPin()
-    {
-        return $this->customerPin;
-    }
-
-    private $timeoutFlag;
-
-    public function setTimeoutFlag($timeoutFlag)
-    {
-        $this->timeoutFlag             = $timeoutFlag;
-        $this->apiParas["timeoutFlag"] = $timeoutFlag;
-    }
-
-    public function getTimeoutFlag()
-    {
-        return $this->timeoutFlag;
-    }
-
-    private $skuId;
-
-    public function setSkuId($skuId)
-    {
-        $this->skuId             = $skuId;
-        $this->apiParas["skuId"] = $skuId;
-    }
-
-    public function getSkuId()
-    {
-        return $this->skuId;
-    }
-
-    private $pageNumber;
-
-    public function setPageNumber($pageNumber)
-    {
-        $this->pageNumber             = $pageNumber;
-        $this->apiParas["pageNumber"] = $pageNumber;
-    }
-
-    public function getPageNumber()
-    {
-        return $this->pageNumber;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-    private $extJsonStr;
-
-    public function setExtJsonStr($extJsonStr)
-    {
-        $this->extJsonStr             = $extJsonStr;
-        $this->apiParas["extJsonStr"] = $extJsonStr;
-    }
-
-    public function getExtJsonStr()
-    {
-        return $this->extJsonStr;
-    }
-
-}
+                            }
 
 
 

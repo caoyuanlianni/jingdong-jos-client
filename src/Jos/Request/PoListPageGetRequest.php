@@ -1,191 +1,157 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class PoListPageGetRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.po.list.page.get";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $deliverCenterId;
+    	                        
+	public function setDeliverCenterId($deliverCenterId){
+		$this->deliverCenterId = $deliverCenterId;
+         $this->apiParas["deliverCenterId"] = $deliverCenterId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.po.list.page.get";
-    }
+	public function getDeliverCenterId(){
+	  return $this->deliverCenterId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $status;
+    	                        
+	public function setStatus($status){
+		$this->status = $status;
+         $this->apiParas["status"] = $status;
+	}
 
-    public function check()
-    {
+	public function getStatus(){
+	  return $this->status;
+	}
 
-    }
+                        	                   			private $createdDateStart;
+    	                        
+	public function setCreatedDateStart($createdDateStart){
+		$this->createdDateStart = $createdDateStart;
+         $this->apiParas["createdDateStart"] = $createdDateStart;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getCreatedDateStart(){
+	  return $this->createdDateStart;
+	}
 
-    private $deliverCenterId;
+                        	                   			private $createdDateEnd;
+    	                        
+	public function setCreatedDateEnd($createdDateEnd){
+		$this->createdDateEnd = $createdDateEnd;
+         $this->apiParas["createdDateEnd"] = $createdDateEnd;
+	}
 
-    public function setDeliverCenterId($deliverCenterId)
-    {
-        $this->deliverCenterId             = $deliverCenterId;
-        $this->apiParas["deliverCenterId"] = $deliverCenterId;
-    }
+	public function getCreatedDateEnd(){
+	  return $this->createdDateEnd;
+	}
 
-    public function getDeliverCenterId()
-    {
-        return $this->deliverCenterId;
-    }
+                        	                        	                   			private $isEptCustomized;
+    	                        
+	public function setIsEptCustomized($isEptCustomized){
+		$this->isEptCustomized = $isEptCustomized;
+         $this->apiParas["isEptCustomized"] = $isEptCustomized;
+	}
 
-    private $status;
+	public function getIsEptCustomized(){
+	  return $this->isEptCustomized;
+	}
 
-    public function setStatus($status)
-    {
-        $this->status             = $status;
-        $this->apiParas["status"] = $status;
-    }
+                        	                   			private $pageIndex;
+    	                        
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["pageIndex"] = $pageIndex;
+	}
 
-    public function getStatus()
-    {
-        return $this->status;
-    }
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    private $createdDateStart;
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function setCreatedDateStart($createdDateStart)
-    {
-        $this->createdDateStart             = $createdDateStart;
-        $this->apiParas["createdDateStart"] = $createdDateStart;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function getCreatedDateStart()
-    {
-        return $this->createdDateStart;
-    }
+                        	                   	                    		private $orderIds;
+    	                        
+	public function setOrderIds($orderIds){
+		$this->orderIds = $orderIds;
+         $this->apiParas["orderIds"] = $orderIds;
+	}
 
-    private $createdDateEnd;
+	public function getOrderIds(){
+	  return $this->orderIds;
+	}
 
-    public function setCreatedDateEnd($createdDateEnd)
-    {
-        $this->createdDateEnd             = $createdDateEnd;
-        $this->apiParas["createdDateEnd"] = $createdDateEnd;
-    }
+                        	                   	                    		private $wareIds;
+    	                        
+	public function setWareIds($wareIds){
+		$this->wareIds = $wareIds;
+         $this->apiParas["wareIds"] = $wareIds;
+	}
 
-    public function getCreatedDateEnd()
-    {
-        return $this->createdDateEnd;
-    }
+	public function getWareIds(){
+	  return $this->wareIds;
+	}
 
-    private $isEptCustomized;
+                        	                   	                    		private $states;
+    	                        
+	public function setStates($states){
+		$this->states = $states;
+         $this->apiParas["states"] = $states;
+	}
 
-    public function setIsEptCustomized($isEptCustomized)
-    {
-        $this->isEptCustomized             = $isEptCustomized;
-        $this->apiParas["isEptCustomized"] = $isEptCustomized;
-    }
+	public function getStates(){
+	  return $this->states;
+	}
 
-    public function getIsEptCustomized()
-    {
-        return $this->isEptCustomized;
-    }
+                        	                   	                    		private $confirmStates;
+    	                        
+	public function setConfirmStates($confirmStates){
+		$this->confirmStates = $confirmStates;
+         $this->apiParas["confirmStates"] = $confirmStates;
+	}
 
-    private $pageIndex;
+	public function getConfirmStates(){
+	  return $this->confirmStates;
+	}
 
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex             = $pageIndex;
-        $this->apiParas["pageIndex"] = $pageIndex;
-    }
+                        	                   	                    		private $orderAttributes;
+    	                        
+	public function setOrderAttributes($orderAttributes){
+		$this->orderAttributes = $orderAttributes;
+         $this->apiParas["orderAttributes"] = $orderAttributes;
+	}
 
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
+	public function getOrderAttributes(){
+	  return $this->orderAttributes;
+	}
 
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-    private $orderIds;
-
-    public function setOrderIds($orderIds)
-    {
-        $this->orderIds             = $orderIds;
-        $this->apiParas["orderIds"] = $orderIds;
-    }
-
-    public function getOrderIds()
-    {
-        return $this->orderIds;
-    }
-
-    private $wareIds;
-
-    public function setWareIds($wareIds)
-    {
-        $this->wareIds             = $wareIds;
-        $this->apiParas["wareIds"] = $wareIds;
-    }
-
-    public function getWareIds()
-    {
-        return $this->wareIds;
-    }
-
-    private $states;
-
-    public function setStates($states)
-    {
-        $this->states             = $states;
-        $this->apiParas["states"] = $states;
-    }
-
-    public function getStates()
-    {
-        return $this->states;
-    }
-
-    private $confirmStates;
-
-    public function setConfirmStates($confirmStates)
-    {
-        $this->confirmStates             = $confirmStates;
-        $this->apiParas["confirmStates"] = $confirmStates;
-    }
-
-    public function getConfirmStates()
-    {
-        return $this->confirmStates;
-    }
-
-    private $orderAttributes;
-
-    public function setOrderAttributes($orderAttributes)
-    {
-        $this->orderAttributes             = $orderAttributes;
-        $this->apiParas["orderAttributes"] = $orderAttributes;
-    }
-
-    public function getOrderAttributes()
-    {
-        return $this->orderAttributes;
-    }
-
-}
+                            }
 
 
 

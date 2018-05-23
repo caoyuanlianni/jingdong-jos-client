@@ -1,87 +1,69 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class QueryWaitDispatchTaskRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.queryWaitDispatchTask";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $serviceState;
+    	                        
+	public function setServiceState($serviceState){
+		$this->serviceState = $serviceState;
+         $this->apiParas["serviceState"] = $serviceState;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.queryWaitDispatchTask";
-    }
+	public function getServiceState(){
+	  return $this->serviceState;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function check()
-    {
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    }
+                        	                   			private $pageIndex;
+    	                        
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["pageIndex"] = $pageIndex;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    private $serviceState;
+                        	                   			private $venderCode;
+    	                        
+	public function setVenderCode($venderCode){
+		$this->venderCode = $venderCode;
+         $this->apiParas["venderCode"] = $venderCode;
+	}
 
-    public function setServiceState($serviceState)
-    {
-        $this->serviceState             = $serviceState;
-        $this->apiParas["serviceState"] = $serviceState;
-    }
+	public function getVenderCode(){
+	  return $this->venderCode;
+	}
 
-    public function getServiceState()
-    {
-        return $this->serviceState;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-    private $pageIndex;
-
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex             = $pageIndex;
-        $this->apiParas["pageIndex"] = $pageIndex;
-    }
-
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
-
-    private $venderCode;
-
-    public function setVenderCode($venderCode)
-    {
-        $this->venderCode             = $venderCode;
-        $this->apiParas["venderCode"] = $venderCode;
-    }
-
-    public function getVenderCode()
-    {
-        return $this->venderCode;
-    }
-
-}
+                            }
 
 
 

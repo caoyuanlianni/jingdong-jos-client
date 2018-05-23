@@ -1,178 +1,146 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class DspAdkckeywordUsedKeywordListRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.dsp.adkckeyword.usedKeyword.list";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $startDate;
+    	                        
+	public function setStartDate($startDate){
+		$this->startDate = $startDate;
+         $this->apiParas["startDate"] = $startDate;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.dsp.adkckeyword.usedKeyword.list";
-    }
+	public function getStartDate(){
+	  return $this->startDate;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $endDate;
+    	                        
+	public function setEndDate($endDate){
+		$this->endDate = $endDate;
+         $this->apiParas["endDate"] = $endDate;
+	}
 
-    public function check()
-    {
+	public function getEndDate(){
+	  return $this->endDate;
+	}
 
-    }
+                        	                   			private $groupId;
+    	                        
+	public function setGroupId($groupId){
+		$this->groupId = $groupId;
+         $this->apiParas["groupId"] = $groupId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getGroupId(){
+	  return $this->groupId;
+	}
 
-    private $startDate;
+                        	                   			private $campaignId;
+    	                        
+	public function setCampaignId($campaignId){
+		$this->campaignId = $campaignId;
+         $this->apiParas["campaignId"] = $campaignId;
+	}
 
-    public function setStartDate($startDate)
-    {
-        $this->startDate             = $startDate;
-        $this->apiParas["startDate"] = $startDate;
-    }
+	public function getCampaignId(){
+	  return $this->campaignId;
+	}
 
-    public function getStartDate()
-    {
-        return $this->startDate;
-    }
+                        	                   			private $platform;
+    	                        
+	public function setPlatform($platform){
+		$this->platform = $platform;
+         $this->apiParas["platform"] = $platform;
+	}
 
-    private $endDate;
+	public function getPlatform(){
+	  return $this->platform;
+	}
 
-    public function setEndDate($endDate)
-    {
-        $this->endDate             = $endDate;
-        $this->apiParas["endDate"] = $endDate;
-    }
+                        	                   			private $valType;
+    	                        
+	public function setValType($valType){
+		$this->valType = $valType;
+         $this->apiParas["valType"] = $valType;
+	}
 
-    public function getEndDate()
-    {
-        return $this->endDate;
-    }
+	public function getValType(){
+	  return $this->valType;
+	}
 
-    private $groupId;
+                        	                   			private $clickOrOrderDay;
+    	                        
+	public function setClickOrOrderDay($clickOrOrderDay){
+		$this->clickOrOrderDay = $clickOrOrderDay;
+         $this->apiParas["clickOrOrderDay"] = $clickOrOrderDay;
+	}
 
-    public function setGroupId($groupId)
-    {
-        $this->groupId             = $groupId;
-        $this->apiParas["groupId"] = $groupId;
-    }
+	public function getClickOrOrderDay(){
+	  return $this->clickOrOrderDay;
+	}
 
-    public function getGroupId()
-    {
-        return $this->groupId;
-    }
+                        	                   			private $isOrderOrClick;
+    	                        
+	public function setIsOrderOrClick($isOrderOrClick){
+		$this->isOrderOrClick = $isOrderOrClick;
+         $this->apiParas["isOrderOrClick"] = $isOrderOrClick;
+	}
 
-    private $campaignId;
+	public function getIsOrderOrClick(){
+	  return $this->isOrderOrClick;
+	}
 
-    public function setCampaignId($campaignId)
-    {
-        $this->campaignId             = $campaignId;
-        $this->apiParas["campaignId"] = $campaignId;
-    }
+                        	                        	                   			private $pageIndex;
+    	                        
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["pageIndex"] = $pageIndex;
+	}
 
-    public function getCampaignId()
-    {
-        return $this->campaignId;
-    }
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    private $platform;
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function setPlatform($platform)
-    {
-        $this->platform             = $platform;
-        $this->apiParas["platform"] = $platform;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function getPlatform()
-    {
-        return $this->platform;
-    }
+                        	                        	                   			private $orderStatusCategory;
+    	                        
+	public function setOrderStatusCategory($orderStatusCategory){
+		$this->orderStatusCategory = $orderStatusCategory;
+         $this->apiParas["orderStatusCategory"] = $orderStatusCategory;
+	}
 
-    private $valType;
+	public function getOrderStatusCategory(){
+	  return $this->orderStatusCategory;
+	}
 
-    public function setValType($valType)
-    {
-        $this->valType             = $valType;
-        $this->apiParas["valType"] = $valType;
-    }
-
-    public function getValType()
-    {
-        return $this->valType;
-    }
-
-    private $clickOrOrderDay;
-
-    public function setClickOrOrderDay($clickOrOrderDay)
-    {
-        $this->clickOrOrderDay             = $clickOrOrderDay;
-        $this->apiParas["clickOrOrderDay"] = $clickOrOrderDay;
-    }
-
-    public function getClickOrOrderDay()
-    {
-        return $this->clickOrOrderDay;
-    }
-
-    private $isOrderOrClick;
-
-    public function setIsOrderOrClick($isOrderOrClick)
-    {
-        $this->isOrderOrClick             = $isOrderOrClick;
-        $this->apiParas["isOrderOrClick"] = $isOrderOrClick;
-    }
-
-    public function getIsOrderOrClick()
-    {
-        return $this->isOrderOrClick;
-    }
-
-    private $pageIndex;
-
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex             = $pageIndex;
-        $this->apiParas["pageIndex"] = $pageIndex;
-    }
-
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-    private $orderStatusCategory;
-
-    public function setOrderStatusCategory($orderStatusCategory)
-    {
-        $this->orderStatusCategory             = $orderStatusCategory;
-        $this->apiParas["orderStatusCategory"] = $orderStatusCategory;
-    }
-
-    public function getOrderStatusCategory()
-    {
-        return $this->orderStatusCategory;
-    }
-
-}
+                                                    	}
 
 
 

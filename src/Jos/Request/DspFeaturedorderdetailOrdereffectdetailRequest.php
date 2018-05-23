@@ -1,217 +1,179 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class DspFeaturedorderdetailOrdereffectdetailRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.dsp.featuredorderdetail.ordereffectdetail";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                   			private $campaignId;
+    	                        
+	public function setCampaignId($campaignId){
+		$this->campaignId = $campaignId;
+         $this->apiParas["campaignId"] = $campaignId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.dsp.featuredorderdetail.ordereffectdetail";
-    }
+	public function getCampaignId(){
+	  return $this->campaignId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $groupId;
+    	                        
+	public function setGroupId($groupId){
+		$this->groupId = $groupId;
+         $this->apiParas["groupId"] = $groupId;
+	}
 
-    public function check()
-    {
+	public function getGroupId(){
+	  return $this->groupId;
+	}
 
-    }
+                        	                   			private $mySelf;
+    	                        
+	public function setMySelf($mySelf){
+		$this->mySelf = $mySelf;
+         $this->apiParas["mySelf"] = $mySelf;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getMySelf(){
+	  return $this->mySelf;
+	}
 
-    private $campaignId;
+                        	                   			private $province;
+    	                        
+	public function setProvince($province){
+		$this->province = $province;
+         $this->apiParas["province"] = $province;
+	}
 
-    public function setCampaignId($campaignId)
-    {
-        $this->campaignId             = $campaignId;
-        $this->apiParas["campaignId"] = $campaignId;
-    }
+	public function getProvince(){
+	  return $this->province;
+	}
 
-    public function getCampaignId()
-    {
-        return $this->campaignId;
-    }
+                        	                   			private $mediaId;
+    	                        
+	public function setMediaId($mediaId){
+		$this->mediaId = $mediaId;
+         $this->apiParas["mediaId"] = $mediaId;
+	}
 
-    private $groupId;
+	public function getMediaId(){
+	  return $this->mediaId;
+	}
 
-    public function setGroupId($groupId)
-    {
-        $this->groupId             = $groupId;
-        $this->apiParas["groupId"] = $groupId;
-    }
+                        	                   			private $unionid;
+    	                        
+	public function setUnionid($unionid){
+		$this->unionid = $unionid;
+         $this->apiParas["unionid"] = $unionid;
+	}
 
-    public function getGroupId()
-    {
-        return $this->groupId;
-    }
+	public function getUnionid(){
+	  return $this->unionid;
+	}
 
-    private $mySelf;
+                        	                   			private $orderStatus;
+    	                        
+	public function setOrderStatus($orderStatus){
+		$this->orderStatus = $orderStatus;
+         $this->apiParas["orderStatus"] = $orderStatus;
+	}
 
-    public function setMySelf($mySelf)
-    {
-        $this->mySelf             = $mySelf;
-        $this->apiParas["mySelf"] = $mySelf;
-    }
+	public function getOrderStatus(){
+	  return $this->orderStatus;
+	}
 
-    public function getMySelf()
-    {
-        return $this->mySelf;
-    }
+                        	                   			private $clickStartDay;
+    	                        
+	public function setClickStartDay($clickStartDay){
+		$this->clickStartDay = $clickStartDay;
+         $this->apiParas["clickStartDay"] = $clickStartDay;
+	}
 
-    private $province;
+	public function getClickStartDay(){
+	  return $this->clickStartDay;
+	}
 
-    public function setProvince($province)
-    {
-        $this->province             = $province;
-        $this->apiParas["province"] = $province;
-    }
+                        	                   			private $clickEndDay;
+    	                        
+	public function setClickEndDay($clickEndDay){
+		$this->clickEndDay = $clickEndDay;
+         $this->apiParas["clickEndDay"] = $clickEndDay;
+	}
 
-    public function getProvince()
-    {
-        return $this->province;
-    }
+	public function getClickEndDay(){
+	  return $this->clickEndDay;
+	}
 
-    private $mediaId;
+                        	                   			private $orderStartDay;
+    	                        
+	public function setOrderStartDay($orderStartDay){
+		$this->orderStartDay = $orderStartDay;
+         $this->apiParas["orderStartDay"] = $orderStartDay;
+	}
 
-    public function setMediaId($mediaId)
-    {
-        $this->mediaId             = $mediaId;
-        $this->apiParas["mediaId"] = $mediaId;
-    }
+	public function getOrderStartDay(){
+	  return $this->orderStartDay;
+	}
 
-    public function getMediaId()
-    {
-        return $this->mediaId;
-    }
+                        	                   			private $orderEndDay;
+    	                        
+	public function setOrderEndDay($orderEndDay){
+		$this->orderEndDay = $orderEndDay;
+         $this->apiParas["orderEndDay"] = $orderEndDay;
+	}
 
-    private $unionid;
+	public function getOrderEndDay(){
+	  return $this->orderEndDay;
+	}
 
-    public function setUnionid($unionid)
-    {
-        $this->unionid             = $unionid;
-        $this->apiParas["unionid"] = $unionid;
-    }
+                        	                   			private $realTime;
+    	                        
+	public function setRealTime($realTime){
+		$this->realTime = $realTime;
+         $this->apiParas["realTime"] = $realTime;
+	}
 
-    public function getUnionid()
-    {
-        return $this->unionid;
-    }
+	public function getRealTime(){
+	  return $this->realTime;
+	}
 
-    private $orderStatus;
+                        	                   			private $pageIndex;
+    	                        
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["pageIndex"] = $pageIndex;
+	}
 
-    public function setOrderStatus($orderStatus)
-    {
-        $this->orderStatus             = $orderStatus;
-        $this->apiParas["orderStatus"] = $orderStatus;
-    }
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    public function getOrderStatus()
-    {
-        return $this->orderStatus;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    private $clickStartDay;
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function setClickStartDay($clickStartDay)
-    {
-        $this->clickStartDay             = $clickStartDay;
-        $this->apiParas["clickStartDay"] = $clickStartDay;
-    }
-
-    public function getClickStartDay()
-    {
-        return $this->clickStartDay;
-    }
-
-    private $clickEndDay;
-
-    public function setClickEndDay($clickEndDay)
-    {
-        $this->clickEndDay             = $clickEndDay;
-        $this->apiParas["clickEndDay"] = $clickEndDay;
-    }
-
-    public function getClickEndDay()
-    {
-        return $this->clickEndDay;
-    }
-
-    private $orderStartDay;
-
-    public function setOrderStartDay($orderStartDay)
-    {
-        $this->orderStartDay             = $orderStartDay;
-        $this->apiParas["orderStartDay"] = $orderStartDay;
-    }
-
-    public function getOrderStartDay()
-    {
-        return $this->orderStartDay;
-    }
-
-    private $orderEndDay;
-
-    public function setOrderEndDay($orderEndDay)
-    {
-        $this->orderEndDay             = $orderEndDay;
-        $this->apiParas["orderEndDay"] = $orderEndDay;
-    }
-
-    public function getOrderEndDay()
-    {
-        return $this->orderEndDay;
-    }
-
-    private $realTime;
-
-    public function setRealTime($realTime)
-    {
-        $this->realTime             = $realTime;
-        $this->apiParas["realTime"] = $realTime;
-    }
-
-    public function getRealTime()
-    {
-        return $this->realTime;
-    }
-
-    private $pageIndex;
-
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex             = $pageIndex;
-        $this->apiParas["pageIndex"] = $pageIndex;
-    }
-
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                            }
 
 
 

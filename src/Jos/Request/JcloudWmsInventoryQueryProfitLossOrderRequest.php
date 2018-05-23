@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class JcloudWmsInventoryQueryProfitLossOrderRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.jcloud.wms.inventory.queryProfitLossOrder";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                                            		                                    	                   			private $inventoryNo;
+    	                        
+	public function setInventoryNo($inventoryNo){
+		$this->inventoryNo = $inventoryNo;
+         $this->apiParas["inventoryNo"] = $inventoryNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.jcloud.wms.inventory.queryProfitLossOrder";
-    }
+	public function getInventoryNo(){
+	  return $this->inventoryNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $surplusDeficitType;
+    	                        
+	public function setSurplusDeficitType($surplusDeficitType){
+		$this->surplusDeficitType = $surplusDeficitType;
+         $this->apiParas["surplusDeficitType"] = $surplusDeficitType;
+	}
 
-    public function check()
-    {
+	public function getSurplusDeficitType(){
+	  return $this->surplusDeficitType;
+	}
 
-    }
+                        	                   			private $TimeStart;
+    	                        
+	public function setTimeStart($TimeStart){
+		$this->TimeStart = $TimeStart;
+         $this->apiParas["TimeStart"] = $TimeStart;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getTimeStart(){
+	  return $this->TimeStart;
+	}
 
-    private $inventoryNo;
+                        	                   			private $TimeEnd;
+    	                        
+	public function setTimeEnd($TimeEnd){
+		$this->TimeEnd = $TimeEnd;
+         $this->apiParas["TimeEnd"] = $TimeEnd;
+	}
 
-    public function setInventoryNo($inventoryNo)
-    {
-        $this->inventoryNo             = $inventoryNo;
-        $this->apiParas["inventoryNo"] = $inventoryNo;
-    }
+	public function getTimeEnd(){
+	  return $this->TimeEnd;
+	}
 
-    public function getInventoryNo()
-    {
-        return $this->inventoryNo;
-    }
+                        	                   			private $warehouseNo;
+    	                        
+	public function setWarehouseNo($warehouseNo){
+		$this->warehouseNo = $warehouseNo;
+         $this->apiParas["warehouseNo"] = $warehouseNo;
+	}
 
-    private $surplusDeficitType;
+	public function getWarehouseNo(){
+	  return $this->warehouseNo;
+	}
 
-    public function setSurplusDeficitType($surplusDeficitType)
-    {
-        $this->surplusDeficitType             = $surplusDeficitType;
-        $this->apiParas["surplusDeficitType"] = $surplusDeficitType;
-    }
+                        	                   			private $tenantId;
+    	                        
+	public function setTenantId($tenantId){
+		$this->tenantId = $tenantId;
+         $this->apiParas["tenantId"] = $tenantId;
+	}
 
-    public function getSurplusDeficitType()
-    {
-        return $this->surplusDeficitType;
-    }
+	public function getTenantId(){
+	  return $this->tenantId;
+	}
 
-    private $TimeStart;
-
-    public function setTimeStart($TimeStart)
-    {
-        $this->TimeStart             = $TimeStart;
-        $this->apiParas["TimeStart"] = $TimeStart;
-    }
-
-    public function getTimeStart()
-    {
-        return $this->TimeStart;
-    }
-
-    private $TimeEnd;
-
-    public function setTimeEnd($TimeEnd)
-    {
-        $this->TimeEnd             = $TimeEnd;
-        $this->apiParas["TimeEnd"] = $TimeEnd;
-    }
-
-    public function getTimeEnd()
-    {
-        return $this->TimeEnd;
-    }
-
-    private $warehouseNo;
-
-    public function setWarehouseNo($warehouseNo)
-    {
-        $this->warehouseNo             = $warehouseNo;
-        $this->apiParas["warehouseNo"] = $warehouseNo;
-    }
-
-    public function getWarehouseNo()
-    {
-        return $this->warehouseNo;
-    }
-
-    private $tenantId;
-
-    public function setTenantId($tenantId)
-    {
-        $this->tenantId             = $tenantId;
-        $this->apiParas["tenantId"] = $tenantId;
-    }
-
-    public function getTenantId()
-    {
-        return $this->tenantId;
-    }
-
-}
+                            }
 
 
 

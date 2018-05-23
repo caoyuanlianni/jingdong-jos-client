@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class DspAdkcunitAdgroupAddRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.dsp.adkcunit.adgroup.add";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $name;
+    	                        
+	public function setName($name){
+		$this->name = $name;
+         $this->apiParas["name"] = $name;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.dsp.adkcunit.adgroup.add";
-    }
+	public function getName(){
+	  return $this->name;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $campaignId;
+    	                        
+	public function setCampaignId($campaignId){
+		$this->campaignId = $campaignId;
+         $this->apiParas["campaignId"] = $campaignId;
+	}
 
-    public function check()
-    {
+	public function getCampaignId(){
+	  return $this->campaignId;
+	}
 
-    }
+                        	                   			private $newAreaId;
+    	                        
+	public function setNewAreaId($newAreaId){
+		$this->newAreaId = $newAreaId;
+         $this->apiParas["newAreaId"] = $newAreaId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getNewAreaId(){
+	  return $this->newAreaId;
+	}
 
-    private $name;
+                        	                        	                   			private $feeStr;
+    	                        
+	public function setFeeStr($feeStr){
+		$this->feeStr = $feeStr;
+         $this->apiParas["feeStr"] = $feeStr;
+	}
 
-    public function setName($name)
-    {
-        $this->name             = $name;
-        $this->apiParas["name"] = $name;
-    }
+	public function getFeeStr(){
+	  return $this->feeStr;
+	}
 
-    public function getName()
-    {
-        return $this->name;
-    }
+                        	                   			private $inSearchFeeStr;
+    	                        
+	public function setInSearchFeeStr($inSearchFeeStr){
+		$this->inSearchFeeStr = $inSearchFeeStr;
+         $this->apiParas["inSearchFeeStr"] = $inSearchFeeStr;
+	}
 
-    private $campaignId;
+	public function getInSearchFeeStr(){
+	  return $this->inSearchFeeStr;
+	}
 
-    public function setCampaignId($campaignId)
-    {
-        $this->campaignId             = $campaignId;
-        $this->apiParas["campaignId"] = $campaignId;
-    }
+                        	                   			private $mobilePriceCoef;
+    	                        
+	public function setMobilePriceCoef($mobilePriceCoef){
+		$this->mobilePriceCoef = $mobilePriceCoef;
+         $this->apiParas["mobilePriceCoef"] = $mobilePriceCoef;
+	}
 
-    public function getCampaignId()
-    {
-        return $this->campaignId;
-    }
+	public function getMobilePriceCoef(){
+	  return $this->mobilePriceCoef;
+	}
 
-    private $newAreaId;
-
-    public function setNewAreaId($newAreaId)
-    {
-        $this->newAreaId             = $newAreaId;
-        $this->apiParas["newAreaId"] = $newAreaId;
-    }
-
-    public function getNewAreaId()
-    {
-        return $this->newAreaId;
-    }
-
-    private $feeStr;
-
-    public function setFeeStr($feeStr)
-    {
-        $this->feeStr             = $feeStr;
-        $this->apiParas["feeStr"] = $feeStr;
-    }
-
-    public function getFeeStr()
-    {
-        return $this->feeStr;
-    }
-
-    private $inSearchFeeStr;
-
-    public function setInSearchFeeStr($inSearchFeeStr)
-    {
-        $this->inSearchFeeStr             = $inSearchFeeStr;
-        $this->apiParas["inSearchFeeStr"] = $inSearchFeeStr;
-    }
-
-    public function getInSearchFeeStr()
-    {
-        return $this->inSearchFeeStr;
-    }
-
-    private $mobilePriceCoef;
-
-    public function setMobilePriceCoef($mobilePriceCoef)
-    {
-        $this->mobilePriceCoef             = $mobilePriceCoef;
-        $this->apiParas["mobilePriceCoef"] = $mobilePriceCoef;
-    }
-
-    public function getMobilePriceCoef()
-    {
-        return $this->mobilePriceCoef;
-    }
-
-}
+                        	                                                    	}
 
 
 

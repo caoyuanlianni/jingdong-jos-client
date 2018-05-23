@@ -1,243 +1,223 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpMasterUpdateCustomerRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.master.updateCustomer";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $customerId;
+    	                        
+	public function setCustomerId($customerId){
+		$this->customerId = $customerId;
+         $this->apiParas["customerId"] = $customerId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.master.updateCustomer";
-    }
+	public function getCustomerId(){
+	  return $this->customerId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $customerName;
+    	                        
+	public function setCustomerName($customerName){
+		$this->customerName = $customerName;
+         $this->apiParas["customerName"] = $customerName;
+	}
 
-    public function check()
-    {
+	public function getCustomerName(){
+	  return $this->customerName;
+	}
 
-    }
+                        	                   			private $type;
+    	                        
+	public function setType($type){
+		$this->type = $type;
+         $this->apiParas["type"] = $type;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getType(){
+	  return $this->type;
+	}
 
-    private $customerId;
+                        	                   			private $level;
+    	                        
+	public function setLevel($level){
+		$this->level = $level;
+         $this->apiParas["level"] = $level;
+	}
 
-    public function setCustomerId($customerId)
-    {
-        $this->customerId             = $customerId;
-        $this->apiParas["customerId"] = $customerId;
-    }
+	public function getLevel(){
+	  return $this->level;
+	}
 
-    public function getCustomerId()
-    {
-        return $this->customerId;
-    }
+                        	                   			private $status;
+    	                        
+	public function setStatus($status){
+		$this->status = $status;
+         $this->apiParas["status"] = $status;
+	}
 
-    private $customerName;
+	public function getStatus(){
+	  return $this->status;
+	}
 
-    public function setCustomerName($customerName)
-    {
-        $this->customerName             = $customerName;
-        $this->apiParas["customerName"] = $customerName;
-    }
+                        	                   			private $email;
+    	                        
+	public function setEmail($email){
+		$this->email = $email;
+         $this->apiParas["email"] = $email;
+	}
 
-    public function getCustomerName()
-    {
-        return $this->customerName;
-    }
+	public function getEmail(){
+	  return $this->email;
+	}
 
-    private $type;
+                        	                   			private $country;
+    	                        
+	public function setCountry($country){
+		$this->country = $country;
+         $this->apiParas["country"] = $country;
+	}
 
-    public function setType($type)
-    {
-        $this->type             = $type;
-        $this->apiParas["type"] = $type;
-    }
+	public function getCountry(){
+	  return $this->country;
+	}
 
-    public function getType()
-    {
-        return $this->type;
-    }
+                        	                   			private $province;
+    	                        
+	public function setProvince($province){
+		$this->province = $province;
+         $this->apiParas["province"] = $province;
+	}
 
-    private $level;
+	public function getProvince(){
+	  return $this->province;
+	}
 
-    public function setLevel($level)
-    {
-        $this->level             = $level;
-        $this->apiParas["level"] = $level;
-    }
+                        	                   			private $city;
+    	                        
+	public function setCity($city){
+		$this->city = $city;
+         $this->apiParas["city"] = $city;
+	}
 
-    public function getLevel()
-    {
-        return $this->level;
-    }
+	public function getCity(){
+	  return $this->city;
+	}
 
-    private $status;
+                        	                   			private $area;
+    	                        
+	public function setArea($area){
+		$this->area = $area;
+         $this->apiParas["area"] = $area;
+	}
 
-    public function setStatus($status)
-    {
-        $this->status             = $status;
-        $this->apiParas["status"] = $status;
-    }
+	public function getArea(){
+	  return $this->area;
+	}
 
-    public function getStatus()
-    {
-        return $this->status;
-    }
+                        	                   			private $address;
+    	                        
+	public function setAddress($address){
+		$this->address = $address;
+         $this->apiParas["address"] = $address;
+	}
 
-    private $email;
+	public function getAddress(){
+	  return $this->address;
+	}
 
-    public function setEmail($email)
-    {
-        $this->email             = $email;
-        $this->apiParas["email"] = $email;
-    }
+                        	                   			private $zipCode;
+    	                        
+	public function setZipCode($zipCode){
+		$this->zipCode = $zipCode;
+         $this->apiParas["zipCode"] = $zipCode;
+	}
 
-    public function getEmail()
-    {
-        return $this->email;
-    }
+	public function getZipCode(){
+	  return $this->zipCode;
+	}
 
-    private $country;
+                        	                   			private $consignee;
+    	                        
+	public function setConsignee($consignee){
+		$this->consignee = $consignee;
+         $this->apiParas["consignee"] = $consignee;
+	}
 
-    public function setCountry($country)
-    {
-        $this->country             = $country;
-        $this->apiParas["country"] = $country;
-    }
+	public function getConsignee(){
+	  return $this->consignee;
+	}
 
-    public function getCountry()
-    {
-        return $this->country;
-    }
+                        	                   			private $phone;
+    	                        
+	public function setPhone($phone){
+		$this->phone = $phone;
+         $this->apiParas["phone"] = $phone;
+	}
 
-    private $province;
+	public function getPhone(){
+	  return $this->phone;
+	}
 
-    public function setProvince($province)
-    {
-        $this->province             = $province;
-        $this->apiParas["province"] = $province;
-    }
+                        	                   			private $mobile;
+    	                        
+	public function setMobile($mobile){
+		$this->mobile = $mobile;
+         $this->apiParas["mobile"] = $mobile;
+	}
 
-    public function getProvince()
-    {
-        return $this->province;
-    }
+	public function getMobile(){
+	  return $this->mobile;
+	}
 
-    private $city;
+                        	                   			private $memo;
+    	                        
+	public function setMemo($memo){
+		$this->memo = $memo;
+         $this->apiParas["memo"] = $memo;
+	}
 
-    public function setCity($city)
-    {
-        $this->city             = $city;
-        $this->apiParas["city"] = $city;
-    }
+	public function getMemo(){
+	  return $this->memo;
+	}
 
-    public function getCity()
-    {
-        return $this->city;
-    }
+                        	                   			private $customerAlias;
+    	                        
+	public function setCustomerAlias($customerAlias){
+		$this->customerAlias = $customerAlias;
+         $this->apiParas["customerAlias"] = $customerAlias;
+	}
 
-    private $area;
+	public function getCustomerAlias(){
+	  return $this->customerAlias;
+	}
 
-    public function setArea($area)
-    {
-        $this->area             = $area;
-        $this->apiParas["area"] = $area;
-    }
+                        	                   			private $ownerNo;
+    	                        
+	public function setOwnerNo($ownerNo){
+		$this->ownerNo = $ownerNo;
+         $this->apiParas["ownerNo"] = $ownerNo;
+	}
 
-    public function getArea()
-    {
-        return $this->area;
-    }
+	public function getOwnerNo(){
+	  return $this->ownerNo;
+	}
 
-    private $address;
-
-    public function setAddress($address)
-    {
-        $this->address             = $address;
-        $this->apiParas["address"] = $address;
-    }
-
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    private $zipCode;
-
-    public function setZipCode($zipCode)
-    {
-        $this->zipCode             = $zipCode;
-        $this->apiParas["zipCode"] = $zipCode;
-    }
-
-    public function getZipCode()
-    {
-        return $this->zipCode;
-    }
-
-    private $consignee;
-
-    public function setConsignee($consignee)
-    {
-        $this->consignee             = $consignee;
-        $this->apiParas["consignee"] = $consignee;
-    }
-
-    public function getConsignee()
-    {
-        return $this->consignee;
-    }
-
-    private $phone;
-
-    public function setPhone($phone)
-    {
-        $this->phone             = $phone;
-        $this->apiParas["phone"] = $phone;
-    }
-
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-    private $mobile;
-
-    public function setMobile($mobile)
-    {
-        $this->mobile             = $mobile;
-        $this->apiParas["mobile"] = $mobile;
-    }
-
-    public function getMobile()
-    {
-        return $this->mobile;
-    }
-
-    private $memo;
-
-    public function setMemo($memo)
-    {
-        $this->memo             = $memo;
-        $this->apiParas["memo"] = $memo;
-    }
-
-    public function getMemo()
-    {
-        return $this->memo;
-    }
-
-}
+                                                    	}
 
 
 

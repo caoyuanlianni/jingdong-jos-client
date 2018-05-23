@@ -1,61 +1,47 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class MarketServiceQtSubscribeGetRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.market.service.qt.subscribe.get";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                   			private $serviceItemCode;
+    	                                                                        
+	public function setServiceItemCode($serviceItemCode){
+		$this->serviceItemCode = $serviceItemCode;
+         $this->apiParas["service_item_code"] = $serviceItemCode;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.market.service.qt.subscribe.get";
-    }
+	public function getServiceItemCode(){
+	  return $this->serviceItemCode;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $pin;
+    	                        
+	public function setPin($pin){
+		$this->pin = $pin;
+         $this->apiParas["pin"] = $pin;
+	}
 
-    public function check()
-    {
+	public function getPin(){
+	  return $this->pin;
+	}
 
-    }
-
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
-
-    private $serviceItemCode;
-
-    public function setServiceItemCode($serviceItemCode)
-    {
-        $this->serviceItemCode               = $serviceItemCode;
-        $this->apiParas["service_item_code"] = $serviceItemCode;
-    }
-
-    public function getServiceItemCode()
-    {
-        return $this->serviceItemCode;
-    }
-
-    private $pin;
-
-    public function setPin($pin)
-    {
-        $this->pin             = $pin;
-        $this->apiParas["pin"] = $pin;
-    }
-
-    public function getPin()
-    {
-        return $this->pin;
-    }
-
-}
+                        	}
 
 
 

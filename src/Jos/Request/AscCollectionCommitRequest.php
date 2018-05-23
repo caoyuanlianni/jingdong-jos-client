@@ -1,139 +1,113 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscCollectionCommitRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.collection.commit";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.collection.commit";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    private $operatePin;
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
+                        	                   			private $amount;
+    	                        
+	public function setAmount($amount){
+		$this->amount = $amount;
+         $this->apiParas["amount"] = $amount;
+	}
 
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
+	public function getAmount(){
+	  return $this->amount;
+	}
 
-    private $operateNick;
+                        	                   			private $receivableType;
+    	                        
+	public function setReceivableType($receivableType){
+		$this->receivableType = $receivableType;
+         $this->apiParas["receivableType"] = $receivableType;
+	}
 
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
+	public function getReceivableType(){
+	  return $this->receivableType;
+	}
 
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
+                        	                   			private $extJsonStr;
+    	                        
+	public function setExtJsonStr($extJsonStr){
+		$this->extJsonStr = $extJsonStr;
+         $this->apiParas["extJsonStr"] = $extJsonStr;
+	}
 
-    private $serviceId;
+	public function getExtJsonStr(){
+	  return $this->extJsonStr;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
-
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
-
-    private $orderId;
-
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
-
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
-
-    private $amount;
-
-    public function setAmount($amount)
-    {
-        $this->amount             = $amount;
-        $this->apiParas["amount"] = $amount;
-    }
-
-    public function getAmount()
-    {
-        return $this->amount;
-    }
-
-    private $receivableType;
-
-    public function setReceivableType($receivableType)
-    {
-        $this->receivableType             = $receivableType;
-        $this->apiParas["receivableType"] = $receivableType;
-    }
-
-    public function getReceivableType()
-    {
-        return $this->receivableType;
-    }
-
-    private $extJsonStr;
-
-    public function setExtJsonStr($extJsonStr)
-    {
-        $this->extJsonStr             = $extJsonStr;
-        $this->apiParas["extJsonStr"] = $extJsonStr;
-    }
-
-    public function getExtJsonStr()
-    {
-        return $this->extJsonStr;
-    }
-
-}
+                            }
 
 
 

@@ -1,165 +1,133 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class DeliRecomdCarriersSearchRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.deliRecomdCarriers.search";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.deliRecomdCarriers.search";
-    }
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                                                 	                        	                                                                                                                                                                                                                                                                                                               private $sku;
+                              public function setSku($sku ){
+                 $this->sku=$sku;
+                 $this->apiParas["sku"] = $sku;
+              }
 
-    public function check()
-    {
+              public function getSku(){
+              	return $this->sku;
+              }
+                                                                                                                                        	                   			private $sendProvinceId;
+    	                        
+	public function setSendProvinceId($sendProvinceId){
+		$this->sendProvinceId = $sendProvinceId;
+         $this->apiParas["sendProvinceId"] = $sendProvinceId;
+	}
 
-    }
+	public function getSendProvinceId(){
+	  return $this->sendProvinceId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+                        	                   			private $sendCityId;
+    	                        
+	public function setSendCityId($sendCityId){
+		$this->sendCityId = $sendCityId;
+         $this->apiParas["sendCityId"] = $sendCityId;
+	}
 
-    private $orderId;
+	public function getSendCityId(){
+	  return $this->sendCityId;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+                        	                   			private $sendCountyId;
+    	                        
+	public function setSendCountyId($sendCountyId){
+		$this->sendCountyId = $sendCountyId;
+         $this->apiParas["sendCountyId"] = $sendCountyId;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+	public function getSendCountyId(){
+	  return $this->sendCountyId;
+	}
 
-    private $sku;
+                        	                   			private $sendTownId;
+    	                        
+	public function setSendTownId($sendTownId){
+		$this->sendTownId = $sendTownId;
+         $this->apiParas["sendTownId"] = $sendTownId;
+	}
 
-    public function setSku($sku)
-    {
-        $this->sku             = $sku;
-        $this->apiParas["sku"] = $sku;
-    }
+	public function getSendTownId(){
+	  return $this->sendTownId;
+	}
 
-    public function getSku()
-    {
-        return $this->sku;
-    }
+                        	                   			private $receiveProvinceId;
+    	                        
+	public function setReceiveProvinceId($receiveProvinceId){
+		$this->receiveProvinceId = $receiveProvinceId;
+         $this->apiParas["receiveProvinceId"] = $receiveProvinceId;
+	}
 
-    private $sendProvinceId;
+	public function getReceiveProvinceId(){
+	  return $this->receiveProvinceId;
+	}
 
-    public function setSendProvinceId($sendProvinceId)
-    {
-        $this->sendProvinceId             = $sendProvinceId;
-        $this->apiParas["sendProvinceId"] = $sendProvinceId;
-    }
+                        	                   			private $receiveCityId;
+    	                        
+	public function setReceiveCityId($receiveCityId){
+		$this->receiveCityId = $receiveCityId;
+         $this->apiParas["receiveCityId"] = $receiveCityId;
+	}
 
-    public function getSendProvinceId()
-    {
-        return $this->sendProvinceId;
-    }
+	public function getReceiveCityId(){
+	  return $this->receiveCityId;
+	}
 
-    private $sendCityId;
+                        	                   			private $receiveCountyId;
+    	                        
+	public function setReceiveCountyId($receiveCountyId){
+		$this->receiveCountyId = $receiveCountyId;
+         $this->apiParas["receiveCountyId"] = $receiveCountyId;
+	}
 
-    public function setSendCityId($sendCityId)
-    {
-        $this->sendCityId             = $sendCityId;
-        $this->apiParas["sendCityId"] = $sendCityId;
-    }
+	public function getReceiveCountyId(){
+	  return $this->receiveCountyId;
+	}
 
-    public function getSendCityId()
-    {
-        return $this->sendCityId;
-    }
+                        	                   			private $receiveTownId;
+    	                        
+	public function setReceiveTownId($receiveTownId){
+		$this->receiveTownId = $receiveTownId;
+         $this->apiParas["receiveTownId"] = $receiveTownId;
+	}
 
-    private $sendCountyId;
+	public function getReceiveTownId(){
+	  return $this->receiveTownId;
+	}
 
-    public function setSendCountyId($sendCountyId)
-    {
-        $this->sendCountyId             = $sendCountyId;
-        $this->apiParas["sendCountyId"] = $sendCountyId;
-    }
-
-    public function getSendCountyId()
-    {
-        return $this->sendCountyId;
-    }
-
-    private $sendTownId;
-
-    public function setSendTownId($sendTownId)
-    {
-        $this->sendTownId             = $sendTownId;
-        $this->apiParas["sendTownId"] = $sendTownId;
-    }
-
-    public function getSendTownId()
-    {
-        return $this->sendTownId;
-    }
-
-    private $receiveProvinceId;
-
-    public function setReceiveProvinceId($receiveProvinceId)
-    {
-        $this->receiveProvinceId             = $receiveProvinceId;
-        $this->apiParas["receiveProvinceId"] = $receiveProvinceId;
-    }
-
-    public function getReceiveProvinceId()
-    {
-        return $this->receiveProvinceId;
-    }
-
-    private $receiveCityId;
-
-    public function setReceiveCityId($receiveCityId)
-    {
-        $this->receiveCityId             = $receiveCityId;
-        $this->apiParas["receiveCityId"] = $receiveCityId;
-    }
-
-    public function getReceiveCityId()
-    {
-        return $this->receiveCityId;
-    }
-
-    private $receiveCountyId;
-
-    public function setReceiveCountyId($receiveCountyId)
-    {
-        $this->receiveCountyId             = $receiveCountyId;
-        $this->apiParas["receiveCountyId"] = $receiveCountyId;
-    }
-
-    public function getReceiveCountyId()
-    {
-        return $this->receiveCountyId;
-    }
-
-    private $receiveTownId;
-
-    public function setReceiveTownId($receiveTownId)
-    {
-        $this->receiveTownId             = $receiveTownId;
-        $this->apiParas["receiveTownId"] = $receiveTownId;
-    }
-
-    public function getReceiveTownId()
-    {
-        return $this->receiveTownId;
-    }
-
-}
+                            }
 
 
 

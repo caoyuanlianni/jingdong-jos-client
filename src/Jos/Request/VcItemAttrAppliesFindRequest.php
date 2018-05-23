@@ -1,139 +1,113 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class VcItemAttrAppliesFindRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.vc.item.attr.applies.find";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                                            		                                    	                   			private $wareGroupId;
+    	                                                                        
+	public function setWareGroupId($wareGroupId){
+		$this->wareGroupId = $wareGroupId;
+         $this->apiParas["ware_group_id"] = $wareGroupId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.vc.item.attr.applies.find";
-    }
+	public function getWareGroupId(){
+	  return $this->wareGroupId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $category;
+    	                        
+	public function setCategory($category){
+		$this->category = $category;
+         $this->apiParas["category"] = $category;
+	}
 
-    public function check()
-    {
+	public function getCategory(){
+	  return $this->category;
+	}
 
-    }
+                        	                   			private $beginApplyTime;
+    	                                                                        
+	public function setBeginApplyTime($beginApplyTime){
+		$this->beginApplyTime = $beginApplyTime;
+         $this->apiParas["begin_apply_time"] = $beginApplyTime;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getBeginApplyTime(){
+	  return $this->beginApplyTime;
+	}
 
-    private $wareGroupId;
+                        	                   			private $endApplyTime;
+    	                                                                        
+	public function setEndApplyTime($endApplyTime){
+		$this->endApplyTime = $endApplyTime;
+         $this->apiParas["end_apply_time"] = $endApplyTime;
+	}
 
-    public function setWareGroupId($wareGroupId)
-    {
-        $this->wareGroupId               = $wareGroupId;
-        $this->apiParas["ware_group_id"] = $wareGroupId;
-    }
+	public function getEndApplyTime(){
+	  return $this->endApplyTime;
+	}
 
-    public function getWareGroupId()
-    {
-        return $this->wareGroupId;
-    }
+                        	                   			private $state;
+    	                        
+	public function setState($state){
+		$this->state = $state;
+         $this->apiParas["state"] = $state;
+	}
 
-    private $category;
+	public function getState(){
+	  return $this->state;
+	}
 
-    public function setCategory($category)
-    {
-        $this->category             = $category;
-        $this->apiParas["category"] = $category;
-    }
+                        	                   			private $publicName;
+    	                                                            
+	public function setPublicName($publicName){
+		$this->publicName = $publicName;
+         $this->apiParas["public_name"] = $publicName;
+	}
 
-    public function getCategory()
-    {
-        return $this->category;
-    }
+	public function getPublicName(){
+	  return $this->publicName;
+	}
 
-    private $beginApplyTime;
+                        	                   			private $offset;
+    	                        
+	public function setOffset($offset){
+		$this->offset = $offset;
+         $this->apiParas["offset"] = $offset;
+	}
 
-    public function setBeginApplyTime($beginApplyTime)
-    {
-        $this->beginApplyTime               = $beginApplyTime;
-        $this->apiParas["begin_apply_time"] = $beginApplyTime;
-    }
+	public function getOffset(){
+	  return $this->offset;
+	}
 
-    public function getBeginApplyTime()
-    {
-        return $this->beginApplyTime;
-    }
+                        	                   			private $pageSize;
+    	                                                            
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["page_size"] = $pageSize;
+	}
 
-    private $endApplyTime;
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function setEndApplyTime($endApplyTime)
-    {
-        $this->endApplyTime               = $endApplyTime;
-        $this->apiParas["end_apply_time"] = $endApplyTime;
-    }
-
-    public function getEndApplyTime()
-    {
-        return $this->endApplyTime;
-    }
-
-    private $state;
-
-    public function setState($state)
-    {
-        $this->state             = $state;
-        $this->apiParas["state"] = $state;
-    }
-
-    public function getState()
-    {
-        return $this->state;
-    }
-
-    private $publicName;
-
-    public function setPublicName($publicName)
-    {
-        $this->publicName              = $publicName;
-        $this->apiParas["public_name"] = $publicName;
-    }
-
-    public function getPublicName()
-    {
-        return $this->publicName;
-    }
-
-    private $offset;
-
-    public function setOffset($offset)
-    {
-        $this->offset             = $offset;
-        $this->apiParas["offset"] = $offset;
-    }
-
-    public function getOffset()
-    {
-        return $this->offset;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize              = $pageSize;
-        $this->apiParas["page_size"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                            }
 
 
 

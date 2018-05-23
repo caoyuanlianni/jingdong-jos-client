@@ -1,152 +1,124 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class VcItemQualificationListFindRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.vc.item.qualification.list.find";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                                            		                                    	                   			private $wareId;
+    	                                                            
+	public function setWareId($wareId){
+		$this->wareId = $wareId;
+         $this->apiParas["ware_id"] = $wareId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.vc.item.qualification.list.find";
-    }
+	public function getWareId(){
+	  return $this->wareId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $categoryId;
+    	                                                            
+	public function setCategoryId($categoryId){
+		$this->categoryId = $categoryId;
+         $this->apiParas["category_id"] = $categoryId;
+	}
 
-    public function check()
-    {
+	public function getCategoryId(){
+	  return $this->categoryId;
+	}
 
-    }
+                        	                   			private $name;
+    	                        
+	public function setName($name){
+		$this->name = $name;
+         $this->apiParas["name"] = $name;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getName(){
+	  return $this->name;
+	}
 
-    private $wareId;
+                        	                   			private $brandId;
+    	                                                            
+	public function setBrandId($brandId){
+		$this->brandId = $brandId;
+         $this->apiParas["brand_id"] = $brandId;
+	}
 
-    public function setWareId($wareId)
-    {
-        $this->wareId              = $wareId;
-        $this->apiParas["ware_id"] = $wareId;
-    }
+	public function getBrandId(){
+	  return $this->brandId;
+	}
 
-    public function getWareId()
-    {
-        return $this->wareId;
-    }
+                        	                   			private $beginAuditTime;
+    	                                                                        
+	public function setBeginAuditTime($beginAuditTime){
+		$this->beginAuditTime = $beginAuditTime;
+         $this->apiParas["begin_audit_time"] = $beginAuditTime;
+	}
 
-    private $categoryId;
+	public function getBeginAuditTime(){
+	  return $this->beginAuditTime;
+	}
 
-    public function setCategoryId($categoryId)
-    {
-        $this->categoryId              = $categoryId;
-        $this->apiParas["category_id"] = $categoryId;
-    }
+                        	                   			private $endAuditTime;
+    	                                                                        
+	public function setEndAuditTime($endAuditTime){
+		$this->endAuditTime = $endAuditTime;
+         $this->apiParas["end_audit_time"] = $endAuditTime;
+	}
 
-    public function getCategoryId()
-    {
-        return $this->categoryId;
-    }
+	public function getEndAuditTime(){
+	  return $this->endAuditTime;
+	}
 
-    private $name;
+                        	                   			private $state;
+    	                        
+	public function setState($state){
+		$this->state = $state;
+         $this->apiParas["state"] = $state;
+	}
 
-    public function setName($name)
-    {
-        $this->name             = $name;
-        $this->apiParas["name"] = $name;
-    }
+	public function getState(){
+	  return $this->state;
+	}
 
-    public function getName()
-    {
-        return $this->name;
-    }
+                        	                   			private $offset;
+    	                        
+	public function setOffset($offset){
+		$this->offset = $offset;
+         $this->apiParas["offset"] = $offset;
+	}
 
-    private $brandId;
+	public function getOffset(){
+	  return $this->offset;
+	}
 
-    public function setBrandId($brandId)
-    {
-        $this->brandId              = $brandId;
-        $this->apiParas["brand_id"] = $brandId;
-    }
+                        	                   			private $pageSize;
+    	                                                            
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["page_size"] = $pageSize;
+	}
 
-    public function getBrandId()
-    {
-        return $this->brandId;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    private $beginAuditTime;
-
-    public function setBeginAuditTime($beginAuditTime)
-    {
-        $this->beginAuditTime               = $beginAuditTime;
-        $this->apiParas["begin_audit_time"] = $beginAuditTime;
-    }
-
-    public function getBeginAuditTime()
-    {
-        return $this->beginAuditTime;
-    }
-
-    private $endAuditTime;
-
-    public function setEndAuditTime($endAuditTime)
-    {
-        $this->endAuditTime               = $endAuditTime;
-        $this->apiParas["end_audit_time"] = $endAuditTime;
-    }
-
-    public function getEndAuditTime()
-    {
-        return $this->endAuditTime;
-    }
-
-    private $state;
-
-    public function setState($state)
-    {
-        $this->state             = $state;
-        $this->apiParas["state"] = $state;
-    }
-
-    public function getState()
-    {
-        return $this->state;
-    }
-
-    private $offset;
-
-    public function setOffset($offset)
-    {
-        $this->offset             = $offset;
-        $this->apiParas["offset"] = $offset;
-    }
-
-    public function getOffset()
-    {
-        return $this->offset;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize              = $pageSize;
-        $this->apiParas["page_size"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                            }
 
 
 

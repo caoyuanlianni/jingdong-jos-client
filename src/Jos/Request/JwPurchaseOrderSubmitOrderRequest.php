@@ -1,256 +1,208 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class JwPurchaseOrderSubmitOrderRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.jw.purchase.order.submitOrder";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                                             	                        	                                                                                                                                                                                                                                                                                                               private $sku;
+                              public function setSku($sku ){
+                 $this->sku=$sku;
+                 $this->apiParas["sku"] = $sku;
+              }
 
-    public function getApiMethodName()
-    {
-        return "jingdong.jw.purchase.order.submitOrder";
-    }
+              public function getSku(){
+              	return $this->sku;
+              }
+                                                                                                                                                                                                                                                                                                                                              private $num;
+                              public function setNum($num ){
+                 $this->num=$num;
+                 $this->apiParas["num"] = $num;
+              }
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+              public function getNum(){
+              	return $this->num;
+              }
+                                                                                                                                                            		                                    	                   			private $addressLevel1Id;
+    	                        
+	public function setAddressLevel1Id($addressLevel1Id){
+		$this->addressLevel1Id = $addressLevel1Id;
+         $this->apiParas["addressLevel1Id"] = $addressLevel1Id;
+	}
 
-    public function check()
-    {
+	public function getAddressLevel1Id(){
+	  return $this->addressLevel1Id;
+	}
 
-    }
+                        	                   			private $addressLevel2Id;
+    	                        
+	public function setAddressLevel2Id($addressLevel2Id){
+		$this->addressLevel2Id = $addressLevel2Id;
+         $this->apiParas["addressLevel2Id"] = $addressLevel2Id;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getAddressLevel2Id(){
+	  return $this->addressLevel2Id;
+	}
 
-    private $sku;
+                        	                   			private $addressLevel3Id;
+    	                        
+	public function setAddressLevel3Id($addressLevel3Id){
+		$this->addressLevel3Id = $addressLevel3Id;
+         $this->apiParas["addressLevel3Id"] = $addressLevel3Id;
+	}
 
-    public function setSku($sku)
-    {
-        $this->sku             = $sku;
-        $this->apiParas["sku"] = $sku;
-    }
+	public function getAddressLevel3Id(){
+	  return $this->addressLevel3Id;
+	}
 
-    public function getSku()
-    {
-        return $this->sku;
-    }
+                        	                   			private $addressLevel4Id;
+    	                        
+	public function setAddressLevel4Id($addressLevel4Id){
+		$this->addressLevel4Id = $addressLevel4Id;
+         $this->apiParas["addressLevel4Id"] = $addressLevel4Id;
+	}
 
-    private $num;
+	public function getAddressLevel4Id(){
+	  return $this->addressLevel4Id;
+	}
 
-    public function setNum($num)
-    {
-        $this->num             = $num;
-        $this->apiParas["num"] = $num;
-    }
+                        	                   			private $addressDetail;
+    	                        
+	public function setAddressDetail($addressDetail){
+		$this->addressDetail = $addressDetail;
+         $this->apiParas["addressDetail"] = $addressDetail;
+	}
 
-    public function getNum()
-    {
-        return $this->num;
-    }
+	public function getAddressDetail(){
+	  return $this->addressDetail;
+	}
 
-    private $addressLevel1Id;
+                        	                   			private $phone;
+    	                        
+	public function setPhone($phone){
+		$this->phone = $phone;
+         $this->apiParas["phone"] = $phone;
+	}
 
-    public function setAddressLevel1Id($addressLevel1Id)
-    {
-        $this->addressLevel1Id             = $addressLevel1Id;
-        $this->apiParas["addressLevel1Id"] = $addressLevel1Id;
-    }
+	public function getPhone(){
+	  return $this->phone;
+	}
 
-    public function getAddressLevel1Id()
-    {
-        return $this->addressLevel1Id;
-    }
+                        	                   			private $name;
+    	                        
+	public function setName($name){
+		$this->name = $name;
+         $this->apiParas["name"] = $name;
+	}
 
-    private $addressLevel2Id;
+	public function getName(){
+	  return $this->name;
+	}
 
-    public function setAddressLevel2Id($addressLevel2Id)
-    {
-        $this->addressLevel2Id             = $addressLevel2Id;
-        $this->apiParas["addressLevel2Id"] = $addressLevel2Id;
-    }
+                        	                   			private $idCard;
+    	                        
+	public function setIdCard($idCard){
+		$this->idCard = $idCard;
+         $this->apiParas["idCard"] = $idCard;
+	}
 
-    public function getAddressLevel2Id()
-    {
-        return $this->addressLevel2Id;
-    }
+	public function getIdCard(){
+	  return $this->idCard;
+	}
 
-    private $addressLevel3Id;
+                                                                        		                                    	                   			private $invoiceType;
+    	                        
+	public function setInvoiceType($invoiceType){
+		$this->invoiceType = $invoiceType;
+         $this->apiParas["invoiceType"] = $invoiceType;
+	}
 
-    public function setAddressLevel3Id($addressLevel3Id)
-    {
-        $this->addressLevel3Id             = $addressLevel3Id;
-        $this->apiParas["addressLevel3Id"] = $addressLevel3Id;
-    }
+	public function getInvoiceType(){
+	  return $this->invoiceType;
+	}
 
-    public function getAddressLevel3Id()
-    {
-        return $this->addressLevel3Id;
-    }
+                        	                   			private $billingType;
+    	                        
+	public function setBillingType($billingType){
+		$this->billingType = $billingType;
+         $this->apiParas["billingType"] = $billingType;
+	}
 
-    private $addressLevel4Id;
+	public function getBillingType(){
+	  return $this->billingType;
+	}
 
-    public function setAddressLevel4Id($addressLevel4Id)
-    {
-        $this->addressLevel4Id             = $addressLevel4Id;
-        $this->apiParas["addressLevel4Id"] = $addressLevel4Id;
-    }
+                                                    	                   			private $autoDeductRebate;
+    	                        
+	public function setAutoDeductRebate($autoDeductRebate){
+		$this->autoDeductRebate = $autoDeductRebate;
+         $this->apiParas["autoDeductRebate"] = $autoDeductRebate;
+	}
 
-    public function getAddressLevel4Id()
-    {
-        return $this->addressLevel4Id;
-    }
+	public function getAutoDeductRebate(){
+	  return $this->autoDeductRebate;
+	}
 
-    private $addressDetail;
+                        	                   			private $rebate;
+    	                        
+	public function setRebate($rebate){
+		$this->rebate = $rebate;
+         $this->apiParas["rebate"] = $rebate;
+	}
 
-    public function setAddressDetail($addressDetail)
-    {
-        $this->addressDetail             = $addressDetail;
-        $this->apiParas["addressDetail"] = $addressDetail;
-    }
+	public function getRebate(){
+	  return $this->rebate;
+	}
 
-    public function getAddressDetail()
-    {
-        return $this->addressDetail;
-    }
+                        	                   			private $clientId;
+    	                        
+	public function setClientId($clientId){
+		$this->clientId = $clientId;
+         $this->apiParas["clientId"] = $clientId;
+	}
 
-    private $phone;
+	public function getClientId(){
+	  return $this->clientId;
+	}
 
-    public function setPhone($phone)
-    {
-        $this->phone             = $phone;
-        $this->apiParas["phone"] = $phone;
-    }
+                        	                   			private $clientBusinessNo;
+    	                        
+	public function setClientBusinessNo($clientBusinessNo){
+		$this->clientBusinessNo = $clientBusinessNo;
+         $this->apiParas["clientBusinessNo"] = $clientBusinessNo;
+	}
 
-    public function getPhone()
-    {
-        return $this->phone;
-    }
+	public function getClientBusinessNo(){
+	  return $this->clientBusinessNo;
+	}
 
-    private $name;
+                        	                   			private $remark;
+    	                        
+	public function setRemark($remark){
+		$this->remark = $remark;
+         $this->apiParas["remark"] = $remark;
+	}
 
-    public function setName($name)
-    {
-        $this->name             = $name;
-        $this->apiParas["name"] = $name;
-    }
+	public function getRemark(){
+	  return $this->remark;
+	}
 
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    private $idCard;
-
-    public function setIdCard($idCard)
-    {
-        $this->idCard             = $idCard;
-        $this->apiParas["idCard"] = $idCard;
-    }
-
-    public function getIdCard()
-    {
-        return $this->idCard;
-    }
-
-    private $invoiceType;
-
-    public function setInvoiceType($invoiceType)
-    {
-        $this->invoiceType             = $invoiceType;
-        $this->apiParas["invoiceType"] = $invoiceType;
-    }
-
-    public function getInvoiceType()
-    {
-        return $this->invoiceType;
-    }
-
-    private $billingType;
-
-    public function setBillingType($billingType)
-    {
-        $this->billingType             = $billingType;
-        $this->apiParas["billingType"] = $billingType;
-    }
-
-    public function getBillingType()
-    {
-        return $this->billingType;
-    }
-
-    private $autoDeductRebate;
-
-    public function setAutoDeductRebate($autoDeductRebate)
-    {
-        $this->autoDeductRebate             = $autoDeductRebate;
-        $this->apiParas["autoDeductRebate"] = $autoDeductRebate;
-    }
-
-    public function getAutoDeductRebate()
-    {
-        return $this->autoDeductRebate;
-    }
-
-    private $rebate;
-
-    public function setRebate($rebate)
-    {
-        $this->rebate             = $rebate;
-        $this->apiParas["rebate"] = $rebate;
-    }
-
-    public function getRebate()
-    {
-        return $this->rebate;
-    }
-
-    private $clientId;
-
-    public function setClientId($clientId)
-    {
-        $this->clientId             = $clientId;
-        $this->apiParas["clientId"] = $clientId;
-    }
-
-    public function getClientId()
-    {
-        return $this->clientId;
-    }
-
-    private $clientBusinessNo;
-
-    public function setClientBusinessNo($clientBusinessNo)
-    {
-        $this->clientBusinessNo             = $clientBusinessNo;
-        $this->apiParas["clientBusinessNo"] = $clientBusinessNo;
-    }
-
-    public function getClientBusinessNo()
-    {
-        return $this->clientBusinessNo;
-    }
-
-    private $remark;
-
-    public function setRemark($remark)
-    {
-        $this->remark             = $remark;
-        $this->apiParas["remark"] = $remark;
-    }
-
-    public function getRemark()
-    {
-        return $this->remark;
-    }
-
-}
+                        	                        	                            }
 
 
 

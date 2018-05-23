@@ -1,126 +1,102 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class PopCustomsCenterServiceSoaDlzServicecallbackServiceCallbackRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.pop.customs.center.service.soa.dlz.servicecallback.serviceCallback";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $customsId;
+    	                        
+	public function setCustomsId($customsId){
+		$this->customsId = $customsId;
+         $this->apiParas["customsId"] = $customsId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.pop.customs.center.service.soa.dlz.servicecallback.serviceCallback";
-    }
+	public function getCustomsId(){
+	  return $this->customsId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function check()
-    {
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    }
+                        	                        	                                                                        		                                    	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    private $customsId;
+                        	                   			private $platformId;
+    	                        
+	public function setPlatformId($platformId){
+		$this->platformId = $platformId;
+         $this->apiParas["platformId"] = $platformId;
+	}
 
-    public function setCustomsId($customsId)
-    {
-        $this->customsId             = $customsId;
-        $this->apiParas["customsId"] = $customsId;
-    }
+	public function getPlatformId(){
+	  return $this->platformId;
+	}
 
-    public function getCustomsId()
-    {
-        return $this->customsId;
-    }
+                        	                   			private $orderStatus;
+    	                        
+	public function setOrderStatus($orderStatus){
+		$this->orderStatus = $orderStatus;
+         $this->apiParas["orderStatus"] = $orderStatus;
+	}
 
-    private $serviceId;
+	public function getOrderStatus(){
+	  return $this->orderStatus;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
+                        	                   			private $orderDesc;
+    	                        
+	public function setOrderDesc($orderDesc){
+		$this->orderDesc = $orderDesc;
+         $this->apiParas["orderDesc"] = $orderDesc;
+	}
 
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
+	public function getOrderDesc(){
+	  return $this->orderDesc;
+	}
 
-    private $orderId;
+                        	                   			private $goodsCheck;
+    	                        
+	public function setGoodsCheck($goodsCheck){
+		$this->goodsCheck = $goodsCheck;
+         $this->apiParas["goodsCheck"] = $goodsCheck;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getGoodsCheck(){
+	  return $this->goodsCheck;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
-
-    private $platformId;
-
-    public function setPlatformId($platformId)
-    {
-        $this->platformId             = $platformId;
-        $this->apiParas["platformId"] = $platformId;
-    }
-
-    public function getPlatformId()
-    {
-        return $this->platformId;
-    }
-
-    private $orderStatus;
-
-    public function setOrderStatus($orderStatus)
-    {
-        $this->orderStatus             = $orderStatus;
-        $this->apiParas["orderStatus"] = $orderStatus;
-    }
-
-    public function getOrderStatus()
-    {
-        return $this->orderStatus;
-    }
-
-    private $orderDesc;
-
-    public function setOrderDesc($orderDesc)
-    {
-        $this->orderDesc             = $orderDesc;
-        $this->apiParas["orderDesc"] = $orderDesc;
-    }
-
-    public function getOrderDesc()
-    {
-        return $this->orderDesc;
-    }
-
-    private $goodsCheck;
-
-    public function setGoodsCheck($goodsCheck)
-    {
-        $this->goodsCheck             = $goodsCheck;
-        $this->apiParas["goodsCheck"] = $goodsCheck;
-    }
-
-    public function getGoodsCheck()
-    {
-        return $this->goodsCheck;
-    }
-
-}
+                            }
 
 
 

@@ -1,230 +1,190 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpMasterReceiveCommunityRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.master.receiveCommunity";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $communityNo;
+    	                        
+	public function setCommunityNo($communityNo){
+		$this->communityNo = $communityNo;
+         $this->apiParas["communityNo"] = $communityNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.master.receiveCommunity";
-    }
+	public function getCommunityNo(){
+	  return $this->communityNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $communityName;
+    	                        
+	public function setCommunityName($communityName){
+		$this->communityName = $communityName;
+         $this->apiParas["communityName"] = $communityName;
+	}
 
-    public function check()
-    {
+	public function getCommunityName(){
+	  return $this->communityName;
+	}
 
-    }
+                        	                   			private $country;
+    	                        
+	public function setCountry($country){
+		$this->country = $country;
+         $this->apiParas["country"] = $country;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getCountry(){
+	  return $this->country;
+	}
 
-    private $communityNo;
+                        	                   			private $province;
+    	                        
+	public function setProvince($province){
+		$this->province = $province;
+         $this->apiParas["province"] = $province;
+	}
 
-    public function setCommunityNo($communityNo)
-    {
-        $this->communityNo             = $communityNo;
-        $this->apiParas["communityNo"] = $communityNo;
-    }
+	public function getProvince(){
+	  return $this->province;
+	}
 
-    public function getCommunityNo()
-    {
-        return $this->communityNo;
-    }
+                        	                   			private $city;
+    	                        
+	public function setCity($city){
+		$this->city = $city;
+         $this->apiParas["city"] = $city;
+	}
 
-    private $communityName;
+	public function getCity(){
+	  return $this->city;
+	}
 
-    public function setCommunityName($communityName)
-    {
-        $this->communityName             = $communityName;
-        $this->apiParas["communityName"] = $communityName;
-    }
+                        	                   			private $county;
+    	                        
+	public function setCounty($county){
+		$this->county = $county;
+         $this->apiParas["county"] = $county;
+	}
 
-    public function getCommunityName()
-    {
-        return $this->communityName;
-    }
+	public function getCounty(){
+	  return $this->county;
+	}
 
-    private $country;
+                        	                   			private $street;
+    	                        
+	public function setStreet($street){
+		$this->street = $street;
+         $this->apiParas["street"] = $street;
+	}
 
-    public function setCountry($country)
-    {
-        $this->country             = $country;
-        $this->apiParas["country"] = $country;
-    }
+	public function getStreet(){
+	  return $this->street;
+	}
 
-    public function getCountry()
-    {
-        return $this->country;
-    }
+                        	                   			private $address;
+    	                        
+	public function setAddress($address){
+		$this->address = $address;
+         $this->apiParas["address"] = $address;
+	}
 
-    private $province;
+	public function getAddress(){
+	  return $this->address;
+	}
 
-    public function setProvince($province)
-    {
-        $this->province             = $province;
-        $this->apiParas["province"] = $province;
-    }
+                        	                   			private $routeNo;
+    	                        
+	public function setRouteNo($routeNo){
+		$this->routeNo = $routeNo;
+         $this->apiParas["routeNo"] = $routeNo;
+	}
 
-    public function getProvince()
-    {
-        return $this->province;
-    }
+	public function getRouteNo(){
+	  return $this->routeNo;
+	}
 
-    private $city;
+                        	                   			private $building;
+    	                        
+	public function setBuilding($building){
+		$this->building = $building;
+         $this->apiParas["building"] = $building;
+	}
 
-    public function setCity($city)
-    {
-        $this->city             = $city;
-        $this->apiParas["city"] = $city;
-    }
+	public function getBuilding(){
+	  return $this->building;
+	}
 
-    public function getCity()
-    {
-        return $this->city;
-    }
+                        	                   			private $unit;
+    	                        
+	public function setUnit($unit){
+		$this->unit = $unit;
+         $this->apiParas["unit"] = $unit;
+	}
 
-    private $county;
+	public function getUnit(){
+	  return $this->unit;
+	}
 
-    public function setCounty($county)
-    {
-        $this->county             = $county;
-        $this->apiParas["county"] = $county;
-    }
+                        	                   			private $floor;
+    	                        
+	public function setFloor($floor){
+		$this->floor = $floor;
+         $this->apiParas["floor"] = $floor;
+	}
 
-    public function getCounty()
-    {
-        return $this->county;
-    }
+	public function getFloor(){
+	  return $this->floor;
+	}
 
-    private $street;
+                        	                   			private $room;
+    	                        
+	public function setRoom($room){
+		$this->room = $room;
+         $this->apiParas["room"] = $room;
+	}
 
-    public function setStreet($street)
-    {
-        $this->street             = $street;
-        $this->apiParas["street"] = $street;
-    }
+	public function getRoom(){
+	  return $this->room;
+	}
 
-    public function getStreet()
-    {
-        return $this->street;
-    }
+                        	                   			private $contact;
+    	                        
+	public function setContact($contact){
+		$this->contact = $contact;
+         $this->apiParas["contact"] = $contact;
+	}
 
-    private $address;
+	public function getContact(){
+	  return $this->contact;
+	}
 
-    public function setAddress($address)
-    {
-        $this->address             = $address;
-        $this->apiParas["address"] = $address;
-    }
+                        	                   			private $phone;
+    	                        
+	public function setPhone($phone){
+		$this->phone = $phone;
+         $this->apiParas["phone"] = $phone;
+	}
 
-    public function getAddress()
-    {
-        return $this->address;
-    }
+	public function getPhone(){
+	  return $this->phone;
+	}
 
-    private $routeNo;
-
-    public function setRouteNo($routeNo)
-    {
-        $this->routeNo             = $routeNo;
-        $this->apiParas["routeNo"] = $routeNo;
-    }
-
-    public function getRouteNo()
-    {
-        return $this->routeNo;
-    }
-
-    private $building;
-
-    public function setBuilding($building)
-    {
-        $this->building             = $building;
-        $this->apiParas["building"] = $building;
-    }
-
-    public function getBuilding()
-    {
-        return $this->building;
-    }
-
-    private $unit;
-
-    public function setUnit($unit)
-    {
-        $this->unit             = $unit;
-        $this->apiParas["unit"] = $unit;
-    }
-
-    public function getUnit()
-    {
-        return $this->unit;
-    }
-
-    private $floor;
-
-    public function setFloor($floor)
-    {
-        $this->floor             = $floor;
-        $this->apiParas["floor"] = $floor;
-    }
-
-    public function getFloor()
-    {
-        return $this->floor;
-    }
-
-    private $room;
-
-    public function setRoom($room)
-    {
-        $this->room             = $room;
-        $this->apiParas["room"] = $room;
-    }
-
-    public function getRoom()
-    {
-        return $this->room;
-    }
-
-    private $contact;
-
-    public function setContact($contact)
-    {
-        $this->contact             = $contact;
-        $this->apiParas["contact"] = $contact;
-    }
-
-    public function getContact()
-    {
-        return $this->contact;
-    }
-
-    private $phone;
-
-    public function setPhone($phone)
-    {
-        $this->phone             = $phone;
-        $this->apiParas["phone"] = $phone;
-    }
-
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-}
+                                                    	}
 
 
 

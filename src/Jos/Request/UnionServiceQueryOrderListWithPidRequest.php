@@ -1,98 +1,78 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class UnionServiceQueryOrderListWithPidRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.UnionService.queryOrderListWithPid";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                   			private $unionId;
+    	                        
+	public function setUnionId($unionId){
+		$this->unionId = $unionId;
+         $this->apiParas["unionId"] = $unionId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.UnionService.queryOrderListWithPid";
-    }
+	public function getUnionId(){
+	  return $this->unionId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                        	                   			private $childUnionId;
+    	                        
+	public function setChildUnionId($childUnionId){
+		$this->childUnionId = $childUnionId;
+         $this->apiParas["childUnionId"] = $childUnionId;
+	}
 
-    public function check()
-    {
+	public function getChildUnionId(){
+	  return $this->childUnionId;
+	}
 
-    }
+                        	                   			private $time;
+    	                        
+	public function setTime($time){
+		$this->time = $time;
+         $this->apiParas["time"] = $time;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getTime(){
+	  return $this->time;
+	}
 
-    private $unionId;
+                        	                   			private $pageIndex;
+    	                        
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["pageIndex"] = $pageIndex;
+	}
 
-    public function setUnionId($unionId)
-    {
-        $this->unionId             = $unionId;
-        $this->apiParas["unionId"] = $unionId;
-    }
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    public function getUnionId()
-    {
-        return $this->unionId;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    private $childUnionId;
-
-    public function setChildUnionId($childUnionId)
-    {
-        $this->childUnionId             = $childUnionId;
-        $this->apiParas["childUnionId"] = $childUnionId;
-    }
-
-    public function getChildUnionId()
-    {
-        return $this->childUnionId;
-    }
-
-    private $time;
-
-    public function setTime($time)
-    {
-        $this->time             = $time;
-        $this->apiParas["time"] = $time;
-    }
-
-    public function getTime()
-    {
-        return $this->time;
-    }
-
-    private $pageIndex;
-
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex             = $pageIndex;
-        $this->apiParas["pageIndex"] = $pageIndex;
-    }
-
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
 }
 

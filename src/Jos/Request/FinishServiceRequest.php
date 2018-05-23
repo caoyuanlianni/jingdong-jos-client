@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class FinishServiceRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.finishService";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $venderCode;
+    	                        
+	public function setVenderCode($venderCode){
+		$this->venderCode = $venderCode;
+         $this->apiParas["venderCode"] = $venderCode;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.finishService";
-    }
+	public function getVenderCode(){
+	  return $this->venderCode;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function check()
-    {
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    }
+                        	                   			private $engineerPin;
+    	                        
+	public function setEngineerPin($engineerPin){
+		$this->engineerPin = $engineerPin;
+         $this->apiParas["engineerPin"] = $engineerPin;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getEngineerPin(){
+	  return $this->engineerPin;
+	}
 
-    private $venderCode;
+                        	                   			private $engineerName;
+    	                        
+	public function setEngineerName($engineerName){
+		$this->engineerName = $engineerName;
+         $this->apiParas["engineerName"] = $engineerName;
+	}
 
-    public function setVenderCode($venderCode)
-    {
-        $this->venderCode             = $venderCode;
-        $this->apiParas["venderCode"] = $venderCode;
-    }
+	public function getEngineerName(){
+	  return $this->engineerName;
+	}
 
-    public function getVenderCode()
-    {
-        return $this->venderCode;
-    }
+                        	                   			private $finshNum;
+    	                        
+	public function setFinshNum($finshNum){
+		$this->finshNum = $finshNum;
+         $this->apiParas["finshNum"] = $finshNum;
+	}
 
-    private $serviceId;
+	public function getFinshNum(){
+	  return $this->finshNum;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
+                        	                   			private $remart;
+    	                        
+	public function setRemart($remart){
+		$this->remart = $remart;
+         $this->apiParas["remart"] = $remart;
+	}
 
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
+	public function getRemart(){
+	  return $this->remart;
+	}
 
-    private $engineerPin;
-
-    public function setEngineerPin($engineerPin)
-    {
-        $this->engineerPin             = $engineerPin;
-        $this->apiParas["engineerPin"] = $engineerPin;
-    }
-
-    public function getEngineerPin()
-    {
-        return $this->engineerPin;
-    }
-
-    private $engineerName;
-
-    public function setEngineerName($engineerName)
-    {
-        $this->engineerName             = $engineerName;
-        $this->apiParas["engineerName"] = $engineerName;
-    }
-
-    public function getEngineerName()
-    {
-        return $this->engineerName;
-    }
-
-    private $finshNum;
-
-    public function setFinshNum($finshNum)
-    {
-        $this->finshNum             = $finshNum;
-        $this->apiParas["finshNum"] = $finshNum;
-    }
-
-    public function getFinshNum()
-    {
-        return $this->finshNum;
-    }
-
-    private $remart;
-
-    public function setRemart($remart)
-    {
-        $this->remart             = $remart;
-        $this->apiParas["remart"] = $remart;
-    }
-
-    public function getRemart()
-    {
-        return $this->remart;
-    }
-
-}
+                            }
 
 
 

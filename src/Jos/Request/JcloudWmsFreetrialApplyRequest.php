@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class JcloudWmsFreetrialApplyRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.jcloud.wms.freetrial.apply";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                                            		                                    	                   			private $companyName;
+    	                        
+	public function setCompanyName($companyName){
+		$this->companyName = $companyName;
+         $this->apiParas["companyName"] = $companyName;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.jcloud.wms.freetrial.apply";
-    }
+	public function getCompanyName(){
+	  return $this->companyName;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $userName;
+    	                        
+	public function setUserName($userName){
+		$this->userName = $userName;
+         $this->apiParas["userName"] = $userName;
+	}
 
-    public function check()
-    {
+	public function getUserName(){
+	  return $this->userName;
+	}
 
-    }
+                        	                   			private $email;
+    	                        
+	public function setEmail($email){
+		$this->email = $email;
+         $this->apiParas["email"] = $email;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getEmail(){
+	  return $this->email;
+	}
 
-    private $companyName;
+                        	                   			private $phone;
+    	                        
+	public function setPhone($phone){
+		$this->phone = $phone;
+         $this->apiParas["phone"] = $phone;
+	}
 
-    public function setCompanyName($companyName)
-    {
-        $this->companyName             = $companyName;
-        $this->apiParas["companyName"] = $companyName;
-    }
+	public function getPhone(){
+	  return $this->phone;
+	}
 
-    public function getCompanyName()
-    {
-        return $this->companyName;
-    }
+                        	                   			private $industry;
+    	                        
+	public function setIndustry($industry){
+		$this->industry = $industry;
+         $this->apiParas["industry"] = $industry;
+	}
 
-    private $userName;
+	public function getIndustry(){
+	  return $this->industry;
+	}
 
-    public function setUserName($userName)
-    {
-        $this->userName             = $userName;
-        $this->apiParas["userName"] = $userName;
-    }
+                        	                   			private $jdPin;
+    	                        
+	public function setJdPin($jdPin){
+		$this->jdPin = $jdPin;
+         $this->apiParas["jdPin"] = $jdPin;
+	}
 
-    public function getUserName()
-    {
-        return $this->userName;
-    }
+	public function getJdPin(){
+	  return $this->jdPin;
+	}
 
-    private $email;
-
-    public function setEmail($email)
-    {
-        $this->email             = $email;
-        $this->apiParas["email"] = $email;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    private $phone;
-
-    public function setPhone($phone)
-    {
-        $this->phone             = $phone;
-        $this->apiParas["phone"] = $phone;
-    }
-
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-    private $industry;
-
-    public function setIndustry($industry)
-    {
-        $this->industry             = $industry;
-        $this->apiParas["industry"] = $industry;
-    }
-
-    public function getIndustry()
-    {
-        return $this->industry;
-    }
-
-    private $jdPin;
-
-    public function setJdPin($jdPin)
-    {
-        $this->jdPin             = $jdPin;
-        $this->apiParas["jdPin"] = $jdPin;
-    }
-
-    public function getJdPin()
-    {
-        return $this->jdPin;
-    }
-
-}
+                        	                            }
 
 
 

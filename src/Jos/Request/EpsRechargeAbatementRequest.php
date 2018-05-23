@@ -1,139 +1,113 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EpsRechargeAbatementRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eps.rechargeAbatement";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $deliveryNo;
+    	                        
+	public function setDeliveryNo($deliveryNo){
+		$this->deliveryNo = $deliveryNo;
+         $this->apiParas["deliveryNo"] = $deliveryNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eps.rechargeAbatement";
-    }
+	public function getDeliveryNo(){
+	  return $this->deliveryNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $siteNo;
+    	                        
+	public function setSiteNo($siteNo){
+		$this->siteNo = $siteNo;
+         $this->apiParas["siteNo"] = $siteNo;
+	}
 
-    public function check()
-    {
+	public function getSiteNo(){
+	  return $this->siteNo;
+	}
 
-    }
+                        	                        	                   			private $rechargeUUID;
+    	                        
+	public function setRechargeUUID($rechargeUUID){
+		$this->rechargeUUID = $rechargeUUID;
+         $this->apiParas["rechargeUUID"] = $rechargeUUID;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getRechargeUUID(){
+	  return $this->rechargeUUID;
+	}
 
-    private $deliveryNo;
+                        	                   			private $rechargeNum;
+    	                        
+	public function setRechargeNum($rechargeNum){
+		$this->rechargeNum = $rechargeNum;
+         $this->apiParas["rechargeNum"] = $rechargeNum;
+	}
 
-    public function setDeliveryNo($deliveryNo)
-    {
-        $this->deliveryNo             = $deliveryNo;
-        $this->apiParas["deliveryNo"] = $deliveryNo;
-    }
+	public function getRechargeNum(){
+	  return $this->rechargeNum;
+	}
 
-    public function getDeliveryNo()
-    {
-        return $this->deliveryNo;
-    }
+                        	                   			private $rechargeType;
+    	                        
+	public function setRechargeType($rechargeType){
+		$this->rechargeType = $rechargeType;
+         $this->apiParas["rechargeType"] = $rechargeType;
+	}
 
-    private $siteNo;
+	public function getRechargeType(){
+	  return $this->rechargeType;
+	}
 
-    public function setSiteNo($siteNo)
-    {
-        $this->siteNo             = $siteNo;
-        $this->apiParas["siteNo"] = $siteNo;
-    }
+                        	                   			private $remark;
+    	                        
+	public function setRemark($remark){
+		$this->remark = $remark;
+         $this->apiParas["remark"] = $remark;
+	}
 
-    public function getSiteNo()
-    {
-        return $this->siteNo;
-    }
+	public function getRemark(){
+	  return $this->remark;
+	}
 
-    private $rechargeUUID;
+                        	                   			private $operator;
+    	                        
+	public function setOperator($operator){
+		$this->operator = $operator;
+         $this->apiParas["operator"] = $operator;
+	}
 
-    public function setRechargeUUID($rechargeUUID)
-    {
-        $this->rechargeUUID             = $rechargeUUID;
-        $this->apiParas["rechargeUUID"] = $rechargeUUID;
-    }
+	public function getOperator(){
+	  return $this->operator;
+	}
 
-    public function getRechargeUUID()
-    {
-        return $this->rechargeUUID;
-    }
+                        	                   			private $operateTime;
+    	                        
+	public function setOperateTime($operateTime){
+		$this->operateTime = $operateTime;
+         $this->apiParas["operateTime"] = $operateTime;
+	}
 
-    private $rechargeNum;
+	public function getOperateTime(){
+	  return $this->operateTime;
+	}
 
-    public function setRechargeNum($rechargeNum)
-    {
-        $this->rechargeNum             = $rechargeNum;
-        $this->apiParas["rechargeNum"] = $rechargeNum;
-    }
-
-    public function getRechargeNum()
-    {
-        return $this->rechargeNum;
-    }
-
-    private $rechargeType;
-
-    public function setRechargeType($rechargeType)
-    {
-        $this->rechargeType             = $rechargeType;
-        $this->apiParas["rechargeType"] = $rechargeType;
-    }
-
-    public function getRechargeType()
-    {
-        return $this->rechargeType;
-    }
-
-    private $remark;
-
-    public function setRemark($remark)
-    {
-        $this->remark             = $remark;
-        $this->apiParas["remark"] = $remark;
-    }
-
-    public function getRemark()
-    {
-        return $this->remark;
-    }
-
-    private $operator;
-
-    public function setOperator($operator)
-    {
-        $this->operator             = $operator;
-        $this->apiParas["operator"] = $operator;
-    }
-
-    public function getOperator()
-    {
-        return $this->operator;
-    }
-
-    private $operateTime;
-
-    public function setOperateTime($operateTime)
-    {
-        $this->operateTime             = $operateTime;
-        $this->apiParas["operateTime"] = $operateTime;
-    }
-
-    public function getOperateTime()
-    {
-        return $this->operateTime;
-    }
-
-}
+                            }
 
 
 

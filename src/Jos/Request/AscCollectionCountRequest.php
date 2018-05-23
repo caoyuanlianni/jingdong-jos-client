@@ -1,139 +1,113 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscCollectionCountRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.collection.count";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.collection.count";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $jdInterveneFlag;
+    	                        
+	public function setJdInterveneFlag($jdInterveneFlag){
+		$this->jdInterveneFlag = $jdInterveneFlag;
+         $this->apiParas["jdInterveneFlag"] = $jdInterveneFlag;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getJdInterveneFlag(){
+	  return $this->jdInterveneFlag;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $balanceFlag;
+    	                        
+	public function setBalanceFlag($balanceFlag){
+		$this->balanceFlag = $balanceFlag;
+         $this->apiParas["balanceFlag"] = $balanceFlag;
+	}
 
-    private $operatePin;
+	public function getBalanceFlag(){
+	  return $this->balanceFlag;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
+                        	                   			private $applyTimeBegin;
+    	                        
+	public function setApplyTimeBegin($applyTimeBegin){
+		$this->applyTimeBegin = $applyTimeBegin;
+         $this->apiParas["applyTimeBegin"] = $applyTimeBegin;
+	}
 
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
+	public function getApplyTimeBegin(){
+	  return $this->applyTimeBegin;
+	}
 
-    private $operateNick;
+                        	                   			private $applyTimeEnd;
+    	                        
+	public function setApplyTimeEnd($applyTimeEnd){
+		$this->applyTimeEnd = $applyTimeEnd;
+         $this->apiParas["applyTimeEnd"] = $applyTimeEnd;
+	}
 
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
+	public function getApplyTimeEnd(){
+	  return $this->applyTimeEnd;
+	}
 
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
+                        	                   			private $extJsonStr;
+    	                        
+	public function setExtJsonStr($extJsonStr){
+		$this->extJsonStr = $extJsonStr;
+         $this->apiParas["extJsonStr"] = $extJsonStr;
+	}
 
-    private $jdInterveneFlag;
+	public function getExtJsonStr(){
+	  return $this->extJsonStr;
+	}
 
-    public function setJdInterveneFlag($jdInterveneFlag)
-    {
-        $this->jdInterveneFlag             = $jdInterveneFlag;
-        $this->apiParas["jdInterveneFlag"] = $jdInterveneFlag;
-    }
-
-    public function getJdInterveneFlag()
-    {
-        return $this->jdInterveneFlag;
-    }
-
-    private $balanceFlag;
-
-    public function setBalanceFlag($balanceFlag)
-    {
-        $this->balanceFlag             = $balanceFlag;
-        $this->apiParas["balanceFlag"] = $balanceFlag;
-    }
-
-    public function getBalanceFlag()
-    {
-        return $this->balanceFlag;
-    }
-
-    private $applyTimeBegin;
-
-    public function setApplyTimeBegin($applyTimeBegin)
-    {
-        $this->applyTimeBegin             = $applyTimeBegin;
-        $this->apiParas["applyTimeBegin"] = $applyTimeBegin;
-    }
-
-    public function getApplyTimeBegin()
-    {
-        return $this->applyTimeBegin;
-    }
-
-    private $applyTimeEnd;
-
-    public function setApplyTimeEnd($applyTimeEnd)
-    {
-        $this->applyTimeEnd             = $applyTimeEnd;
-        $this->apiParas["applyTimeEnd"] = $applyTimeEnd;
-    }
-
-    public function getApplyTimeEnd()
-    {
-        return $this->applyTimeEnd;
-    }
-
-    private $extJsonStr;
-
-    public function setExtJsonStr($extJsonStr)
-    {
-        $this->extJsonStr             = $extJsonStr;
-        $this->apiParas["extJsonStr"] = $extJsonStr;
-    }
-
-    public function getExtJsonStr()
-    {
-        return $this->extJsonStr;
-    }
-
-}
+                            }
 
 
 

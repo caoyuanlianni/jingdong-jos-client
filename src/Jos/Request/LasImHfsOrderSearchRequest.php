@@ -1,87 +1,69 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class LasImHfsOrderSearchRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.las.im.hfs.order.search";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $code;
+    	                        
+	public function setCode($code){
+		$this->code = $code;
+         $this->apiParas["code"] = $code;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.las.im.hfs.order.search";
-    }
+	public function getCode(){
+	  return $this->code;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $offset;
+    	                        
+	public function setOffset($offset){
+		$this->offset = $offset;
+         $this->apiParas["offset"] = $offset;
+	}
 
-    public function check()
-    {
+	public function getOffset(){
+	  return $this->offset;
+	}
 
-    }
+                        	                   			private $no;
+    	                        
+	public function setNo($no){
+		$this->no = $no;
+         $this->apiParas["no"] = $no;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getNo(){
+	  return $this->no;
+	}
 
-    private $code;
+                        	                   			private $token;
+    	                        
+	public function setToken($token){
+		$this->token = $token;
+         $this->apiParas["token"] = $token;
+	}
 
-    public function setCode($code)
-    {
-        $this->code             = $code;
-        $this->apiParas["code"] = $code;
-    }
+	public function getToken(){
+	  return $this->token;
+	}
 
-    public function getCode()
-    {
-        return $this->code;
-    }
-
-    private $offset;
-
-    public function setOffset($offset)
-    {
-        $this->offset             = $offset;
-        $this->apiParas["offset"] = $offset;
-    }
-
-    public function getOffset()
-    {
-        return $this->offset;
-    }
-
-    private $no;
-
-    public function setNo($no)
-    {
-        $this->no             = $no;
-        $this->apiParas["no"] = $no;
-    }
-
-    public function getNo()
-    {
-        return $this->no;
-    }
-
-    private $token;
-
-    public function setToken($token)
-    {
-        $this->token             = $token;
-        $this->apiParas["token"] = $token;
-    }
-
-    public function getToken()
-    {
-        return $this->token;
-    }
-
-}
+                            }
 
 
 

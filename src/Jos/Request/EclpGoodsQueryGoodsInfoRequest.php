@@ -1,126 +1,102 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpGoodsQueryGoodsInfoRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.goods.queryGoodsInfo";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $deptNo;
+    	                        
+	public function setDeptNo($deptNo){
+		$this->deptNo = $deptNo;
+         $this->apiParas["deptNo"] = $deptNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.goods.queryGoodsInfo";
-    }
+	public function getDeptNo(){
+	  return $this->deptNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $isvGoodsNos;
+    	                        
+	public function setIsvGoodsNos($isvGoodsNos){
+		$this->isvGoodsNos = $isvGoodsNos;
+         $this->apiParas["isvGoodsNos"] = $isvGoodsNos;
+	}
 
-    public function check()
-    {
+	public function getIsvGoodsNos(){
+	  return $this->isvGoodsNos;
+	}
 
-    }
+                        	                   			private $goodsNos;
+    	                        
+	public function setGoodsNos($goodsNos){
+		$this->goodsNos = $goodsNos;
+         $this->apiParas["goodsNos"] = $goodsNos;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getGoodsNos(){
+	  return $this->goodsNos;
+	}
 
-    private $deptNo;
+                        	                   			private $queryType;
+    	                        
+	public function setQueryType($queryType){
+		$this->queryType = $queryType;
+         $this->apiParas["queryType"] = $queryType;
+	}
 
-    public function setDeptNo($deptNo)
-    {
-        $this->deptNo             = $deptNo;
-        $this->apiParas["deptNo"] = $deptNo;
-    }
+	public function getQueryType(){
+	  return $this->queryType;
+	}
 
-    public function getDeptNo()
-    {
-        return $this->deptNo;
-    }
+                        	                   			private $barcodes;
+    	                        
+	public function setBarcodes($barcodes){
+		$this->barcodes = $barcodes;
+         $this->apiParas["barcodes"] = $barcodes;
+	}
 
-    private $isvGoodsNos;
+	public function getBarcodes(){
+	  return $this->barcodes;
+	}
 
-    public function setIsvGoodsNos($isvGoodsNos)
-    {
-        $this->isvGoodsNos             = $isvGoodsNos;
-        $this->apiParas["isvGoodsNos"] = $isvGoodsNos;
-    }
+                        	                   			private $pageNo;
+    	                        
+	public function setPageNo($pageNo){
+		$this->pageNo = $pageNo;
+         $this->apiParas["pageNo"] = $pageNo;
+	}
 
-    public function getIsvGoodsNos()
-    {
-        return $this->isvGoodsNos;
-    }
+	public function getPageNo(){
+	  return $this->pageNo;
+	}
 
-    private $goodsNos;
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function setGoodsNos($goodsNos)
-    {
-        $this->goodsNos             = $goodsNos;
-        $this->apiParas["goodsNos"] = $goodsNos;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function getGoodsNos()
-    {
-        return $this->goodsNos;
-    }
-
-    private $queryType;
-
-    public function setQueryType($queryType)
-    {
-        $this->queryType             = $queryType;
-        $this->apiParas["queryType"] = $queryType;
-    }
-
-    public function getQueryType()
-    {
-        return $this->queryType;
-    }
-
-    private $barcodes;
-
-    public function setBarcodes($barcodes)
-    {
-        $this->barcodes             = $barcodes;
-        $this->apiParas["barcodes"] = $barcodes;
-    }
-
-    public function getBarcodes()
-    {
-        return $this->barcodes;
-    }
-
-    private $pageNo;
-
-    public function setPageNo($pageNo)
-    {
-        $this->pageNo             = $pageNo;
-        $this->apiParas["pageNo"] = $pageNo;
-    }
-
-    public function getPageNo()
-    {
-        return $this->pageNo;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                                                    	}
 
 
 

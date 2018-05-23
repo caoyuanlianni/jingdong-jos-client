@@ -1,139 +1,113 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpCloudAddCenterUserRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.cloud.addCenterUser";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $tenantId;
+    	                        
+	public function setTenantId($tenantId){
+		$this->tenantId = $tenantId;
+         $this->apiParas["tenantId"] = $tenantId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.cloud.addCenterUser";
-    }
+	public function getTenantId(){
+	  return $this->tenantId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $userId;
+    	                        
+	public function setUserId($userId){
+		$this->userId = $userId;
+         $this->apiParas["userId"] = $userId;
+	}
 
-    public function check()
-    {
+	public function getUserId(){
+	  return $this->userId;
+	}
 
-    }
+                        	                   			private $mobile;
+    	                        
+	public function setMobile($mobile){
+		$this->mobile = $mobile;
+         $this->apiParas["mobile"] = $mobile;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getMobile(){
+	  return $this->mobile;
+	}
 
-    private $tenantId;
+                        	                   			private $origin;
+    	                        
+	public function setOrigin($origin){
+		$this->origin = $origin;
+         $this->apiParas["origin"] = $origin;
+	}
 
-    public function setTenantId($tenantId)
-    {
-        $this->tenantId             = $tenantId;
-        $this->apiParas["tenantId"] = $tenantId;
-    }
+	public function getOrigin(){
+	  return $this->origin;
+	}
 
-    public function getTenantId()
-    {
-        return $this->tenantId;
-    }
+                        	                   			private $name;
+    	                        
+	public function setName($name){
+		$this->name = $name;
+         $this->apiParas["name"] = $name;
+	}
 
-    private $userId;
+	public function getName(){
+	  return $this->name;
+	}
 
-    public function setUserId($userId)
-    {
-        $this->userId             = $userId;
-        $this->apiParas["userId"] = $userId;
-    }
+                        	                   			private $isManager;
+    	                        
+	public function setIsManager($isManager){
+		$this->isManager = $isManager;
+         $this->apiParas["isManager"] = $isManager;
+	}
 
-    public function getUserId()
-    {
-        return $this->userId;
-    }
+	public function getIsManager(){
+	  return $this->isManager;
+	}
 
-    private $mobile;
+                        	                   			private $status;
+    	                        
+	public function setStatus($status){
+		$this->status = $status;
+         $this->apiParas["status"] = $status;
+	}
 
-    public function setMobile($mobile)
-    {
-        $this->mobile             = $mobile;
-        $this->apiParas["mobile"] = $mobile;
-    }
+	public function getStatus(){
+	  return $this->status;
+	}
 
-    public function getMobile()
-    {
-        return $this->mobile;
-    }
+                        	                   			private $operator;
+    	                        
+	public function setOperator($operator){
+		$this->operator = $operator;
+         $this->apiParas["operator"] = $operator;
+	}
 
-    private $origin;
+	public function getOperator(){
+	  return $this->operator;
+	}
 
-    public function setOrigin($origin)
-    {
-        $this->origin             = $origin;
-        $this->apiParas["origin"] = $origin;
-    }
-
-    public function getOrigin()
-    {
-        return $this->origin;
-    }
-
-    private $name;
-
-    public function setName($name)
-    {
-        $this->name             = $name;
-        $this->apiParas["name"] = $name;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    private $isManager;
-
-    public function setIsManager($isManager)
-    {
-        $this->isManager             = $isManager;
-        $this->apiParas["isManager"] = $isManager;
-    }
-
-    public function getIsManager()
-    {
-        return $this->isManager;
-    }
-
-    private $status;
-
-    public function setStatus($status)
-    {
-        $this->status             = $status;
-        $this->apiParas["status"] = $status;
-    }
-
-    public function getStatus()
-    {
-        return $this->status;
-    }
-
-    private $operator;
-
-    public function setOperator($operator)
-    {
-        $this->operator             = $operator;
-        $this->apiParas["operator"] = $operator;
-    }
-
-    public function getOperator()
-    {
-        return $this->operator;
-    }
-
-}
+                                                    	}
 
 
 

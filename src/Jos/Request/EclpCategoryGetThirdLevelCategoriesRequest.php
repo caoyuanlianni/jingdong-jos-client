@@ -1,61 +1,47 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpCategoryGetThirdLevelCategoriesRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.category.getThirdLevelCategories";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $secondCategoryNo;
+    	                        
+	public function setSecondCategoryNo($secondCategoryNo){
+		$this->secondCategoryNo = $secondCategoryNo;
+         $this->apiParas["secondCategoryNo"] = $secondCategoryNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.category.getThirdLevelCategories";
-    }
+	public function getSecondCategoryNo(){
+	  return $this->secondCategoryNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $thirdCategoryNo;
+    	                        
+	public function setThirdCategoryNo($thirdCategoryNo){
+		$this->thirdCategoryNo = $thirdCategoryNo;
+         $this->apiParas["thirdCategoryNo"] = $thirdCategoryNo;
+	}
 
-    public function check()
-    {
+	public function getThirdCategoryNo(){
+	  return $this->thirdCategoryNo;
+	}
 
-    }
-
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
-
-    private $secondCategoryNo;
-
-    public function setSecondCategoryNo($secondCategoryNo)
-    {
-        $this->secondCategoryNo             = $secondCategoryNo;
-        $this->apiParas["secondCategoryNo"] = $secondCategoryNo;
-    }
-
-    public function getSecondCategoryNo()
-    {
-        return $this->secondCategoryNo;
-    }
-
-    private $thirdCategoryNo;
-
-    public function setThirdCategoryNo($thirdCategoryNo)
-    {
-        $this->thirdCategoryNo             = $thirdCategoryNo;
-        $this->apiParas["thirdCategoryNo"] = $thirdCategoryNo;
-    }
-
-    public function getThirdCategoryNo()
-    {
-        return $this->thirdCategoryNo;
-    }
-
-}
+                                                    	}
 
 
 

@@ -1,100 +1,80 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class KuaicheZnKeywordgroupListSearchRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.kuaiche.zn.keywordgroup.list.search";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                                            		                                    	                   			private $thirdCategoryId;
+    	                                                                        
+	public function setThirdCategoryId($thirdCategoryId){
+		$this->thirdCategoryId = $thirdCategoryId;
+         $this->apiParas["third_category_id"] = $thirdCategoryId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.kuaiche.zn.keywordgroup.list.search";
-    }
+	public function getThirdCategoryId(){
+	  return $this->thirdCategoryId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $sortField;
+    	                                                            
+	public function setSortField($sortField){
+		$this->sortField = $sortField;
+         $this->apiParas["sort_field"] = $sortField;
+	}
 
-    public function check()
-    {
+	public function getSortField(){
+	  return $this->sortField;
+	}
 
-    }
+                        	                   			private $sortType;
+    	                                                            
+	public function setSortType($sortType){
+		$this->sortType = $sortType;
+         $this->apiParas["sort_type"] = $sortType;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getSortType(){
+	  return $this->sortType;
+	}
 
-    private $thirdCategoryId;
+                        	                   			private $pageSize;
+    	                                                            
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["page_size"] = $pageSize;
+	}
 
-    public function setThirdCategoryId($thirdCategoryId)
-    {
-        $this->thirdCategoryId               = $thirdCategoryId;
-        $this->apiParas["third_category_id"] = $thirdCategoryId;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function getThirdCategoryId()
-    {
-        return $this->thirdCategoryId;
-    }
+                        	                   			private $pageIndex;
+    	                                                            
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["page_index"] = $pageIndex;
+	}
 
-    private $sortField;
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    public function setSortField($sortField)
-    {
-        $this->sortField              = $sortField;
-        $this->apiParas["sort_field"] = $sortField;
-    }
-
-    public function getSortField()
-    {
-        return $this->sortField;
-    }
-
-    private $sortType;
-
-    public function setSortType($sortType)
-    {
-        $this->sortType              = $sortType;
-        $this->apiParas["sort_type"] = $sortType;
-    }
-
-    public function getSortType()
-    {
-        return $this->sortType;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize              = $pageSize;
-        $this->apiParas["page_size"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-    private $pageIndex;
-
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex              = $pageIndex;
-        $this->apiParas["page_index"] = $pageIndex;
-    }
-
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
-
-}
+                            }
 
 
 

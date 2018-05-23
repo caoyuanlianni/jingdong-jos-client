@@ -1,100 +1,80 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EdiReplenishmentplanGetRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.edi.replenishmentplan.get";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $status;
+    	                        
+	public function setStatus($status){
+		$this->status = $status;
+         $this->apiParas["status"] = $status;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.edi.replenishmentplan.get";
-    }
+	public function getStatus(){
+	  return $this->status;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $sendTimeStart;
+    	                        
+	public function setSendTimeStart($sendTimeStart){
+		$this->sendTimeStart = $sendTimeStart;
+         $this->apiParas["sendTimeStart"] = $sendTimeStart;
+	}
 
-    public function check()
-    {
+	public function getSendTimeStart(){
+	  return $this->sendTimeStart;
+	}
 
-    }
+                        	                   			private $sendTimeEnd;
+    	                        
+	public function setSendTimeEnd($sendTimeEnd){
+		$this->sendTimeEnd = $sendTimeEnd;
+         $this->apiParas["sendTimeEnd"] = $sendTimeEnd;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getSendTimeEnd(){
+	  return $this->sendTimeEnd;
+	}
 
-    private $status;
+                        	                   			private $pageNum;
+    	                        
+	public function setPageNum($pageNum){
+		$this->pageNum = $pageNum;
+         $this->apiParas["pageNum"] = $pageNum;
+	}
 
-    public function setStatus($status)
-    {
-        $this->status             = $status;
-        $this->apiParas["status"] = $status;
-    }
+	public function getPageNum(){
+	  return $this->pageNum;
+	}
 
-    public function getStatus()
-    {
-        return $this->status;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    private $sendTimeStart;
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function setSendTimeStart($sendTimeStart)
-    {
-        $this->sendTimeStart             = $sendTimeStart;
-        $this->apiParas["sendTimeStart"] = $sendTimeStart;
-    }
-
-    public function getSendTimeStart()
-    {
-        return $this->sendTimeStart;
-    }
-
-    private $sendTimeEnd;
-
-    public function setSendTimeEnd($sendTimeEnd)
-    {
-        $this->sendTimeEnd             = $sendTimeEnd;
-        $this->apiParas["sendTimeEnd"] = $sendTimeEnd;
-    }
-
-    public function getSendTimeEnd()
-    {
-        return $this->sendTimeEnd;
-    }
-
-    private $pageNum;
-
-    public function setPageNum($pageNum)
-    {
-        $this->pageNum             = $pageNum;
-        $this->apiParas["pageNum"] = $pageNum;
-    }
-
-    public function getPageNum()
-    {
-        return $this->pageNum;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                        	                            }
 
 
 

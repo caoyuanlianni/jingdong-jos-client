@@ -1,255 +1,210 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class SellerPromotionV2OrderDiscountCreateRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.seller.promotion.v2.order.discount.create";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                        	                   			private $ip;
+    	                        
+	public function setIp($ip){
+		$this->ip = $ip;
+         $this->apiParas["ip"] = $ip;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.seller.promotion.v2.order.discount.create";
-    }
+	public function getIp(){
+	  return $this->ip;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $port;
+    	                        
+	public function setPort($port){
+		$this->port = $port;
+         $this->apiParas["port"] = $port;
+	}
 
-    public function check()
-    {
+	public function getPort(){
+	  return $this->port;
+	}
 
-    }
+                        	                   			private $requestId;
+    	                                                            
+	public function setRequestId($requestId){
+		$this->requestId = $requestId;
+         $this->apiParas["request_id"] = $requestId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getRequestId(){
+	  return $this->requestId;
+	}
 
-    private $ip;
+                        	                                                                        		                                    	                        	                   			private $promoName;
+    	                                                            
+	public function setPromoName($promoName){
+		$this->promoName = $promoName;
+         $this->apiParas["promo_name"] = $promoName;
+	}
 
-    public function setIp($ip)
-    {
-        $this->ip             = $ip;
-        $this->apiParas["ip"] = $ip;
-    }
+	public function getPromoName(){
+	  return $this->promoName;
+	}
 
-    public function getIp()
-    {
-        return $this->ip;
-    }
+                        	                        	                   			private $beginTime;
+    	                                                            
+	public function setBeginTime($beginTime){
+		$this->beginTime = $beginTime;
+         $this->apiParas["begin_time"] = $beginTime;
+	}
 
-    private $port;
+	public function getBeginTime(){
+	  return $this->beginTime;
+	}
 
-    public function setPort($port)
-    {
-        $this->port             = $port;
-        $this->apiParas["port"] = $port;
-    }
+                        	                   			private $endTime;
+    	                                                            
+	public function setEndTime($endTime){
+		$this->endTime = $endTime;
+         $this->apiParas["end_time"] = $endTime;
+	}
 
-    public function getPort()
-    {
-        return $this->port;
-    }
+	public function getEndTime(){
+	  return $this->endTime;
+	}
 
-    private $requestId;
+                        	                   			private $bound;
+    	                        
+	public function setBound($bound){
+		$this->bound = $bound;
+         $this->apiParas["bound"] = $bound;
+	}
 
-    public function setRequestId($requestId)
-    {
-        $this->requestId              = $requestId;
-        $this->apiParas["request_id"] = $requestId;
-    }
+	public function getBound(){
+	  return $this->bound;
+	}
 
-    public function getRequestId()
-    {
-        return $this->requestId;
-    }
+                        	                   			private $slogan;
+    	                        
+	public function setSlogan($slogan){
+		$this->slogan = $slogan;
+         $this->apiParas["slogan"] = $slogan;
+	}
 
-    private $promoName;
+	public function getSlogan(){
+	  return $this->slogan;
+	}
 
-    public function setPromoName($promoName)
-    {
-        $this->promoName              = $promoName;
-        $this->apiParas["promo_name"] = $promoName;
-    }
+                        	                   			private $comment;
+    	                        
+	public function setComment($comment){
+		$this->comment = $comment;
+         $this->apiParas["comment"] = $comment;
+	}
 
-    public function getPromoName()
-    {
-        return $this->promoName;
-    }
+	public function getComment(){
+	  return $this->comment;
+	}
 
-    private $beginTime;
+                        	                   			private $link;
+    	                        
+	public function setLink($link){
+		$this->link = $link;
+         $this->apiParas["link"] = $link;
+	}
 
-    public function setBeginTime($beginTime)
-    {
-        $this->beginTime              = $beginTime;
-        $this->apiParas["begin_time"] = $beginTime;
-    }
+	public function getLink(){
+	  return $this->link;
+	}
 
-    public function getBeginTime()
-    {
-        return $this->beginTime;
-    }
+                        	                        	                   			private $allowOthersOperate;
+    	                                                                        
+	public function setAllowOthersOperate($allowOthersOperate){
+		$this->allowOthersOperate = $allowOthersOperate;
+         $this->apiParas["allow_others_operate"] = $allowOthersOperate;
+	}
 
-    private $endTime;
+	public function getAllowOthersOperate(){
+	  return $this->allowOthersOperate;
+	}
 
-    public function setEndTime($endTime)
-    {
-        $this->endTime              = $endTime;
-        $this->apiParas["end_time"] = $endTime;
-    }
+                        	                   			private $allowOthersCheck;
+    	                                                                        
+	public function setAllowOthersCheck($allowOthersCheck){
+		$this->allowOthersCheck = $allowOthersCheck;
+         $this->apiParas["allow_others_check"] = $allowOthersCheck;
+	}
 
-    public function getEndTime()
-    {
-        return $this->endTime;
-    }
+	public function getAllowOthersCheck(){
+	  return $this->allowOthersCheck;
+	}
 
-    private $bound;
+                        	                   			private $allowOtherUserOperate;
+    	                                                                                    
+	public function setAllowOtherUserOperate($allowOtherUserOperate){
+		$this->allowOtherUserOperate = $allowOtherUserOperate;
+         $this->apiParas["allow_other_user_operate"] = $allowOtherUserOperate;
+	}
 
-    public function setBound($bound)
-    {
-        $this->bound             = $bound;
-        $this->apiParas["bound"] = $bound;
-    }
+	public function getAllowOtherUserOperate(){
+	  return $this->allowOtherUserOperate;
+	}
 
-    public function getBound()
-    {
-        return $this->bound;
-    }
+                        	                   			private $allowOtherUserCheck;
+    	                                                                                    
+	public function setAllowOtherUserCheck($allowOtherUserCheck){
+		$this->allowOtherUserCheck = $allowOtherUserCheck;
+         $this->apiParas["allow_other_user_check"] = $allowOtherUserCheck;
+	}
 
-    private $slogan;
+	public function getAllowOtherUserCheck(){
+	  return $this->allowOtherUserCheck;
+	}
 
-    public function setSlogan($slogan)
-    {
-        $this->slogan             = $slogan;
-        $this->apiParas["slogan"] = $slogan;
-    }
+                        	                   			private $needManualCheck;
+    	                                                                        
+	public function setNeedManualCheck($needManualCheck){
+		$this->needManualCheck = $needManualCheck;
+         $this->apiParas["need_manual_check"] = $needManualCheck;
+	}
 
-    public function getSlogan()
-    {
-        return $this->slogan;
-    }
+	public function getNeedManualCheck(){
+	  return $this->needManualCheck;
+	}
 
-    private $comment;
+                        	                        	                   			private $rate;
+    	                        
+	public function setRate($rate){
+		$this->rate = $rate;
+         $this->apiParas["rate"] = $rate;
+	}
 
-    public function setComment($comment)
-    {
-        $this->comment             = $comment;
-        $this->apiParas["comment"] = $comment;
-    }
+	public function getRate(){
+	  return $this->rate;
+	}
 
-    public function getComment()
-    {
-        return $this->comment;
-    }
+                                                                             	                        	                                                                                                                                                                                                                                                                                                                                                                                                       private $skuId;
+                              public function setSkuId($skuId ){
+                 $this->skuId=$skuId;
+                 $this->apiParas["sku_id"] = $skuId;
+              }
 
-    private $link;
-
-    public function setLink($link)
-    {
-        $this->link             = $link;
-        $this->apiParas["link"] = $link;
-    }
-
-    public function getLink()
-    {
-        return $this->link;
-    }
-
-    private $allowOthersOperate;
-
-    public function setAllowOthersOperate($allowOthersOperate)
-    {
-        $this->allowOthersOperate               = $allowOthersOperate;
-        $this->apiParas["allow_others_operate"] = $allowOthersOperate;
-    }
-
-    public function getAllowOthersOperate()
-    {
-        return $this->allowOthersOperate;
-    }
-
-    private $allowOthersCheck;
-
-    public function setAllowOthersCheck($allowOthersCheck)
-    {
-        $this->allowOthersCheck               = $allowOthersCheck;
-        $this->apiParas["allow_others_check"] = $allowOthersCheck;
-    }
-
-    public function getAllowOthersCheck()
-    {
-        return $this->allowOthersCheck;
-    }
-
-    private $allowOtherUserOperate;
-
-    public function setAllowOtherUserOperate($allowOtherUserOperate)
-    {
-        $this->allowOtherUserOperate                = $allowOtherUserOperate;
-        $this->apiParas["allow_other_user_operate"] = $allowOtherUserOperate;
-    }
-
-    public function getAllowOtherUserOperate()
-    {
-        return $this->allowOtherUserOperate;
-    }
-
-    private $allowOtherUserCheck;
-
-    public function setAllowOtherUserCheck($allowOtherUserCheck)
-    {
-        $this->allowOtherUserCheck                = $allowOtherUserCheck;
-        $this->apiParas["allow_other_user_check"] = $allowOtherUserCheck;
-    }
-
-    public function getAllowOtherUserCheck()
-    {
-        return $this->allowOtherUserCheck;
-    }
-
-    private $needManualCheck;
-
-    public function setNeedManualCheck($needManualCheck)
-    {
-        $this->needManualCheck               = $needManualCheck;
-        $this->apiParas["need_manual_check"] = $needManualCheck;
-    }
-
-    public function getNeedManualCheck()
-    {
-        return $this->needManualCheck;
-    }
-
-    private $rate;
-
-    public function setRate($rate)
-    {
-        $this->rate             = $rate;
-        $this->apiParas["rate"] = $rate;
-    }
-
-    public function getRate()
-    {
-        return $this->rate;
-    }
-
-    private $skuId;
-
-    public function setSkuId($skuId)
-    {
-        $this->skuId              = $skuId;
-        $this->apiParas["sku_id"] = $skuId;
-    }
-
-    public function getSkuId()
-    {
-        return $this->skuId;
-    }
-}
+              public function getSkuId(){
+              	return $this->skuId;
+              }
+                                                                                                                }
 
 
 

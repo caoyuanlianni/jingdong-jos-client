@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class QueryTaskInfoRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.queryTaskInfo";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $serviceState;
+    	                        
+	public function setServiceState($serviceState){
+		$this->serviceState = $serviceState;
+         $this->apiParas["serviceState"] = $serviceState;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.queryTaskInfo";
-    }
+	public function getServiceState(){
+	  return $this->serviceState;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function check()
-    {
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    }
+                        	                   			private $pageIndex;
+    	                        
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["pageIndex"] = $pageIndex;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    private $serviceState;
+                        	                   			private $venderCode;
+    	                        
+	public function setVenderCode($venderCode){
+		$this->venderCode = $venderCode;
+         $this->apiParas["venderCode"] = $venderCode;
+	}
 
-    public function setServiceState($serviceState)
-    {
-        $this->serviceState             = $serviceState;
-        $this->apiParas["serviceState"] = $serviceState;
-    }
+	public function getVenderCode(){
+	  return $this->venderCode;
+	}
 
-    public function getServiceState()
-    {
-        return $this->serviceState;
-    }
+                        	                   			private $updateTimeStart;
+    	                        
+	public function setUpdateTimeStart($updateTimeStart){
+		$this->updateTimeStart = $updateTimeStart;
+         $this->apiParas["updateTimeStart"] = $updateTimeStart;
+	}
 
-    private $pageSize;
+	public function getUpdateTimeStart(){
+	  return $this->updateTimeStart;
+	}
 
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
+                        	                   			private $updateTimeEnd;
+    	                        
+	public function setUpdateTimeEnd($updateTimeEnd){
+		$this->updateTimeEnd = $updateTimeEnd;
+         $this->apiParas["updateTimeEnd"] = $updateTimeEnd;
+	}
 
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
+	public function getUpdateTimeEnd(){
+	  return $this->updateTimeEnd;
+	}
 
-    private $pageIndex;
-
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex             = $pageIndex;
-        $this->apiParas["pageIndex"] = $pageIndex;
-    }
-
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
-
-    private $venderCode;
-
-    public function setVenderCode($venderCode)
-    {
-        $this->venderCode             = $venderCode;
-        $this->apiParas["venderCode"] = $venderCode;
-    }
-
-    public function getVenderCode()
-    {
-        return $this->venderCode;
-    }
-
-    private $updateTimeStart;
-
-    public function setUpdateTimeStart($updateTimeStart)
-    {
-        $this->updateTimeStart             = $updateTimeStart;
-        $this->apiParas["updateTimeStart"] = $updateTimeStart;
-    }
-
-    public function getUpdateTimeStart()
-    {
-        return $this->updateTimeStart;
-    }
-
-    private $updateTimeEnd;
-
-    public function setUpdateTimeEnd($updateTimeEnd)
-    {
-        $this->updateTimeEnd             = $updateTimeEnd;
-        $this->apiParas["updateTimeEnd"] = $updateTimeEnd;
-    }
-
-    public function getUpdateTimeEnd()
-    {
-        return $this->updateTimeEnd;
-    }
-
-}
+                            }
 
 
 

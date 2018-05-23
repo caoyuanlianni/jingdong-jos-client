@@ -1,176 +1,144 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class WeilianOpenAuthGetqrcodeRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.weilian.open.auth.getqrcode";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                   			private $deviceId;
+    	                                                            
+	public function setDeviceId($deviceId){
+		$this->deviceId = $deviceId;
+         $this->apiParas["device_id"] = $deviceId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.weilian.open.auth.getqrcode";
-    }
+	public function getDeviceId(){
+	  return $this->deviceId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $userIdentity;
+    	                                                            
+	public function setUserIdentity($userIdentity){
+		$this->userIdentity = $userIdentity;
+         $this->apiParas["user_identity"] = $userIdentity;
+	}
 
-    public function check()
-    {
+	public function getUserIdentity(){
+	  return $this->userIdentity;
+	}
 
-    }
+                        	                   			private $deviceName;
+    	                                                            
+	public function setDeviceName($deviceName){
+		$this->deviceName = $deviceName;
+         $this->apiParas["device_name"] = $deviceName;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getDeviceName(){
+	  return $this->deviceName;
+	}
 
-    private $deviceId;
+                        	                   			private $osType;
+    	                                                            
+	public function setOsType($osType){
+		$this->osType = $osType;
+         $this->apiParas["os_type"] = $osType;
+	}
 
-    public function setDeviceId($deviceId)
-    {
-        $this->deviceId              = $deviceId;
-        $this->apiParas["device_id"] = $deviceId;
-    }
+	public function getOsType(){
+	  return $this->osType;
+	}
 
-    public function getDeviceId()
-    {
-        return $this->deviceId;
-    }
+                        	                   			private $osVer;
+    	                                                            
+	public function setOsVer($osVer){
+		$this->osVer = $osVer;
+         $this->apiParas["os_ver"] = $osVer;
+	}
 
-    private $userIdentity;
+	public function getOsVer(){
+	  return $this->osVer;
+	}
 
-    public function setUserIdentity($userIdentity)
-    {
-        $this->userIdentity              = $userIdentity;
-        $this->apiParas["user_identity"] = $userIdentity;
-    }
+                        	                   			private $osVerName;
+    	                                                                        
+	public function setOsVerName($osVerName){
+		$this->osVerName = $osVerName;
+         $this->apiParas["os_ver_name"] = $osVerName;
+	}
 
-    public function getUserIdentity()
-    {
-        return $this->userIdentity;
-    }
+	public function getOsVerName(){
+	  return $this->osVerName;
+	}
 
-    private $deviceName;
+                        	                   			private $deviceType;
+    	                                                            
+	public function setDeviceType($deviceType){
+		$this->deviceType = $deviceType;
+         $this->apiParas["device_type"] = $deviceType;
+	}
 
-    public function setDeviceName($deviceName)
-    {
-        $this->deviceName              = $deviceName;
-        $this->apiParas["device_name"] = $deviceName;
-    }
+	public function getDeviceType(){
+	  return $this->deviceType;
+	}
 
-    public function getDeviceName()
-    {
-        return $this->deviceName;
-    }
+                        	                   			private $appName;
+    	                                                            
+	public function setAppName($appName){
+		$this->appName = $appName;
+         $this->apiParas["app_name"] = $appName;
+	}
 
-    private $osType;
+	public function getAppName(){
+	  return $this->appName;
+	}
 
-    public function setOsType($osType)
-    {
-        $this->osType              = $osType;
-        $this->apiParas["os_type"] = $osType;
-    }
+                        	                   			private $appPackageName;
+    	                                                                        
+	public function setAppPackageName($appPackageName){
+		$this->appPackageName = $appPackageName;
+         $this->apiParas["app_package_name"] = $appPackageName;
+	}
 
-    public function getOsType()
-    {
-        return $this->osType;
-    }
+	public function getAppPackageName(){
+	  return $this->appPackageName;
+	}
 
-    private $osVer;
+                        	                   			private $appVersion;
+    	                                                            
+	public function setAppVersion($appVersion){
+		$this->appVersion = $appVersion;
+         $this->apiParas["app_version"] = $appVersion;
+	}
 
-    public function setOsVer($osVer)
-    {
-        $this->osVer              = $osVer;
-        $this->apiParas["os_ver"] = $osVer;
-    }
+	public function getAppVersion(){
+	  return $this->appVersion;
+	}
 
-    public function getOsVer()
-    {
-        return $this->osVer;
-    }
+                        	                   			private $appChannel;
+    	                                                            
+	public function setAppChannel($appChannel){
+		$this->appChannel = $appChannel;
+         $this->apiParas["app_channel"] = $appChannel;
+	}
 
-    private $osVerName;
-
-    public function setOsVerName($osVerName)
-    {
-        $this->osVerName               = $osVerName;
-        $this->apiParas["os_ver_name"] = $osVerName;
-    }
-
-    public function getOsVerName()
-    {
-        return $this->osVerName;
-    }
-
-    private $deviceType;
-
-    public function setDeviceType($deviceType)
-    {
-        $this->deviceType              = $deviceType;
-        $this->apiParas["device_type"] = $deviceType;
-    }
-
-    public function getDeviceType()
-    {
-        return $this->deviceType;
-    }
-
-    private $appName;
-
-    public function setAppName($appName)
-    {
-        $this->appName              = $appName;
-        $this->apiParas["app_name"] = $appName;
-    }
-
-    public function getAppName()
-    {
-        return $this->appName;
-    }
-
-    private $appPackageName;
-
-    public function setAppPackageName($appPackageName)
-    {
-        $this->appPackageName               = $appPackageName;
-        $this->apiParas["app_package_name"] = $appPackageName;
-    }
-
-    public function getAppPackageName()
-    {
-        return $this->appPackageName;
-    }
-
-    private $appVersion;
-
-    public function setAppVersion($appVersion)
-    {
-        $this->appVersion              = $appVersion;
-        $this->apiParas["app_version"] = $appVersion;
-    }
-
-    public function getAppVersion()
-    {
-        return $this->appVersion;
-    }
-
-    private $appChannel;
-
-    public function setAppChannel($appChannel)
-    {
-        $this->appChannel              = $appChannel;
-        $this->apiParas["app_channel"] = $appChannel;
-    }
-
-    public function getAppChannel()
-    {
-        return $this->appChannel;
-    }
+	public function getAppChannel(){
+	  return $this->appChannel;
+	}
 
 }
 

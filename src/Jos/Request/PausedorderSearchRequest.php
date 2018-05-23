@@ -1,100 +1,80 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class PausedorderSearchRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.pausedorder.search";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.pausedorder.search";
-    }
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $pageNo;
+    	                        
+	public function setPageNo($pageNo){
+		$this->pageNo = $pageNo;
+         $this->apiParas["pageNo"] = $pageNo;
+	}
 
-    public function check()
-    {
+	public function getPageNo(){
+	  return $this->pageNo;
+	}
 
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    private $orderId;
+                        	                   			private $startDate;
+    	                        
+	public function setStartDate($startDate){
+		$this->startDate = $startDate;
+         $this->apiParas["startDate"] = $startDate;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getStartDate(){
+	  return $this->startDate;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $endDate;
+    	                        
+	public function setEndDate($endDate){
+		$this->endDate = $endDate;
+         $this->apiParas["endDate"] = $endDate;
+	}
 
-    private $pageNo;
+	public function getEndDate(){
+	  return $this->endDate;
+	}
 
-    public function setPageNo($pageNo)
-    {
-        $this->pageNo             = $pageNo;
-        $this->apiParas["pageNo"] = $pageNo;
-    }
-
-    public function getPageNo()
-    {
-        return $this->pageNo;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-    private $startDate;
-
-    public function setStartDate($startDate)
-    {
-        $this->startDate             = $startDate;
-        $this->apiParas["startDate"] = $startDate;
-    }
-
-    public function getStartDate()
-    {
-        return $this->startDate;
-    }
-
-    private $endDate;
-
-    public function setEndDate($endDate)
-    {
-        $this->endDate             = $endDate;
-        $this->apiParas["endDate"] = $endDate;
-    }
-
-    public function getEndDate()
-    {
-        return $this->endDate;
-    }
-
-}
+                            }
 
 
 

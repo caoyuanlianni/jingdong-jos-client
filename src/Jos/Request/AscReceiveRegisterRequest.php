@@ -1,217 +1,179 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscReceiveRegisterRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.receive.register";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.receive.register";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    private $operatePin;
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
+                        	                   			private $receivePin;
+    	                        
+	public function setReceivePin($receivePin){
+		$this->receivePin = $receivePin;
+         $this->apiParas["receivePin"] = $receivePin;
+	}
 
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
+	public function getReceivePin(){
+	  return $this->receivePin;
+	}
 
-    private $operateNick;
+                        	                   			private $receiveName;
+    	                        
+	public function setReceiveName($receiveName){
+		$this->receiveName = $receiveName;
+         $this->apiParas["receiveName"] = $receiveName;
+	}
 
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
+	public function getReceiveName(){
+	  return $this->receiveName;
+	}
 
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
+                        	                   			private $packingState;
+    	                        
+	public function setPackingState($packingState){
+		$this->packingState = $packingState;
+         $this->apiParas["packingState"] = $packingState;
+	}
 
-    private $serviceId;
+	public function getPackingState(){
+	  return $this->packingState;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
+                        	                   			private $qualityState;
+    	                        
+	public function setQualityState($qualityState){
+		$this->qualityState = $qualityState;
+         $this->apiParas["qualityState"] = $qualityState;
+	}
 
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
+	public function getQualityState(){
+	  return $this->qualityState;
+	}
 
-    private $orderId;
+                        	                   			private $invoiceRecord;
+    	                        
+	public function setInvoiceRecord($invoiceRecord){
+		$this->invoiceRecord = $invoiceRecord;
+         $this->apiParas["invoiceRecord"] = $invoiceRecord;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getInvoiceRecord(){
+	  return $this->invoiceRecord;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $judgmentReason;
+    	                        
+	public function setJudgmentReason($judgmentReason){
+		$this->judgmentReason = $judgmentReason;
+         $this->apiParas["judgmentReason"] = $judgmentReason;
+	}
 
-    private $receivePin;
+	public function getJudgmentReason(){
+	  return $this->judgmentReason;
+	}
 
-    public function setReceivePin($receivePin)
-    {
-        $this->receivePin             = $receivePin;
-        $this->apiParas["receivePin"] = $receivePin;
-    }
+                        	                   			private $accessoryOrGift;
+    	                        
+	public function setAccessoryOrGift($accessoryOrGift){
+		$this->accessoryOrGift = $accessoryOrGift;
+         $this->apiParas["accessoryOrGift"] = $accessoryOrGift;
+	}
 
-    public function getReceivePin()
-    {
-        return $this->receivePin;
-    }
+	public function getAccessoryOrGift(){
+	  return $this->accessoryOrGift;
+	}
 
-    private $receiveName;
+                        	                   			private $appearanceState;
+    	                        
+	public function setAppearanceState($appearanceState){
+		$this->appearanceState = $appearanceState;
+         $this->apiParas["appearanceState"] = $appearanceState;
+	}
 
-    public function setReceiveName($receiveName)
-    {
-        $this->receiveName             = $receiveName;
-        $this->apiParas["receiveName"] = $receiveName;
-    }
+	public function getAppearanceState(){
+	  return $this->appearanceState;
+	}
 
-    public function getReceiveName()
-    {
-        return $this->receiveName;
-    }
+                        	                   			private $receiveRemark;
+    	                        
+	public function setReceiveRemark($receiveRemark){
+		$this->receiveRemark = $receiveRemark;
+         $this->apiParas["receiveRemark"] = $receiveRemark;
+	}
 
-    private $packingState;
+	public function getReceiveRemark(){
+	  return $this->receiveRemark;
+	}
 
-    public function setPackingState($packingState)
-    {
-        $this->packingState             = $packingState;
-        $this->apiParas["packingState"] = $packingState;
-    }
-
-    public function getPackingState()
-    {
-        return $this->packingState;
-    }
-
-    private $qualityState;
-
-    public function setQualityState($qualityState)
-    {
-        $this->qualityState             = $qualityState;
-        $this->apiParas["qualityState"] = $qualityState;
-    }
-
-    public function getQualityState()
-    {
-        return $this->qualityState;
-    }
-
-    private $invoiceRecord;
-
-    public function setInvoiceRecord($invoiceRecord)
-    {
-        $this->invoiceRecord             = $invoiceRecord;
-        $this->apiParas["invoiceRecord"] = $invoiceRecord;
-    }
-
-    public function getInvoiceRecord()
-    {
-        return $this->invoiceRecord;
-    }
-
-    private $judgmentReason;
-
-    public function setJudgmentReason($judgmentReason)
-    {
-        $this->judgmentReason             = $judgmentReason;
-        $this->apiParas["judgmentReason"] = $judgmentReason;
-    }
-
-    public function getJudgmentReason()
-    {
-        return $this->judgmentReason;
-    }
-
-    private $accessoryOrGift;
-
-    public function setAccessoryOrGift($accessoryOrGift)
-    {
-        $this->accessoryOrGift             = $accessoryOrGift;
-        $this->apiParas["accessoryOrGift"] = $accessoryOrGift;
-    }
-
-    public function getAccessoryOrGift()
-    {
-        return $this->accessoryOrGift;
-    }
-
-    private $appearanceState;
-
-    public function setAppearanceState($appearanceState)
-    {
-        $this->appearanceState             = $appearanceState;
-        $this->apiParas["appearanceState"] = $appearanceState;
-    }
-
-    public function getAppearanceState()
-    {
-        return $this->appearanceState;
-    }
-
-    private $receiveRemark;
-
-    public function setReceiveRemark($receiveRemark)
-    {
-        $this->receiveRemark             = $receiveRemark;
-        $this->apiParas["receiveRemark"] = $receiveRemark;
-    }
-
-    public function getReceiveRemark()
-    {
-        return $this->receiveRemark;
-    }
-
-}
+                            }
 
 
 

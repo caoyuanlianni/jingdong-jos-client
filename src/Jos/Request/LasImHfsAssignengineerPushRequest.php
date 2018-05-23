@@ -1,152 +1,124 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class LasImHfsAssignengineerPushRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.las.im.hfs.assignengineer.push";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $orderid;
+    	                        
+	public function setOrderid($orderid){
+		$this->orderid = $orderid;
+         $this->apiParas["orderid"] = $orderid;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.las.im.hfs.assignengineer.push";
-    }
+	public function getOrderid(){
+	  return $this->orderid;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $assignstatus;
+    	                        
+	public function setAssignstatus($assignstatus){
+		$this->assignstatus = $assignstatus;
+         $this->apiParas["assignstatus"] = $assignstatus;
+	}
 
-    public function check()
-    {
+	public function getAssignstatus(){
+	  return $this->assignstatus;
+	}
 
-    }
+                        	                   			private $engineerpin;
+    	                        
+	public function setEngineerpin($engineerpin){
+		$this->engineerpin = $engineerpin;
+         $this->apiParas["engineerpin"] = $engineerpin;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getEngineerpin(){
+	  return $this->engineerpin;
+	}
 
-    private $orderid;
+                        	                   			private $engineername;
+    	                        
+	public function setEngineername($engineername){
+		$this->engineername = $engineername;
+         $this->apiParas["engineername"] = $engineername;
+	}
 
-    public function setOrderid($orderid)
-    {
-        $this->orderid             = $orderid;
-        $this->apiParas["orderid"] = $orderid;
-    }
+	public function getEngineername(){
+	  return $this->engineername;
+	}
 
-    public function getOrderid()
-    {
-        return $this->orderid;
-    }
+                        	                   			private $engineerphone;
+    	                        
+	public function setEngineerphone($engineerphone){
+		$this->engineerphone = $engineerphone;
+         $this->apiParas["engineerphone"] = $engineerphone;
+	}
 
-    private $assignstatus;
+	public function getEngineerphone(){
+	  return $this->engineerphone;
+	}
 
-    public function setAssignstatus($assignstatus)
-    {
-        $this->assignstatus             = $assignstatus;
-        $this->apiParas["assignstatus"] = $assignstatus;
-    }
+                        	                   			private $serviceproviderno;
+    	                        
+	public function setServiceproviderno($serviceproviderno){
+		$this->serviceproviderno = $serviceproviderno;
+         $this->apiParas["serviceproviderno"] = $serviceproviderno;
+	}
 
-    public function getAssignstatus()
-    {
-        return $this->assignstatus;
-    }
+	public function getServiceproviderno(){
+	  return $this->serviceproviderno;
+	}
 
-    private $engineerpin;
+                        	                   			private $operatorpin;
+    	                        
+	public function setOperatorpin($operatorpin){
+		$this->operatorpin = $operatorpin;
+         $this->apiParas["operatorpin"] = $operatorpin;
+	}
 
-    public function setEngineerpin($engineerpin)
-    {
-        $this->engineerpin             = $engineerpin;
-        $this->apiParas["engineerpin"] = $engineerpin;
-    }
+	public function getOperatorpin(){
+	  return $this->operatorpin;
+	}
 
-    public function getEngineerpin()
-    {
-        return $this->engineerpin;
-    }
+                        	                   			private $operatetime;
+    	                        
+	public function setOperatetime($operatetime){
+		$this->operatetime = $operatetime;
+         $this->apiParas["operatetime"] = $operatetime;
+	}
 
-    private $engineername;
+	public function getOperatetime(){
+	  return $this->operatetime;
+	}
 
-    public function setEngineername($engineername)
-    {
-        $this->engineername             = $engineername;
-        $this->apiParas["engineername"] = $engineername;
-    }
+                        	                   			private $ordertype;
+    	                        
+	public function setOrdertype($ordertype){
+		$this->ordertype = $ordertype;
+         $this->apiParas["ordertype"] = $ordertype;
+	}
 
-    public function getEngineername()
-    {
-        return $this->engineername;
-    }
+	public function getOrdertype(){
+	  return $this->ordertype;
+	}
 
-    private $engineerphone;
-
-    public function setEngineerphone($engineerphone)
-    {
-        $this->engineerphone             = $engineerphone;
-        $this->apiParas["engineerphone"] = $engineerphone;
-    }
-
-    public function getEngineerphone()
-    {
-        return $this->engineerphone;
-    }
-
-    private $serviceproviderno;
-
-    public function setServiceproviderno($serviceproviderno)
-    {
-        $this->serviceproviderno             = $serviceproviderno;
-        $this->apiParas["serviceproviderno"] = $serviceproviderno;
-    }
-
-    public function getServiceproviderno()
-    {
-        return $this->serviceproviderno;
-    }
-
-    private $operatorpin;
-
-    public function setOperatorpin($operatorpin)
-    {
-        $this->operatorpin             = $operatorpin;
-        $this->apiParas["operatorpin"] = $operatorpin;
-    }
-
-    public function getOperatorpin()
-    {
-        return $this->operatorpin;
-    }
-
-    private $operatetime;
-
-    public function setOperatetime($operatetime)
-    {
-        $this->operatetime             = $operatetime;
-        $this->apiParas["operatetime"] = $operatetime;
-    }
-
-    public function getOperatetime()
-    {
-        return $this->operatetime;
-    }
-
-    private $ordertype;
-
-    public function setOrdertype($ordertype)
-    {
-        $this->ordertype             = $ordertype;
-        $this->apiParas["ordertype"] = $ordertype;
-    }
-
-    public function getOrdertype()
-    {
-        return $this->ordertype;
-    }
-
-}
+                            }
 
 
 

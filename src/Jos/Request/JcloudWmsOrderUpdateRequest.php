@@ -1,282 +1,234 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class JcloudWmsOrderUpdateRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.jcloud.wms.order.update";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                                            		                                    	                   			private $orderNo;
+    	                        
+	public function setOrderNo($orderNo){
+		$this->orderNo = $orderNo;
+         $this->apiParas["orderNo"] = $orderNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.jcloud.wms.order.update";
-    }
+	public function getOrderNo(){
+	  return $this->orderNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $warehouseNo;
+    	                        
+	public function setWarehouseNo($warehouseNo){
+		$this->warehouseNo = $warehouseNo;
+         $this->apiParas["warehouseNo"] = $warehouseNo;
+	}
 
-    public function check()
-    {
+	public function getWarehouseNo(){
+	  return $this->warehouseNo;
+	}
 
-    }
+                        	                   			private $tenantId;
+    	                        
+	public function setTenantId($tenantId){
+		$this->tenantId = $tenantId;
+         $this->apiParas["tenantId"] = $tenantId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getTenantId(){
+	  return $this->tenantId;
+	}
 
-    private $orderNo;
+                        	                   			private $billType;
+    	                        
+	public function setBillType($billType){
+		$this->billType = $billType;
+         $this->apiParas["billType"] = $billType;
+	}
 
-    public function setOrderNo($orderNo)
-    {
-        $this->orderNo             = $orderNo;
-        $this->apiParas["orderNo"] = $orderNo;
-    }
+	public function getBillType(){
+	  return $this->billType;
+	}
 
-    public function getOrderNo()
-    {
-        return $this->orderNo;
-    }
+                        	                   			private $ownerNo;
+    	                        
+	public function setOwnerNo($ownerNo){
+		$this->ownerNo = $ownerNo;
+         $this->apiParas["ownerNo"] = $ownerNo;
+	}
 
-    private $warehouseNo;
+	public function getOwnerNo(){
+	  return $this->ownerNo;
+	}
 
-    public function setWarehouseNo($warehouseNo)
-    {
-        $this->warehouseNo             = $warehouseNo;
-        $this->apiParas["warehouseNo"] = $warehouseNo;
-    }
+                        	                   			private $invoiceFlag;
+    	                        
+	public function setInvoiceFlag($invoiceFlag){
+		$this->invoiceFlag = $invoiceFlag;
+         $this->apiParas["invoiceFlag"] = $invoiceFlag;
+	}
 
-    public function getWarehouseNo()
-    {
-        return $this->warehouseNo;
-    }
+	public function getInvoiceFlag(){
+	  return $this->invoiceFlag;
+	}
 
-    private $tenantId;
+                        	                   			private $invoiceTitle;
+    	                        
+	public function setInvoiceTitle($invoiceTitle){
+		$this->invoiceTitle = $invoiceTitle;
+         $this->apiParas["invoiceTitle"] = $invoiceTitle;
+	}
 
-    public function setTenantId($tenantId)
-    {
-        $this->tenantId             = $tenantId;
-        $this->apiParas["tenantId"] = $tenantId;
-    }
+	public function getInvoiceTitle(){
+	  return $this->invoiceTitle;
+	}
 
-    public function getTenantId()
-    {
-        return $this->tenantId;
-    }
+                        	                   			private $invoiceContent;
+    	                        
+	public function setInvoiceContent($invoiceContent){
+		$this->invoiceContent = $invoiceContent;
+         $this->apiParas["invoiceContent"] = $invoiceContent;
+	}
 
-    private $billType;
+	public function getInvoiceContent(){
+	  return $this->invoiceContent;
+	}
 
-    public function setBillType($billType)
-    {
-        $this->billType             = $billType;
-        $this->apiParas["billType"] = $billType;
-    }
+                        	                   			private $notes;
+    	                        
+	public function setNotes($notes){
+		$this->notes = $notes;
+         $this->apiParas["notes"] = $notes;
+	}
 
-    public function getBillType()
-    {
-        return $this->billType;
-    }
+	public function getNotes(){
+	  return $this->notes;
+	}
 
-    private $ownerNo;
+                        	                   			private $sellerNotes;
+    	                        
+	public function setSellerNotes($sellerNotes){
+		$this->sellerNotes = $sellerNotes;
+         $this->apiParas["sellerNotes"] = $sellerNotes;
+	}
 
-    public function setOwnerNo($ownerNo)
-    {
-        $this->ownerNo             = $ownerNo;
-        $this->apiParas["ownerNo"] = $ownerNo;
-    }
+	public function getSellerNotes(){
+	  return $this->sellerNotes;
+	}
 
-    public function getOwnerNo()
-    {
-        return $this->ownerNo;
-    }
+                        	                   			private $province;
+    	                        
+	public function setProvince($province){
+		$this->province = $province;
+         $this->apiParas["province"] = $province;
+	}
 
-    private $invoiceFlag;
+	public function getProvince(){
+	  return $this->province;
+	}
 
-    public function setInvoiceFlag($invoiceFlag)
-    {
-        $this->invoiceFlag             = $invoiceFlag;
-        $this->apiParas["invoiceFlag"] = $invoiceFlag;
-    }
+                        	                   			private $city;
+    	                        
+	public function setCity($city){
+		$this->city = $city;
+         $this->apiParas["city"] = $city;
+	}
 
-    public function getInvoiceFlag()
-    {
-        return $this->invoiceFlag;
-    }
+	public function getCity(){
+	  return $this->city;
+	}
 
-    private $invoiceTitle;
+                        	                   			private $county;
+    	                        
+	public function setCounty($county){
+		$this->county = $county;
+         $this->apiParas["county"] = $county;
+	}
 
-    public function setInvoiceTitle($invoiceTitle)
-    {
-        $this->invoiceTitle             = $invoiceTitle;
-        $this->apiParas["invoiceTitle"] = $invoiceTitle;
-    }
+	public function getCounty(){
+	  return $this->county;
+	}
 
-    public function getInvoiceTitle()
-    {
-        return $this->invoiceTitle;
-    }
+                        	                   			private $zipcode;
+    	                        
+	public function setZipcode($zipcode){
+		$this->zipcode = $zipcode;
+         $this->apiParas["zipcode"] = $zipcode;
+	}
 
-    private $invoiceContent;
+	public function getZipcode(){
+	  return $this->zipcode;
+	}
 
-    public function setInvoiceContent($invoiceContent)
-    {
-        $this->invoiceContent             = $invoiceContent;
-        $this->apiParas["invoiceContent"] = $invoiceContent;
-    }
+                        	                   			private $contact;
+    	                        
+	public function setContact($contact){
+		$this->contact = $contact;
+         $this->apiParas["contact"] = $contact;
+	}
 
-    public function getInvoiceContent()
-    {
-        return $this->invoiceContent;
-    }
+	public function getContact(){
+	  return $this->contact;
+	}
 
-    private $notes;
+                        	                   			private $tel;
+    	                        
+	public function setTel($tel){
+		$this->tel = $tel;
+         $this->apiParas["tel"] = $tel;
+	}
 
-    public function setNotes($notes)
-    {
-        $this->notes             = $notes;
-        $this->apiParas["notes"] = $notes;
-    }
+	public function getTel(){
+	  return $this->tel;
+	}
 
-    public function getNotes()
-    {
-        return $this->notes;
-    }
+                        	                   			private $phone;
+    	                        
+	public function setPhone($phone){
+		$this->phone = $phone;
+         $this->apiParas["phone"] = $phone;
+	}
 
-    private $sellerNotes;
+	public function getPhone(){
+	  return $this->phone;
+	}
 
-    public function setSellerNotes($sellerNotes)
-    {
-        $this->sellerNotes             = $sellerNotes;
-        $this->apiParas["sellerNotes"] = $sellerNotes;
-    }
+                        	                   			private $address;
+    	                        
+	public function setAddress($address){
+		$this->address = $address;
+         $this->apiParas["address"] = $address;
+	}
 
-    public function getSellerNotes()
-    {
-        return $this->sellerNotes;
-    }
+	public function getAddress(){
+	  return $this->address;
+	}
 
-    private $province;
+                        	                   			private $operator;
+    	                        
+	public function setOperator($operator){
+		$this->operator = $operator;
+         $this->apiParas["operator"] = $operator;
+	}
 
-    public function setProvince($province)
-    {
-        $this->province             = $province;
-        $this->apiParas["province"] = $province;
-    }
+	public function getOperator(){
+	  return $this->operator;
+	}
 
-    public function getProvince()
-    {
-        return $this->province;
-    }
-
-    private $city;
-
-    public function setCity($city)
-    {
-        $this->city             = $city;
-        $this->apiParas["city"] = $city;
-    }
-
-    public function getCity()
-    {
-        return $this->city;
-    }
-
-    private $county;
-
-    public function setCounty($county)
-    {
-        $this->county             = $county;
-        $this->apiParas["county"] = $county;
-    }
-
-    public function getCounty()
-    {
-        return $this->county;
-    }
-
-    private $zipcode;
-
-    public function setZipcode($zipcode)
-    {
-        $this->zipcode             = $zipcode;
-        $this->apiParas["zipcode"] = $zipcode;
-    }
-
-    public function getZipcode()
-    {
-        return $this->zipcode;
-    }
-
-    private $contact;
-
-    public function setContact($contact)
-    {
-        $this->contact             = $contact;
-        $this->apiParas["contact"] = $contact;
-    }
-
-    public function getContact()
-    {
-        return $this->contact;
-    }
-
-    private $tel;
-
-    public function setTel($tel)
-    {
-        $this->tel             = $tel;
-        $this->apiParas["tel"] = $tel;
-    }
-
-    public function getTel()
-    {
-        return $this->tel;
-    }
-
-    private $phone;
-
-    public function setPhone($phone)
-    {
-        $this->phone             = $phone;
-        $this->apiParas["phone"] = $phone;
-    }
-
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-    private $address;
-
-    public function setAddress($address)
-    {
-        $this->address             = $address;
-        $this->apiParas["address"] = $address;
-    }
-
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    private $operator;
-
-    public function setOperator($operator)
-    {
-        $this->operator             = $operator;
-        $this->apiParas["operator"] = $operator;
-    }
-
-    public function getOperator()
-    {
-        return $this->operator;
-    }
-
-}
+                            }
 
 
 

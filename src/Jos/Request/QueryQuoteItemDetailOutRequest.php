@@ -1,87 +1,69 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class QueryQuoteItemDetailOutRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.queryQuoteItemDetailOut";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $operatorPin;
+    	                        
+	public function setOperatorPin($operatorPin){
+		$this->operatorPin = $operatorPin;
+         $this->apiParas["operatorPin"] = $operatorPin;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.queryQuoteItemDetailOut";
-    }
+	public function getOperatorPin(){
+	  return $this->operatorPin;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatorName;
+    	                        
+	public function setOperatorName($operatorName){
+		$this->operatorName = $operatorName;
+         $this->apiParas["operatorName"] = $operatorName;
+	}
 
-    public function check()
-    {
+	public function getOperatorName(){
+	  return $this->operatorName;
+	}
 
-    }
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    private $operatorPin;
+                        	                   			private $venderCode;
+    	                        
+	public function setVenderCode($venderCode){
+		$this->venderCode = $venderCode;
+         $this->apiParas["venderCode"] = $venderCode;
+	}
 
-    public function setOperatorPin($operatorPin)
-    {
-        $this->operatorPin             = $operatorPin;
-        $this->apiParas["operatorPin"] = $operatorPin;
-    }
+	public function getVenderCode(){
+	  return $this->venderCode;
+	}
 
-    public function getOperatorPin()
-    {
-        return $this->operatorPin;
-    }
-
-    private $operatorName;
-
-    public function setOperatorName($operatorName)
-    {
-        $this->operatorName             = $operatorName;
-        $this->apiParas["operatorName"] = $operatorName;
-    }
-
-    public function getOperatorName()
-    {
-        return $this->operatorName;
-    }
-
-    private $serviceId;
-
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
-
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
-
-    private $venderCode;
-
-    public function setVenderCode($venderCode)
-    {
-        $this->venderCode             = $venderCode;
-        $this->apiParas["venderCode"] = $venderCode;
-    }
-
-    public function getVenderCode()
-    {
-        return $this->venderCode;
-    }
-
-}
+                            }
 
 
 

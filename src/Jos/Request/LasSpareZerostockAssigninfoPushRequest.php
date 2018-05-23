@@ -1,126 +1,102 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class LasSpareZerostockAssigninfoPushRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.las.spare.zerostock.assigninfo.push";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $afsNo;
+    	                                                            
+	public function setAfsNo($afsNo){
+		$this->afsNo = $afsNo;
+         $this->apiParas["afs_no"] = $afsNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.las.spare.zerostock.assigninfo.push";
-    }
+	public function getAfsNo(){
+	  return $this->afsNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $ordNo;
+    	                                                            
+	public function setOrdNo($ordNo){
+		$this->ordNo = $ordNo;
+         $this->apiParas["ord_no"] = $ordNo;
+	}
 
-    public function check()
-    {
+	public function getOrdNo(){
+	  return $this->ordNo;
+	}
 
-    }
+                        	                   			private $afsSerTasNo;
+    	                                                                                    
+	public function setAfsSerTasNo($afsSerTasNo){
+		$this->afsSerTasNo = $afsSerTasNo;
+         $this->apiParas["afs_ser_tas_no"] = $afsSerTasNo;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getAfsSerTasNo(){
+	  return $this->afsSerTasNo;
+	}
 
-    private $afsNo;
+                        	                   			private $sitNo;
+    	                                                            
+	public function setSitNo($sitNo){
+		$this->sitNo = $sitNo;
+         $this->apiParas["sit_no"] = $sitNo;
+	}
 
-    public function setAfsNo($afsNo)
-    {
-        $this->afsNo              = $afsNo;
-        $this->apiParas["afs_no"] = $afsNo;
-    }
+	public function getSitNo(){
+	  return $this->sitNo;
+	}
 
-    public function getAfsNo()
-    {
-        return $this->afsNo;
-    }
+                        	                   			private $sitN;
+    	                                                            
+	public function setSitN($sitN){
+		$this->sitN = $sitN;
+         $this->apiParas["sit_n"] = $sitN;
+	}
 
-    private $ordNo;
+	public function getSitN(){
+	  return $this->sitN;
+	}
 
-    public function setOrdNo($ordNo)
-    {
-        $this->ordNo              = $ordNo;
-        $this->apiParas["ord_no"] = $ordNo;
-    }
+                        	                   			private $sitTel;
+    	                                                            
+	public function setSitTel($sitTel){
+		$this->sitTel = $sitTel;
+         $this->apiParas["sit_tel"] = $sitTel;
+	}
 
-    public function getOrdNo()
-    {
-        return $this->ordNo;
-    }
+	public function getSitTel(){
+	  return $this->sitTel;
+	}
 
-    private $afsSerTasNo;
+                        	                   			private $actT;
+    	                                                            
+	public function setActT($actT){
+		$this->actT = $actT;
+         $this->apiParas["act_t"] = $actT;
+	}
 
-    public function setAfsSerTasNo($afsSerTasNo)
-    {
-        $this->afsSerTasNo                = $afsSerTasNo;
-        $this->apiParas["afs_ser_tas_no"] = $afsSerTasNo;
-    }
+	public function getActT(){
+	  return $this->actT;
+	}
 
-    public function getAfsSerTasNo()
-    {
-        return $this->afsSerTasNo;
-    }
-
-    private $sitNo;
-
-    public function setSitNo($sitNo)
-    {
-        $this->sitNo              = $sitNo;
-        $this->apiParas["sit_no"] = $sitNo;
-    }
-
-    public function getSitNo()
-    {
-        return $this->sitNo;
-    }
-
-    private $sitN;
-
-    public function setSitN($sitN)
-    {
-        $this->sitN              = $sitN;
-        $this->apiParas["sit_n"] = $sitN;
-    }
-
-    public function getSitN()
-    {
-        return $this->sitN;
-    }
-
-    private $sitTel;
-
-    public function setSitTel($sitTel)
-    {
-        $this->sitTel              = $sitTel;
-        $this->apiParas["sit_tel"] = $sitTel;
-    }
-
-    public function getSitTel()
-    {
-        return $this->sitTel;
-    }
-
-    private $actT;
-
-    public function setActT($actT)
-    {
-        $this->actT              = $actT;
-        $this->apiParas["act_t"] = $actT;
-    }
-
-    public function getActT()
-    {
-        return $this->actT;
-    }
-
-}
+                            }
 
 
 

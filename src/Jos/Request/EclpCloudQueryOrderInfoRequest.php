@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpCloudQueryOrderInfoRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.cloud.queryOrderInfo";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $machiningNo;
+    	                        
+	public function setMachiningNo($machiningNo){
+		$this->machiningNo = $machiningNo;
+         $this->apiParas["machiningNo"] = $machiningNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.cloud.queryOrderInfo";
-    }
+	public function getMachiningNo(){
+	  return $this->machiningNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $machiningType;
+    	                        
+	public function setMachiningType($machiningType){
+		$this->machiningType = $machiningType;
+         $this->apiParas["machiningType"] = $machiningType;
+	}
 
-    public function check()
-    {
+	public function getMachiningType(){
+	  return $this->machiningType;
+	}
 
-    }
+                        	                   			private $timeStart;
+    	                        
+	public function setTimeStart($timeStart){
+		$this->timeStart = $timeStart;
+         $this->apiParas["timeStart"] = $timeStart;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getTimeStart(){
+	  return $this->timeStart;
+	}
 
-    private $machiningNo;
+                        	                   			private $timeEnd;
+    	                        
+	public function setTimeEnd($timeEnd){
+		$this->timeEnd = $timeEnd;
+         $this->apiParas["timeEnd"] = $timeEnd;
+	}
 
-    public function setMachiningNo($machiningNo)
-    {
-        $this->machiningNo             = $machiningNo;
-        $this->apiParas["machiningNo"] = $machiningNo;
-    }
+	public function getTimeEnd(){
+	  return $this->timeEnd;
+	}
 
-    public function getMachiningNo()
-    {
-        return $this->machiningNo;
-    }
+                        	                   			private $warehouseNo;
+    	                        
+	public function setWarehouseNo($warehouseNo){
+		$this->warehouseNo = $warehouseNo;
+         $this->apiParas["warehouseNo"] = $warehouseNo;
+	}
 
-    private $machiningType;
+	public function getWarehouseNo(){
+	  return $this->warehouseNo;
+	}
 
-    public function setMachiningType($machiningType)
-    {
-        $this->machiningType             = $machiningType;
-        $this->apiParas["machiningType"] = $machiningType;
-    }
+                        	                   			private $tenantId;
+    	                        
+	public function setTenantId($tenantId){
+		$this->tenantId = $tenantId;
+         $this->apiParas["tenantId"] = $tenantId;
+	}
 
-    public function getMachiningType()
-    {
-        return $this->machiningType;
-    }
+	public function getTenantId(){
+	  return $this->tenantId;
+	}
 
-    private $timeStart;
-
-    public function setTimeStart($timeStart)
-    {
-        $this->timeStart             = $timeStart;
-        $this->apiParas["timeStart"] = $timeStart;
-    }
-
-    public function getTimeStart()
-    {
-        return $this->timeStart;
-    }
-
-    private $timeEnd;
-
-    public function setTimeEnd($timeEnd)
-    {
-        $this->timeEnd             = $timeEnd;
-        $this->apiParas["timeEnd"] = $timeEnd;
-    }
-
-    public function getTimeEnd()
-    {
-        return $this->timeEnd;
-    }
-
-    private $warehouseNo;
-
-    public function setWarehouseNo($warehouseNo)
-    {
-        $this->warehouseNo             = $warehouseNo;
-        $this->apiParas["warehouseNo"] = $warehouseNo;
-    }
-
-    public function getWarehouseNo()
-    {
-        return $this->warehouseNo;
-    }
-
-    private $tenantId;
-
-    public function setTenantId($tenantId)
-    {
-        $this->tenantId             = $tenantId;
-        $this->apiParas["tenantId"] = $tenantId;
-    }
-
-    public function getTenantId()
-    {
-        return $this->tenantId;
-    }
-
-}
+                                                    	}
 
 
 

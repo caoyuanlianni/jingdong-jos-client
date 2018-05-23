@@ -1,165 +1,135 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpCloudCreateCarrierInfoToWMSRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.cloud.createCarrierInfoToWMS";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $carrierNo;
+    	                        
+	public function setCarrierNo($carrierNo){
+		$this->carrierNo = $carrierNo;
+         $this->apiParas["carrierNo"] = $carrierNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.cloud.createCarrierInfoToWMS";
-    }
+	public function getCarrierNo(){
+	  return $this->carrierNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $carrierName;
+    	                        
+	public function setCarrierName($carrierName){
+		$this->carrierName = $carrierName;
+         $this->apiParas["carrierName"] = $carrierName;
+	}
 
-    public function check()
-    {
+	public function getCarrierName(){
+	  return $this->carrierName;
+	}
 
-    }
+                        	                   			private $useFlag;
+    	                        
+	public function setUseFlag($useFlag){
+		$this->useFlag = $useFlag;
+         $this->apiParas["useFlag"] = $useFlag;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getUseFlag(){
+	  return $this->useFlag;
+	}
 
-    private $carrierNo;
+                        	                   			private $contact;
+    	                        
+	public function setContact($contact){
+		$this->contact = $contact;
+         $this->apiParas["contact"] = $contact;
+	}
 
-    public function setCarrierNo($carrierNo)
-    {
-        $this->carrierNo             = $carrierNo;
-        $this->apiParas["carrierNo"] = $carrierNo;
-    }
+	public function getContact(){
+	  return $this->contact;
+	}
 
-    public function getCarrierNo()
-    {
-        return $this->carrierNo;
-    }
+                        	                   			private $contactPhone;
+    	                        
+	public function setContactPhone($contactPhone){
+		$this->contactPhone = $contactPhone;
+         $this->apiParas["contactPhone"] = $contactPhone;
+	}
 
-    private $carrierName;
+	public function getContactPhone(){
+	  return $this->contactPhone;
+	}
 
-    public function setCarrierName($carrierName)
-    {
-        $this->carrierName             = $carrierName;
-        $this->apiParas["carrierName"] = $carrierName;
-    }
+                        	                   			private $address;
+    	                        
+	public function setAddress($address){
+		$this->address = $address;
+         $this->apiParas["address"] = $address;
+	}
 
-    public function getCarrierName()
-    {
-        return $this->carrierName;
-    }
+	public function getAddress(){
+	  return $this->address;
+	}
 
-    private $useFlag;
+                        	                   			private $memo;
+    	                        
+	public function setMemo($memo){
+		$this->memo = $memo;
+         $this->apiParas["memo"] = $memo;
+	}
 
-    public function setUseFlag($useFlag)
-    {
-        $this->useFlag             = $useFlag;
-        $this->apiParas["useFlag"] = $useFlag;
-    }
+	public function getMemo(){
+	  return $this->memo;
+	}
 
-    public function getUseFlag()
-    {
-        return $this->useFlag;
-    }
+                        	                   			private $operateUser;
+    	                        
+	public function setOperateUser($operateUser){
+		$this->operateUser = $operateUser;
+         $this->apiParas["operateUser"] = $operateUser;
+	}
 
-    private $contact;
+	public function getOperateUser(){
+	  return $this->operateUser;
+	}
 
-    public function setContact($contact)
-    {
-        $this->contact             = $contact;
-        $this->apiParas["contact"] = $contact;
-    }
+                        	                   			private $operateTime;
+    	                        
+	public function setOperateTime($operateTime){
+		$this->operateTime = $operateTime;
+         $this->apiParas["operateTime"] = $operateTime;
+	}
 
-    public function getContact()
-    {
-        return $this->contact;
-    }
+	public function getOperateTime(){
+	  return $this->operateTime;
+	}
 
-    private $contactPhone;
+                        	                   			private $tenantId;
+    	                        
+	public function setTenantId($tenantId){
+		$this->tenantId = $tenantId;
+         $this->apiParas["tenantId"] = $tenantId;
+	}
 
-    public function setContactPhone($contactPhone)
-    {
-        $this->contactPhone             = $contactPhone;
-        $this->apiParas["contactPhone"] = $contactPhone;
-    }
+	public function getTenantId(){
+	  return $this->tenantId;
+	}
 
-    public function getContactPhone()
-    {
-        return $this->contactPhone;
-    }
-
-    private $address;
-
-    public function setAddress($address)
-    {
-        $this->address             = $address;
-        $this->apiParas["address"] = $address;
-    }
-
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    private $memo;
-
-    public function setMemo($memo)
-    {
-        $this->memo             = $memo;
-        $this->apiParas["memo"] = $memo;
-    }
-
-    public function getMemo()
-    {
-        return $this->memo;
-    }
-
-    private $operateUser;
-
-    public function setOperateUser($operateUser)
-    {
-        $this->operateUser             = $operateUser;
-        $this->apiParas["operateUser"] = $operateUser;
-    }
-
-    public function getOperateUser()
-    {
-        return $this->operateUser;
-    }
-
-    private $operateTime;
-
-    public function setOperateTime($operateTime)
-    {
-        $this->operateTime             = $operateTime;
-        $this->apiParas["operateTime"] = $operateTime;
-    }
-
-    public function getOperateTime()
-    {
-        return $this->operateTime;
-    }
-
-    private $tenantId;
-
-    public function setTenantId($tenantId)
-    {
-        $this->tenantId             = $tenantId;
-        $this->apiParas["tenantId"] = $tenantId;
-    }
-
-    public function getTenantId()
-    {
-        return $this->tenantId;
-    }
-
-}
+                                                    	}
 
 
 

@@ -1,282 +1,234 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscReceiveCountRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.receive.count";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.receive.count";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    private $operatePin;
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
+                        	                   			private $skuId;
+    	                        
+	public function setSkuId($skuId){
+		$this->skuId = $skuId;
+         $this->apiParas["skuId"] = $skuId;
+	}
 
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
+	public function getSkuId(){
+	  return $this->skuId;
+	}
 
-    private $operateNick;
+                        	                   			private $applyTimeBegin;
+    	                        
+	public function setApplyTimeBegin($applyTimeBegin){
+		$this->applyTimeBegin = $applyTimeBegin;
+         $this->apiParas["applyTimeBegin"] = $applyTimeBegin;
+	}
 
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
+	public function getApplyTimeBegin(){
+	  return $this->applyTimeBegin;
+	}
 
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
+                        	                   			private $applyTimeEnd;
+    	                        
+	public function setApplyTimeEnd($applyTimeEnd){
+		$this->applyTimeEnd = $applyTimeEnd;
+         $this->apiParas["applyTimeEnd"] = $applyTimeEnd;
+	}
 
-    private $serviceId;
+	public function getApplyTimeEnd(){
+	  return $this->applyTimeEnd;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
+                        	                   			private $expressCode;
+    	                        
+	public function setExpressCode($expressCode){
+		$this->expressCode = $expressCode;
+         $this->apiParas["expressCode"] = $expressCode;
+	}
 
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
+	public function getExpressCode(){
+	  return $this->expressCode;
+	}
 
-    private $orderId;
+                        	                   			private $timeoutFlag;
+    	                        
+	public function setTimeoutFlag($timeoutFlag){
+		$this->timeoutFlag = $timeoutFlag;
+         $this->apiParas["timeoutFlag"] = $timeoutFlag;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getTimeoutFlag(){
+	  return $this->timeoutFlag;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $customerPin;
+    	                        
+	public function setCustomerPin($customerPin){
+		$this->customerPin = $customerPin;
+         $this->apiParas["customerPin"] = $customerPin;
+	}
 
-    private $skuId;
+	public function getCustomerPin(){
+	  return $this->customerPin;
+	}
 
-    public function setSkuId($skuId)
-    {
-        $this->skuId             = $skuId;
-        $this->apiParas["skuId"] = $skuId;
-    }
+                        	                   			private $customerName;
+    	                        
+	public function setCustomerName($customerName){
+		$this->customerName = $customerName;
+         $this->apiParas["customerName"] = $customerName;
+	}
 
-    public function getSkuId()
-    {
-        return $this->skuId;
-    }
+	public function getCustomerName(){
+	  return $this->customerName;
+	}
 
-    private $applyTimeBegin;
+                        	                   			private $customerTel;
+    	                        
+	public function setCustomerTel($customerTel){
+		$this->customerTel = $customerTel;
+         $this->apiParas["customerTel"] = $customerTel;
+	}
 
-    public function setApplyTimeBegin($applyTimeBegin)
-    {
-        $this->applyTimeBegin             = $applyTimeBegin;
-        $this->apiParas["applyTimeBegin"] = $applyTimeBegin;
-    }
+	public function getCustomerTel(){
+	  return $this->customerTel;
+	}
 
-    public function getApplyTimeBegin()
-    {
-        return $this->applyTimeBegin;
-    }
+                        	                   			private $dealType;
+    	                        
+	public function setDealType($dealType){
+		$this->dealType = $dealType;
+         $this->apiParas["dealType"] = $dealType;
+	}
 
-    private $applyTimeEnd;
+	public function getDealType(){
+	  return $this->dealType;
+	}
 
-    public function setApplyTimeEnd($applyTimeEnd)
-    {
-        $this->applyTimeEnd             = $applyTimeEnd;
-        $this->apiParas["applyTimeEnd"] = $applyTimeEnd;
-    }
+                        	                   			private $customerExpect;
+    	                        
+	public function setCustomerExpect($customerExpect){
+		$this->customerExpect = $customerExpect;
+         $this->apiParas["customerExpect"] = $customerExpect;
+	}
 
-    public function getApplyTimeEnd()
-    {
-        return $this->applyTimeEnd;
-    }
+	public function getCustomerExpect(){
+	  return $this->customerExpect;
+	}
 
-    private $expressCode;
+                        	                   			private $jdInterveneFlag;
+    	                        
+	public function setJdInterveneFlag($jdInterveneFlag){
+		$this->jdInterveneFlag = $jdInterveneFlag;
+         $this->apiParas["jdInterveneFlag"] = $jdInterveneFlag;
+	}
 
-    public function setExpressCode($expressCode)
-    {
-        $this->expressCode             = $expressCode;
-        $this->apiParas["expressCode"] = $expressCode;
-    }
+	public function getJdInterveneFlag(){
+	  return $this->jdInterveneFlag;
+	}
 
-    public function getExpressCode()
-    {
-        return $this->expressCode;
-    }
+                        	                   			private $approveResult;
+    	                        
+	public function setApproveResult($approveResult){
+		$this->approveResult = $approveResult;
+         $this->apiParas["approveResult"] = $approveResult;
+	}
 
-    private $timeoutFlag;
+	public function getApproveResult(){
+	  return $this->approveResult;
+	}
 
-    public function setTimeoutFlag($timeoutFlag)
-    {
-        $this->timeoutFlag             = $timeoutFlag;
-        $this->apiParas["timeoutFlag"] = $timeoutFlag;
-    }
+                        	                   			private $approveReasonCid1;
+    	                        
+	public function setApproveReasonCid1($approveReasonCid1){
+		$this->approveReasonCid1 = $approveReasonCid1;
+         $this->apiParas["approveReasonCid1"] = $approveReasonCid1;
+	}
 
-    public function getTimeoutFlag()
-    {
-        return $this->timeoutFlag;
-    }
+	public function getApproveReasonCid1(){
+	  return $this->approveReasonCid1;
+	}
 
-    private $customerPin;
+                        	                   			private $extJsonStr;
+    	                        
+	public function setExtJsonStr($extJsonStr){
+		$this->extJsonStr = $extJsonStr;
+         $this->apiParas["extJsonStr"] = $extJsonStr;
+	}
 
-    public function setCustomerPin($customerPin)
-    {
-        $this->customerPin             = $customerPin;
-        $this->apiParas["customerPin"] = $customerPin;
-    }
+	public function getExtJsonStr(){
+	  return $this->extJsonStr;
+	}
 
-    public function getCustomerPin()
-    {
-        return $this->customerPin;
-    }
-
-    private $customerName;
-
-    public function setCustomerName($customerName)
-    {
-        $this->customerName             = $customerName;
-        $this->apiParas["customerName"] = $customerName;
-    }
-
-    public function getCustomerName()
-    {
-        return $this->customerName;
-    }
-
-    private $customerTel;
-
-    public function setCustomerTel($customerTel)
-    {
-        $this->customerTel             = $customerTel;
-        $this->apiParas["customerTel"] = $customerTel;
-    }
-
-    public function getCustomerTel()
-    {
-        return $this->customerTel;
-    }
-
-    private $dealType;
-
-    public function setDealType($dealType)
-    {
-        $this->dealType             = $dealType;
-        $this->apiParas["dealType"] = $dealType;
-    }
-
-    public function getDealType()
-    {
-        return $this->dealType;
-    }
-
-    private $customerExpect;
-
-    public function setCustomerExpect($customerExpect)
-    {
-        $this->customerExpect             = $customerExpect;
-        $this->apiParas["customerExpect"] = $customerExpect;
-    }
-
-    public function getCustomerExpect()
-    {
-        return $this->customerExpect;
-    }
-
-    private $jdInterveneFlag;
-
-    public function setJdInterveneFlag($jdInterveneFlag)
-    {
-        $this->jdInterveneFlag             = $jdInterveneFlag;
-        $this->apiParas["jdInterveneFlag"] = $jdInterveneFlag;
-    }
-
-    public function getJdInterveneFlag()
-    {
-        return $this->jdInterveneFlag;
-    }
-
-    private $approveResult;
-
-    public function setApproveResult($approveResult)
-    {
-        $this->approveResult             = $approveResult;
-        $this->apiParas["approveResult"] = $approveResult;
-    }
-
-    public function getApproveResult()
-    {
-        return $this->approveResult;
-    }
-
-    private $approveReasonCid1;
-
-    public function setApproveReasonCid1($approveReasonCid1)
-    {
-        $this->approveReasonCid1             = $approveReasonCid1;
-        $this->apiParas["approveReasonCid1"] = $approveReasonCid1;
-    }
-
-    public function getApproveReasonCid1()
-    {
-        return $this->approveReasonCid1;
-    }
-
-    private $extJsonStr;
-
-    public function setExtJsonStr($extJsonStr)
-    {
-        $this->extJsonStr             = $extJsonStr;
-        $this->apiParas["extJsonStr"] = $extJsonStr;
-    }
-
-    public function getExtJsonStr()
-    {
-        return $this->extJsonStr;
-    }
-
-}
+                            }
 
 
 

@@ -1,74 +1,58 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class LdopAlphaProviderStockResetRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.ldop.alpha.provider.stock.reset";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $providerCode;
+    	                        
+	public function setProviderCode($providerCode){
+		$this->providerCode = $providerCode;
+         $this->apiParas["providerCode"] = $providerCode;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.ldop.alpha.provider.stock.reset";
-    }
+	public function getProviderCode(){
+	  return $this->providerCode;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $branchCode;
+    	                        
+	public function setBranchCode($branchCode){
+		$this->branchCode = $branchCode;
+         $this->apiParas["branchCode"] = $branchCode;
+	}
 
-    public function check()
-    {
+	public function getBranchCode(){
+	  return $this->branchCode;
+	}
 
-    }
+                        	                   			private $vendorCode;
+    	                        
+	public function setVendorCode($vendorCode){
+		$this->vendorCode = $vendorCode;
+         $this->apiParas["vendorCode"] = $vendorCode;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getVendorCode(){
+	  return $this->vendorCode;
+	}
 
-    private $providerCode;
-
-    public function setProviderCode($providerCode)
-    {
-        $this->providerCode             = $providerCode;
-        $this->apiParas["providerCode"] = $providerCode;
-    }
-
-    public function getProviderCode()
-    {
-        return $this->providerCode;
-    }
-
-    private $branchCode;
-
-    public function setBranchCode($branchCode)
-    {
-        $this->branchCode             = $branchCode;
-        $this->apiParas["branchCode"] = $branchCode;
-    }
-
-    public function getBranchCode()
-    {
-        return $this->branchCode;
-    }
-
-    private $vendorCode;
-
-    public function setVendorCode($vendorCode)
-    {
-        $this->vendorCode             = $vendorCode;
-        $this->apiParas["vendorCode"] = $vendorCode;
-    }
-
-    public function getVendorCode()
-    {
-        return $this->vendorCode;
-    }
-
-}
+                            }
 
 
 

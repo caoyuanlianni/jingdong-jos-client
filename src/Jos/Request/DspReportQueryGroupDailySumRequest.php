@@ -1,178 +1,146 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class DspReportQueryGroupDailySumRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.dsp.report.queryGroupDailySum";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                   			private $isDaily;
+    	                        
+	public function setIsDaily($isDaily){
+		$this->isDaily = $isDaily;
+         $this->apiParas["isDaily"] = $isDaily;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.dsp.report.queryGroupDailySum";
-    }
+	public function getIsDaily(){
+	  return $this->isDaily;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $campaignId;
+    	                        
+	public function setCampaignId($campaignId){
+		$this->campaignId = $campaignId;
+         $this->apiParas["campaignId"] = $campaignId;
+	}
 
-    public function check()
-    {
+	public function getCampaignId(){
+	  return $this->campaignId;
+	}
 
-    }
+                        	                   			private $groupId;
+    	                        
+	public function setGroupId($groupId){
+		$this->groupId = $groupId;
+         $this->apiParas["groupId"] = $groupId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getGroupId(){
+	  return $this->groupId;
+	}
 
-    private $isDaily;
+                        	                   			private $startDay;
+    	                        
+	public function setStartDay($startDay){
+		$this->startDay = $startDay;
+         $this->apiParas["startDay"] = $startDay;
+	}
 
-    public function setIsDaily($isDaily)
-    {
-        $this->isDaily             = $isDaily;
-        $this->apiParas["isDaily"] = $isDaily;
-    }
+	public function getStartDay(){
+	  return $this->startDay;
+	}
 
-    public function getIsDaily()
-    {
-        return $this->isDaily;
-    }
+                        	                   			private $endDay;
+    	                        
+	public function setEndDay($endDay){
+		$this->endDay = $endDay;
+         $this->apiParas["endDay"] = $endDay;
+	}
 
-    private $campaignId;
+	public function getEndDay(){
+	  return $this->endDay;
+	}
 
-    public function setCampaignId($campaignId)
-    {
-        $this->campaignId             = $campaignId;
-        $this->apiParas["campaignId"] = $campaignId;
-    }
+                        	                   			private $isOrderOrClick;
+    	                        
+	public function setIsOrderOrClick($isOrderOrClick){
+		$this->isOrderOrClick = $isOrderOrClick;
+         $this->apiParas["isOrderOrClick"] = $isOrderOrClick;
+	}
 
-    public function getCampaignId()
-    {
-        return $this->campaignId;
-    }
+	public function getIsOrderOrClick(){
+	  return $this->isOrderOrClick;
+	}
 
-    private $groupId;
+                        	                   			private $isTodayOr15Days;
+    	                        
+	public function setIsTodayOr15Days($isTodayOr15Days){
+		$this->isTodayOr15Days = $isTodayOr15Days;
+         $this->apiParas["isTodayOr15Days"] = $isTodayOr15Days;
+	}
 
-    public function setGroupId($groupId)
-    {
-        $this->groupId             = $groupId;
-        $this->apiParas["groupId"] = $groupId;
-    }
+	public function getIsTodayOr15Days(){
+	  return $this->isTodayOr15Days;
+	}
 
-    public function getGroupId()
-    {
-        return $this->groupId;
-    }
+                        	                   			private $orderStatusCategory;
+    	                        
+	public function setOrderStatusCategory($orderStatusCategory){
+		$this->orderStatusCategory = $orderStatusCategory;
+         $this->apiParas["orderStatusCategory"] = $orderStatusCategory;
+	}
 
-    private $startDay;
+	public function getOrderStatusCategory(){
+	  return $this->orderStatusCategory;
+	}
 
-    public function setStartDay($startDay)
-    {
-        $this->startDay             = $startDay;
-        $this->apiParas["startDay"] = $startDay;
-    }
+                        	                   			private $platform;
+    	                        
+	public function setPlatform($platform){
+		$this->platform = $platform;
+         $this->apiParas["platform"] = $platform;
+	}
 
-    public function getStartDay()
-    {
-        return $this->startDay;
-    }
+	public function getPlatform(){
+	  return $this->platform;
+	}
 
-    private $endDay;
+                        	                   			private $pageIndex;
+    	                        
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["pageIndex"] = $pageIndex;
+	}
 
-    public function setEndDay($endDay)
-    {
-        $this->endDay             = $endDay;
-        $this->apiParas["endDay"] = $endDay;
-    }
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    public function getEndDay()
-    {
-        return $this->endDay;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    private $isOrderOrClick;
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function setIsOrderOrClick($isOrderOrClick)
-    {
-        $this->isOrderOrClick             = $isOrderOrClick;
-        $this->apiParas["isOrderOrClick"] = $isOrderOrClick;
-    }
-
-    public function getIsOrderOrClick()
-    {
-        return $this->isOrderOrClick;
-    }
-
-    private $isTodayOr15Days;
-
-    public function setIsTodayOr15Days($isTodayOr15Days)
-    {
-        $this->isTodayOr15Days             = $isTodayOr15Days;
-        $this->apiParas["isTodayOr15Days"] = $isTodayOr15Days;
-    }
-
-    public function getIsTodayOr15Days()
-    {
-        return $this->isTodayOr15Days;
-    }
-
-    private $orderStatusCategory;
-
-    public function setOrderStatusCategory($orderStatusCategory)
-    {
-        $this->orderStatusCategory             = $orderStatusCategory;
-        $this->apiParas["orderStatusCategory"] = $orderStatusCategory;
-    }
-
-    public function getOrderStatusCategory()
-    {
-        return $this->orderStatusCategory;
-    }
-
-    private $platform;
-
-    public function setPlatform($platform)
-    {
-        $this->platform             = $platform;
-        $this->apiParas["platform"] = $platform;
-    }
-
-    public function getPlatform()
-    {
-        return $this->platform;
-    }
-
-    private $pageIndex;
-
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex             = $pageIndex;
-        $this->apiParas["pageIndex"] = $pageIndex;
-    }
-
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                                                    	}
 
 
 

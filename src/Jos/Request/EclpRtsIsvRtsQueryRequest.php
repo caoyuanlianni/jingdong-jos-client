@@ -1,281 +1,224 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpRtsIsvRtsQueryRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.rts.isvRtsQuery";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $eclpRtsNo;
+    	                        
+	public function setEclpRtsNo($eclpRtsNo){
+		$this->eclpRtsNo = $eclpRtsNo;
+         $this->apiParas["eclpRtsNo"] = $eclpRtsNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.rts.isvRtsQuery";
-    }
+	public function getEclpRtsNo(){
+	  return $this->eclpRtsNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $isvRtsNum;
+    	                        
+	public function setIsvRtsNum($isvRtsNum){
+		$this->isvRtsNum = $isvRtsNum;
+         $this->apiParas["isvRtsNum"] = $isvRtsNum;
+	}
 
-    public function check()
-    {
+	public function getIsvRtsNum(){
+	  return $this->isvRtsNum;
+	}
 
-    }
+                        	                   			private $deptNo;
+    	                        
+	public function setDeptNo($deptNo){
+		$this->deptNo = $deptNo;
+         $this->apiParas["deptNo"] = $deptNo;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getDeptNo(){
+	  return $this->deptNo;
+	}
 
-    private $eclpRtsNo;
+                        	                   			private $deliveryMode;
+    	                        
+	public function setDeliveryMode($deliveryMode){
+		$this->deliveryMode = $deliveryMode;
+         $this->apiParas["deliveryMode"] = $deliveryMode;
+	}
 
-    public function setEclpRtsNo($eclpRtsNo)
-    {
-        $this->eclpRtsNo             = $eclpRtsNo;
-        $this->apiParas["eclpRtsNo"] = $eclpRtsNo;
-    }
+	public function getDeliveryMode(){
+	  return $this->deliveryMode;
+	}
 
-    public function getEclpRtsNo()
-    {
-        return $this->eclpRtsNo;
-    }
+                        	                   			private $warehouseNo;
+    	                        
+	public function setWarehouseNo($warehouseNo){
+		$this->warehouseNo = $warehouseNo;
+         $this->apiParas["warehouseNo"] = $warehouseNo;
+	}
 
-    private $isvRtsNum;
+	public function getWarehouseNo(){
+	  return $this->warehouseNo;
+	}
 
-    public function setIsvRtsNum($isvRtsNum)
-    {
-        $this->isvRtsNum             = $isvRtsNum;
-        $this->apiParas["isvRtsNum"] = $isvRtsNum;
-    }
+                        	                   			private $supplierNo;
+    	                        
+	public function setSupplierNo($supplierNo){
+		$this->supplierNo = $supplierNo;
+         $this->apiParas["supplierNo"] = $supplierNo;
+	}
 
-    public function getIsvRtsNum()
-    {
-        return $this->isvRtsNum;
-    }
+	public function getSupplierNo(){
+	  return $this->supplierNo;
+	}
 
-    private $deptNo;
+                        	                   			private $receiver;
+    	                        
+	public function setReceiver($receiver){
+		$this->receiver = $receiver;
+         $this->apiParas["receiver"] = $receiver;
+	}
 
-    public function setDeptNo($deptNo)
-    {
-        $this->deptNo             = $deptNo;
-        $this->apiParas["deptNo"] = $deptNo;
-    }
+	public function getReceiver(){
+	  return $this->receiver;
+	}
 
-    public function getDeptNo()
-    {
-        return $this->deptNo;
-    }
+                        	                   			private $receiverPhone;
+    	                        
+	public function setReceiverPhone($receiverPhone){
+		$this->receiverPhone = $receiverPhone;
+         $this->apiParas["receiverPhone"] = $receiverPhone;
+	}
 
-    private $deliveryMode;
+	public function getReceiverPhone(){
+	  return $this->receiverPhone;
+	}
 
-    public function setDeliveryMode($deliveryMode)
-    {
-        $this->deliveryMode             = $deliveryMode;
-        $this->apiParas["deliveryMode"] = $deliveryMode;
-    }
+                        	                   			private $email;
+    	                        
+	public function setEmail($email){
+		$this->email = $email;
+         $this->apiParas["email"] = $email;
+	}
 
-    public function getDeliveryMode()
-    {
-        return $this->deliveryMode;
-    }
+	public function getEmail(){
+	  return $this->email;
+	}
 
-    private $warehouseNo;
+                        	                   			private $province;
+    	                        
+	public function setProvince($province){
+		$this->province = $province;
+         $this->apiParas["province"] = $province;
+	}
 
-    public function setWarehouseNo($warehouseNo)
-    {
-        $this->warehouseNo             = $warehouseNo;
-        $this->apiParas["warehouseNo"] = $warehouseNo;
-    }
+	public function getProvince(){
+	  return $this->province;
+	}
 
-    public function getWarehouseNo()
-    {
-        return $this->warehouseNo;
-    }
+                        	                   			private $city;
+    	                        
+	public function setCity($city){
+		$this->city = $city;
+         $this->apiParas["city"] = $city;
+	}
 
-    private $supplierNo;
+	public function getCity(){
+	  return $this->city;
+	}
 
-    public function setSupplierNo($supplierNo)
-    {
-        $this->supplierNo             = $supplierNo;
-        $this->apiParas["supplierNo"] = $supplierNo;
-    }
+                        	                   			private $county;
+    	                        
+	public function setCounty($county){
+		$this->county = $county;
+         $this->apiParas["county"] = $county;
+	}
 
-    public function getSupplierNo()
-    {
-        return $this->supplierNo;
-    }
+	public function getCounty(){
+	  return $this->county;
+	}
 
-    private $receiver;
+                        	                   			private $town;
+    	                        
+	public function setTown($town){
+		$this->town = $town;
+         $this->apiParas["town"] = $town;
+	}
 
-    public function setReceiver($receiver)
-    {
-        $this->receiver             = $receiver;
-        $this->apiParas["receiver"] = $receiver;
-    }
+	public function getTown(){
+	  return $this->town;
+	}
 
-    public function getReceiver()
-    {
-        return $this->receiver;
-    }
+                        	                   			private $address;
+    	                        
+	public function setAddress($address){
+		$this->address = $address;
+         $this->apiParas["address"] = $address;
+	}
 
-    private $receiverPhone;
+	public function getAddress(){
+	  return $this->address;
+	}
 
-    public function setReceiverPhone($receiverPhone)
-    {
-        $this->receiverPhone             = $receiverPhone;
-        $this->apiParas["receiverPhone"] = $receiverPhone;
-    }
+                                                 	                        	                                                                                                                                                                                                                                                                                        private $deptGoodsNo;
+                              public function setDeptGoodsNo($deptGoodsNo ){
+                 $this->deptGoodsNo=$deptGoodsNo;
+                 $this->apiParas["deptGoodsNo"] = $deptGoodsNo;
+              }
 
-    public function getReceiverPhone()
-    {
-        return $this->receiverPhone;
-    }
+              public function getDeptGoodsNo(){
+              	return $this->deptGoodsNo;
+              }
+                                                                                                                                                                                                                                                                                                                       private $goodsName;
+                              public function setGoodsName($goodsName ){
+                 $this->goodsName=$goodsName;
+                 $this->apiParas["goodsName"] = $goodsName;
+              }
 
-    private $email;
+              public function getGoodsName(){
+              	return $this->goodsName;
+              }
+                                                                                                                                                                                                                                                                                                                       private $quantity;
+                              public function setQuantity($quantity ){
+                 $this->quantity=$quantity;
+                 $this->apiParas["quantity"] = $quantity;
+              }
 
-    public function setEmail($email)
-    {
-        $this->email             = $email;
-        $this->apiParas["email"] = $email;
-    }
+              public function getQuantity(){
+              	return $this->quantity;
+              }
+                                                                                                                                                                                                                                                                                                                       private $realQuantity;
+                              public function setRealQuantity($realQuantity ){
+                 $this->realQuantity=$realQuantity;
+                 $this->apiParas["realQuantity"] = $realQuantity;
+              }
 
-    public function getEmail()
-    {
-        return $this->email;
-    }
+              public function getRealQuantity(){
+              	return $this->realQuantity;
+              }
+                                                                                                                                                                                                                                                                                                                       private $goodsStatus;
+                              public function setGoodsStatus($goodsStatus ){
+                 $this->goodsStatus=$goodsStatus;
+                 $this->apiParas["goodsStatus"] = $goodsStatus;
+              }
 
-    private $province;
-
-    public function setProvince($province)
-    {
-        $this->province             = $province;
-        $this->apiParas["province"] = $province;
-    }
-
-    public function getProvince()
-    {
-        return $this->province;
-    }
-
-    private $city;
-
-    public function setCity($city)
-    {
-        $this->city             = $city;
-        $this->apiParas["city"] = $city;
-    }
-
-    public function getCity()
-    {
-        return $this->city;
-    }
-
-    private $county;
-
-    public function setCounty($county)
-    {
-        $this->county             = $county;
-        $this->apiParas["county"] = $county;
-    }
-
-    public function getCounty()
-    {
-        return $this->county;
-    }
-
-    private $town;
-
-    public function setTown($town)
-    {
-        $this->town             = $town;
-        $this->apiParas["town"] = $town;
-    }
-
-    public function getTown()
-    {
-        return $this->town;
-    }
-
-    private $address;
-
-    public function setAddress($address)
-    {
-        $this->address             = $address;
-        $this->apiParas["address"] = $address;
-    }
-
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    private $deptGoodsNo;
-
-    public function setDeptGoodsNo($deptGoodsNo)
-    {
-        $this->deptGoodsNo             = $deptGoodsNo;
-        $this->apiParas["deptGoodsNo"] = $deptGoodsNo;
-    }
-
-    public function getDeptGoodsNo()
-    {
-        return $this->deptGoodsNo;
-    }
-
-    private $goodsName;
-
-    public function setGoodsName($goodsName)
-    {
-        $this->goodsName             = $goodsName;
-        $this->apiParas["goodsName"] = $goodsName;
-    }
-
-    public function getGoodsName()
-    {
-        return $this->goodsName;
-    }
-
-    private $quantity;
-
-    public function setQuantity($quantity)
-    {
-        $this->quantity             = $quantity;
-        $this->apiParas["quantity"] = $quantity;
-    }
-
-    public function getQuantity()
-    {
-        return $this->quantity;
-    }
-
-    private $realQuantity;
-
-    public function setRealQuantity($realQuantity)
-    {
-        $this->realQuantity             = $realQuantity;
-        $this->apiParas["realQuantity"] = $realQuantity;
-    }
-
-    public function getRealQuantity()
-    {
-        return $this->realQuantity;
-    }
-
-    private $goodsStatus;
-
-    public function setGoodsStatus($goodsStatus)
-    {
-        $this->goodsStatus             = $goodsStatus;
-        $this->apiParas["goodsStatus"] = $goodsStatus;
-    }
-
-    public function getGoodsStatus()
-    {
-        return $this->goodsStatus;
-    }
-}
+              public function getGoodsStatus(){
+              	return $this->goodsStatus;
+              }
+                                                                                                                                                                    	}
 
 
 

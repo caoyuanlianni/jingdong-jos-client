@@ -1,191 +1,157 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscSyncListRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.sync.list";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.sync.list";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    private $operatePin;
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
+                        	                   			private $serviceStatus;
+    	                        
+	public function setServiceStatus($serviceStatus){
+		$this->serviceStatus = $serviceStatus;
+         $this->apiParas["serviceStatus"] = $serviceStatus;
+	}
 
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
+	public function getServiceStatus(){
+	  return $this->serviceStatus;
+	}
 
-    private $operateNick;
+                        	                   			private $orderType;
+    	                        
+	public function setOrderType($orderType){
+		$this->orderType = $orderType;
+         $this->apiParas["orderType"] = $orderType;
+	}
 
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
+	public function getOrderType(){
+	  return $this->orderType;
+	}
 
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
+                        	                   			private $updateTimeBegin;
+    	                        
+	public function setUpdateTimeBegin($updateTimeBegin){
+		$this->updateTimeBegin = $updateTimeBegin;
+         $this->apiParas["updateTimeBegin"] = $updateTimeBegin;
+	}
 
-    private $serviceId;
+	public function getUpdateTimeBegin(){
+	  return $this->updateTimeBegin;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
+                        	                   			private $updateTimeEnd;
+    	                        
+	public function setUpdateTimeEnd($updateTimeEnd){
+		$this->updateTimeEnd = $updateTimeEnd;
+         $this->apiParas["updateTimeEnd"] = $updateTimeEnd;
+	}
 
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
+	public function getUpdateTimeEnd(){
+	  return $this->updateTimeEnd;
+	}
 
-    private $orderId;
+                                            		                                    	                   			private $pageNumber;
+    	                        
+	public function setPageNumber($pageNumber){
+		$this->pageNumber = $pageNumber;
+         $this->apiParas["pageNumber"] = $pageNumber;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getPageNumber(){
+	  return $this->pageNumber;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    private $serviceStatus;
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function setServiceStatus($serviceStatus)
-    {
-        $this->serviceStatus             = $serviceStatus;
-        $this->apiParas["serviceStatus"] = $serviceStatus;
-    }
+                                                    	                   			private $extJsonStr;
+    	                        
+	public function setExtJsonStr($extJsonStr){
+		$this->extJsonStr = $extJsonStr;
+         $this->apiParas["extJsonStr"] = $extJsonStr;
+	}
 
-    public function getServiceStatus()
-    {
-        return $this->serviceStatus;
-    }
+	public function getExtJsonStr(){
+	  return $this->extJsonStr;
+	}
 
-    private $orderType;
-
-    public function setOrderType($orderType)
-    {
-        $this->orderType             = $orderType;
-        $this->apiParas["orderType"] = $orderType;
-    }
-
-    public function getOrderType()
-    {
-        return $this->orderType;
-    }
-
-    private $updateTimeBegin;
-
-    public function setUpdateTimeBegin($updateTimeBegin)
-    {
-        $this->updateTimeBegin             = $updateTimeBegin;
-        $this->apiParas["updateTimeBegin"] = $updateTimeBegin;
-    }
-
-    public function getUpdateTimeBegin()
-    {
-        return $this->updateTimeBegin;
-    }
-
-    private $updateTimeEnd;
-
-    public function setUpdateTimeEnd($updateTimeEnd)
-    {
-        $this->updateTimeEnd             = $updateTimeEnd;
-        $this->apiParas["updateTimeEnd"] = $updateTimeEnd;
-    }
-
-    public function getUpdateTimeEnd()
-    {
-        return $this->updateTimeEnd;
-    }
-
-    private $pageNumber;
-
-    public function setPageNumber($pageNumber)
-    {
-        $this->pageNumber             = $pageNumber;
-        $this->apiParas["pageNumber"] = $pageNumber;
-    }
-
-    public function getPageNumber()
-    {
-        return $this->pageNumber;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-    private $extJsonStr;
-
-    public function setExtJsonStr($extJsonStr)
-    {
-        $this->extJsonStr             = $extJsonStr;
-        $this->apiParas["extJsonStr"] = $extJsonStr;
-    }
-
-    public function getExtJsonStr()
-    {
-        return $this->extJsonStr;
-    }
-
-}
+                            }
 
 
 

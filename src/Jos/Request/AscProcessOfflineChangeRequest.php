@@ -1,243 +1,201 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscProcessOfflineChangeRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.process.offline.change";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.process.offline.change";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $operateRemark;
+    	                        
+	public function setOperateRemark($operateRemark){
+		$this->operateRemark = $operateRemark;
+         $this->apiParas["operateRemark"] = $operateRemark;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getOperateRemark(){
+	  return $this->operateRemark;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    private $operatePin;
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
+                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    private $operateNick;
+                        	                   			private $sysVersion;
+    	                        
+	public function setSysVersion($sysVersion){
+		$this->sysVersion = $sysVersion;
+         $this->apiParas["sysVersion"] = $sysVersion;
+	}
 
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
+	public function getSysVersion(){
+	  return $this->sysVersion;
+	}
 
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
+                        	                   			private $opFlag;
+    	                        
+	public function setOpFlag($opFlag){
+		$this->opFlag = $opFlag;
+         $this->apiParas["opFlag"] = $opFlag;
+	}
 
-    private $operateRemark;
+	public function getOpFlag(){
+	  return $this->opFlag;
+	}
 
-    public function setOperateRemark($operateRemark)
-    {
-        $this->operateRemark             = $operateRemark;
-        $this->apiParas["operateRemark"] = $operateRemark;
-    }
+                        	                   			private $partExpressId;
+    	                        
+	public function setPartExpressId($partExpressId){
+		$this->partExpressId = $partExpressId;
+         $this->apiParas["partExpressId"] = $partExpressId;
+	}
 
-    public function getOperateRemark()
-    {
-        return $this->operateRemark;
-    }
+	public function getPartExpressId(){
+	  return $this->partExpressId;
+	}
 
-    private $serviceId;
+                        	                   			private $shipWayId;
+    	                        
+	public function setShipWayId($shipWayId){
+		$this->shipWayId = $shipWayId;
+         $this->apiParas["shipWayId"] = $shipWayId;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
+	public function getShipWayId(){
+	  return $this->shipWayId;
+	}
 
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
+                        	                   			private $shipWayName;
+    	                        
+	public function setShipWayName($shipWayName){
+		$this->shipWayName = $shipWayName;
+         $this->apiParas["shipWayName"] = $shipWayName;
+	}
 
-    private $orderId;
+	public function getShipWayName(){
+	  return $this->shipWayName;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+                        	                   			private $expressCode;
+    	                        
+	public function setExpressCode($expressCode){
+		$this->expressCode = $expressCode;
+         $this->apiParas["expressCode"] = $expressCode;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+	public function getExpressCode(){
+	  return $this->expressCode;
+	}
 
-    private $sysVersion;
+                        	                   			private $relationBillId;
+    	                        
+	public function setRelationBillId($relationBillId){
+		$this->relationBillId = $relationBillId;
+         $this->apiParas["relationBillId"] = $relationBillId;
+	}
 
-    public function setSysVersion($sysVersion)
-    {
-        $this->sysVersion             = $sysVersion;
-        $this->apiParas["sysVersion"] = $sysVersion;
-    }
+	public function getRelationBillId(){
+	  return $this->relationBillId;
+	}
 
-    public function getSysVersion()
-    {
-        return $this->sysVersion;
-    }
+                        	                   			private $wareType;
+    	                        
+	public function setWareType($wareType){
+		$this->wareType = $wareType;
+         $this->apiParas["wareType"] = $wareType;
+	}
 
-    private $opFlag;
+	public function getWareType(){
+	  return $this->wareType;
+	}
 
-    public function setOpFlag($opFlag)
-    {
-        $this->opFlag             = $opFlag;
-        $this->apiParas["opFlag"] = $opFlag;
-    }
+                        	                   			private $partSrc;
+    	                        
+	public function setPartSrc($partSrc){
+		$this->partSrc = $partSrc;
+         $this->apiParas["partSrc"] = $partSrc;
+	}
 
-    public function getOpFlag()
-    {
-        return $this->opFlag;
-    }
+	public function getPartSrc(){
+	  return $this->partSrc;
+	}
 
-    private $partExpressId;
+                        	                   			private $extJsonStr;
+    	                        
+	public function setExtJsonStr($extJsonStr){
+		$this->extJsonStr = $extJsonStr;
+         $this->apiParas["extJsonStr"] = $extJsonStr;
+	}
 
-    public function setPartExpressId($partExpressId)
-    {
-        $this->partExpressId             = $partExpressId;
-        $this->apiParas["partExpressId"] = $partExpressId;
-    }
+	public function getExtJsonStr(){
+	  return $this->extJsonStr;
+	}
 
-    public function getPartExpressId()
-    {
-        return $this->partExpressId;
-    }
-
-    private $shipWayId;
-
-    public function setShipWayId($shipWayId)
-    {
-        $this->shipWayId             = $shipWayId;
-        $this->apiParas["shipWayId"] = $shipWayId;
-    }
-
-    public function getShipWayId()
-    {
-        return $this->shipWayId;
-    }
-
-    private $shipWayName;
-
-    public function setShipWayName($shipWayName)
-    {
-        $this->shipWayName             = $shipWayName;
-        $this->apiParas["shipWayName"] = $shipWayName;
-    }
-
-    public function getShipWayName()
-    {
-        return $this->shipWayName;
-    }
-
-    private $expressCode;
-
-    public function setExpressCode($expressCode)
-    {
-        $this->expressCode             = $expressCode;
-        $this->apiParas["expressCode"] = $expressCode;
-    }
-
-    public function getExpressCode()
-    {
-        return $this->expressCode;
-    }
-
-    private $relationBillId;
-
-    public function setRelationBillId($relationBillId)
-    {
-        $this->relationBillId             = $relationBillId;
-        $this->apiParas["relationBillId"] = $relationBillId;
-    }
-
-    public function getRelationBillId()
-    {
-        return $this->relationBillId;
-    }
-
-    private $wareType;
-
-    public function setWareType($wareType)
-    {
-        $this->wareType             = $wareType;
-        $this->apiParas["wareType"] = $wareType;
-    }
-
-    public function getWareType()
-    {
-        return $this->wareType;
-    }
-
-    private $partSrc;
-
-    public function setPartSrc($partSrc)
-    {
-        $this->partSrc             = $partSrc;
-        $this->apiParas["partSrc"] = $partSrc;
-    }
-
-    public function getPartSrc()
-    {
-        return $this->partSrc;
-    }
-
-    private $extJsonStr;
-
-    public function setExtJsonStr($extJsonStr)
-    {
-        $this->extJsonStr             = $extJsonStr;
-        $this->apiParas["extJsonStr"] = $extJsonStr;
-    }
-
-    public function getExtJsonStr()
-    {
-        return $this->extJsonStr;
-    }
-
-}
+                            }
 
 
 

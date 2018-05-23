@@ -1,100 +1,80 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class PoDetailPageGetRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.po.detail.page.get";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.po.detail.page.get";
-    }
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                        	                   			private $sortFiled;
+    	                        
+	public function setSortFiled($sortFiled){
+		$this->sortFiled = $sortFiled;
+         $this->apiParas["sortFiled"] = $sortFiled;
+	}
 
-    public function check()
-    {
+	public function getSortFiled(){
+	  return $this->sortFiled;
+	}
 
-    }
+                        	                   			private $sortMode;
+    	                        
+	public function setSortMode($sortMode){
+		$this->sortMode = $sortMode;
+         $this->apiParas["sortMode"] = $sortMode;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getSortMode(){
+	  return $this->sortMode;
+	}
 
-    private $orderId;
+                        	                   			private $pageIndex;
+    	                        
+	public function setPageIndex($pageIndex){
+		$this->pageIndex = $pageIndex;
+         $this->apiParas["pageIndex"] = $pageIndex;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getPageIndex(){
+	  return $this->pageIndex;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    private $sortFiled;
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function setSortFiled($sortFiled)
-    {
-        $this->sortFiled             = $sortFiled;
-        $this->apiParas["sortFiled"] = $sortFiled;
-    }
-
-    public function getSortFiled()
-    {
-        return $this->sortFiled;
-    }
-
-    private $sortMode;
-
-    public function setSortMode($sortMode)
-    {
-        $this->sortMode             = $sortMode;
-        $this->apiParas["sortMode"] = $sortMode;
-    }
-
-    public function getSortMode()
-    {
-        return $this->sortMode;
-    }
-
-    private $pageIndex;
-
-    public function setPageIndex($pageIndex)
-    {
-        $this->pageIndex             = $pageIndex;
-        $this->apiParas["pageIndex"] = $pageIndex;
-    }
-
-    public function getPageIndex()
-    {
-        return $this->pageIndex;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                            }
 
 
 

@@ -1,113 +1,113 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpStockQueryGoodsLevelChangeRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.stock.queryGoodsLevelChange";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $deptNo;
+    	                        
+	public function setDeptNo($deptNo){
+		$this->deptNo = $deptNo;
+         $this->apiParas["deptNo"] = $deptNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.stock.queryGoodsLevelChange";
-    }
+	public function getDeptNo(){
+	  return $this->deptNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $orderNo;
+    	                        
+	public function setOrderNo($orderNo){
+		$this->orderNo = $orderNo;
+         $this->apiParas["orderNo"] = $orderNo;
+	}
 
-    public function check()
-    {
+	public function getOrderNo(){
+	  return $this->orderNo;
+	}
 
-    }
+                        	                   			private $outLevel;
+    	                        
+	public function setOutLevel($outLevel){
+		$this->outLevel = $outLevel;
+         $this->apiParas["outLevel"] = $outLevel;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOutLevel(){
+	  return $this->outLevel;
+	}
 
-    private $deptNo;
+                        	                   			private $intoLevel;
+    	                        
+	public function setIntoLevel($intoLevel){
+		$this->intoLevel = $intoLevel;
+         $this->apiParas["intoLevel"] = $intoLevel;
+	}
 
-    public function setDeptNo($deptNo)
-    {
-        $this->deptNo             = $deptNo;
-        $this->apiParas["deptNo"] = $deptNo;
-    }
+	public function getIntoLevel(){
+	  return $this->intoLevel;
+	}
 
-    public function getDeptNo()
-    {
-        return $this->deptNo;
-    }
+                        	                   			private $pageNo;
+    	                        
+	public function setPageNo($pageNo){
+		$this->pageNo = $pageNo;
+         $this->apiParas["pageNo"] = $pageNo;
+	}
 
-    private $orderNo;
+	public function getPageNo(){
+	  return $this->pageNo;
+	}
 
-    public function setOrderNo($orderNo)
-    {
-        $this->orderNo             = $orderNo;
-        $this->apiParas["orderNo"] = $orderNo;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function getOrderNo()
-    {
-        return $this->orderNo;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    private $outLevel;
+                        	                   			private $startTime;
+    	                        
+	public function setStartTime($startTime){
+		$this->startTime = $startTime;
+         $this->apiParas["startTime"] = $startTime;
+	}
 
-    public function setOutLevel($outLevel)
-    {
-        $this->outLevel             = $outLevel;
-        $this->apiParas["outLevel"] = $outLevel;
-    }
+	public function getStartTime(){
+	  return $this->startTime;
+	}
 
-    public function getOutLevel()
-    {
-        return $this->outLevel;
-    }
+                        	                   			private $endTime;
+    	                        
+	public function setEndTime($endTime){
+		$this->endTime = $endTime;
+         $this->apiParas["endTime"] = $endTime;
+	}
 
-    private $intoLevel;
+	public function getEndTime(){
+	  return $this->endTime;
+	}
 
-    public function setIntoLevel($intoLevel)
-    {
-        $this->intoLevel             = $intoLevel;
-        $this->apiParas["intoLevel"] = $intoLevel;
-    }
-
-    public function getIntoLevel()
-    {
-        return $this->intoLevel;
-    }
-
-    private $pageNo;
-
-    public function setPageNo($pageNo)
-    {
-        $this->pageNo             = $pageNo;
-        $this->apiParas["pageNo"] = $pageNo;
-    }
-
-    public function getPageNo()
-    {
-        return $this->pageNo;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                                                    	}
 
 
 

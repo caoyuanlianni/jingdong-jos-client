@@ -1,191 +1,157 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class RegisterorderGetRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.registerorder.get";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.registerorder.get";
-    }
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $appTime;
+    	                        
+	public function setAppTime($appTime){
+		$this->appTime = $appTime;
+         $this->apiParas["appTime"] = $appTime;
+	}
 
-    public function check()
-    {
+	public function getAppTime(){
+	  return $this->appTime;
+	}
 
-    }
+                        	                   			private $hospitalName;
+    	                        
+	public function setHospitalName($hospitalName){
+		$this->hospitalName = $hospitalName;
+         $this->apiParas["hospitalName"] = $hospitalName;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getHospitalName(){
+	  return $this->hospitalName;
+	}
 
-    private $orderId;
+                        	                   			private $pin;
+    	                        
+	public function setPin($pin){
+		$this->pin = $pin;
+         $this->apiParas["pin"] = $pin;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getPin(){
+	  return $this->pin;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $departmentName;
+    	                        
+	public function setDepartmentName($departmentName){
+		$this->departmentName = $departmentName;
+         $this->apiParas["departmentName"] = $departmentName;
+	}
 
-    private $appTime;
+	public function getDepartmentName(){
+	  return $this->departmentName;
+	}
 
-    public function setAppTime($appTime)
-    {
-        $this->appTime             = $appTime;
-        $this->apiParas["appTime"] = $appTime;
-    }
+                        	                   			private $doctorName;
+    	                        
+	public function setDoctorName($doctorName){
+		$this->doctorName = $doctorName;
+         $this->apiParas["doctorName"] = $doctorName;
+	}
 
-    public function getAppTime()
-    {
-        return $this->appTime;
-    }
+	public function getDoctorName(){
+	  return $this->doctorName;
+	}
 
-    private $hospitalName;
+                        	                   			private $platform;
+    	                        
+	public function setPlatform($platform){
+		$this->platform = $platform;
+         $this->apiParas["platform"] = $platform;
+	}
 
-    public function setHospitalName($hospitalName)
-    {
-        $this->hospitalName             = $hospitalName;
-        $this->apiParas["hospitalName"] = $hospitalName;
-    }
+	public function getPlatform(){
+	  return $this->platform;
+	}
 
-    public function getHospitalName()
-    {
-        return $this->hospitalName;
-    }
+                        	                   			private $visitingName;
+    	                        
+	public function setVisitingName($visitingName){
+		$this->visitingName = $visitingName;
+         $this->apiParas["visitingName"] = $visitingName;
+	}
 
-    private $pin;
+	public function getVisitingName(){
+	  return $this->visitingName;
+	}
 
-    public function setPin($pin)
-    {
-        $this->pin             = $pin;
-        $this->apiParas["pin"] = $pin;
-    }
+                        	                   			private $uuid;
+    	                        
+	public function setUuid($uuid){
+		$this->uuid = $uuid;
+         $this->apiParas["uuid"] = $uuid;
+	}
 
-    public function getPin()
-    {
-        return $this->pin;
-    }
+	public function getUuid(){
+	  return $this->uuid;
+	}
 
-    private $departmentName;
+                        	                   			private $orderType;
+    	                        
+	public function setOrderType($orderType){
+		$this->orderType = $orderType;
+         $this->apiParas["orderType"] = $orderType;
+	}
 
-    public function setDepartmentName($departmentName)
-    {
-        $this->departmentName             = $departmentName;
-        $this->apiParas["departmentName"] = $departmentName;
-    }
+	public function getOrderType(){
+	  return $this->orderType;
+	}
 
-    public function getDepartmentName()
-    {
-        return $this->departmentName;
-    }
+                        	                   			private $timeType;
+    	                        
+	public function setTimeType($timeType){
+		$this->timeType = $timeType;
+         $this->apiParas["timeType"] = $timeType;
+	}
 
-    private $doctorName;
+	public function getTimeType(){
+	  return $this->timeType;
+	}
 
-    public function setDoctorName($doctorName)
-    {
-        $this->doctorName             = $doctorName;
-        $this->apiParas["doctorName"] = $doctorName;
-    }
+                        	                   			private $url;
+    	                        
+	public function setUrl($url){
+		$this->url = $url;
+         $this->apiParas["url"] = $url;
+	}
 
-    public function getDoctorName()
-    {
-        return $this->doctorName;
-    }
+	public function getUrl(){
+	  return $this->url;
+	}
 
-    private $platform;
-
-    public function setPlatform($platform)
-    {
-        $this->platform             = $platform;
-        $this->apiParas["platform"] = $platform;
-    }
-
-    public function getPlatform()
-    {
-        return $this->platform;
-    }
-
-    private $visitingName;
-
-    public function setVisitingName($visitingName)
-    {
-        $this->visitingName             = $visitingName;
-        $this->apiParas["visitingName"] = $visitingName;
-    }
-
-    public function getVisitingName()
-    {
-        return $this->visitingName;
-    }
-
-    private $uuid;
-
-    public function setUuid($uuid)
-    {
-        $this->uuid             = $uuid;
-        $this->apiParas["uuid"] = $uuid;
-    }
-
-    public function getUuid()
-    {
-        return $this->uuid;
-    }
-
-    private $orderType;
-
-    public function setOrderType($orderType)
-    {
-        $this->orderType             = $orderType;
-        $this->apiParas["orderType"] = $orderType;
-    }
-
-    public function getOrderType()
-    {
-        return $this->orderType;
-    }
-
-    private $timeType;
-
-    public function setTimeType($timeType)
-    {
-        $this->timeType             = $timeType;
-        $this->apiParas["timeType"] = $timeType;
-    }
-
-    public function getTimeType()
-    {
-        return $this->timeType;
-    }
-
-    private $url;
-
-    public function setUrl($url)
-    {
-        $this->url             = $url;
-        $this->apiParas["url"] = $url;
-    }
-
-    public function getUrl()
-    {
-        return $this->url;
-    }
-
-}
+                            }
 
 
 

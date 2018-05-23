@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EdiPrepoGetRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.edi.prepo.get";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $prePurchaseOrderCode;
+    	                        
+	public function setPrePurchaseOrderCode($prePurchaseOrderCode){
+		$this->prePurchaseOrderCode = $prePurchaseOrderCode;
+         $this->apiParas["prePurchaseOrderCode"] = $prePurchaseOrderCode;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.edi.prepo.get";
-    }
+	public function getPrePurchaseOrderCode(){
+	  return $this->prePurchaseOrderCode;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $status;
+    	                        
+	public function setStatus($status){
+		$this->status = $status;
+         $this->apiParas["status"] = $status;
+	}
 
-    public function check()
-    {
+	public function getStatus(){
+	  return $this->status;
+	}
 
-    }
+                        	                   			private $receiveTimeStart;
+    	                        
+	public function setReceiveTimeStart($receiveTimeStart){
+		$this->receiveTimeStart = $receiveTimeStart;
+         $this->apiParas["receiveTimeStart"] = $receiveTimeStart;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getReceiveTimeStart(){
+	  return $this->receiveTimeStart;
+	}
 
-    private $prePurchaseOrderCode;
+                        	                   			private $receiveTimeEnd;
+    	                        
+	public function setReceiveTimeEnd($receiveTimeEnd){
+		$this->receiveTimeEnd = $receiveTimeEnd;
+         $this->apiParas["receiveTimeEnd"] = $receiveTimeEnd;
+	}
 
-    public function setPrePurchaseOrderCode($prePurchaseOrderCode)
-    {
-        $this->prePurchaseOrderCode             = $prePurchaseOrderCode;
-        $this->apiParas["prePurchaseOrderCode"] = $prePurchaseOrderCode;
-    }
+	public function getReceiveTimeEnd(){
+	  return $this->receiveTimeEnd;
+	}
 
-    public function getPrePurchaseOrderCode()
-    {
-        return $this->prePurchaseOrderCode;
-    }
+                        	                   			private $pageNum;
+    	                        
+	public function setPageNum($pageNum){
+		$this->pageNum = $pageNum;
+         $this->apiParas["pageNum"] = $pageNum;
+	}
 
-    private $status;
+	public function getPageNum(){
+	  return $this->pageNum;
+	}
 
-    public function setStatus($status)
-    {
-        $this->status             = $status;
-        $this->apiParas["status"] = $status;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function getStatus()
-    {
-        return $this->status;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    private $receiveTimeStart;
-
-    public function setReceiveTimeStart($receiveTimeStart)
-    {
-        $this->receiveTimeStart             = $receiveTimeStart;
-        $this->apiParas["receiveTimeStart"] = $receiveTimeStart;
-    }
-
-    public function getReceiveTimeStart()
-    {
-        return $this->receiveTimeStart;
-    }
-
-    private $receiveTimeEnd;
-
-    public function setReceiveTimeEnd($receiveTimeEnd)
-    {
-        $this->receiveTimeEnd             = $receiveTimeEnd;
-        $this->apiParas["receiveTimeEnd"] = $receiveTimeEnd;
-    }
-
-    public function getReceiveTimeEnd()
-    {
-        return $this->receiveTimeEnd;
-    }
-
-    private $pageNum;
-
-    public function setPageNum($pageNum)
-    {
-        $this->pageNum             = $pageNum;
-        $this->apiParas["pageNum"] = $pageNum;
-    }
-
-    public function getPageNum()
-    {
-        return $this->pageNum;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                        	                            }
 
 
 

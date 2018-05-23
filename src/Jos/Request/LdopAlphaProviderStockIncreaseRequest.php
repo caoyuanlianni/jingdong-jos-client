@@ -1,191 +1,157 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class LdopAlphaProviderStockIncreaseRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.ldop.alpha.provider.stock.increase";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $operatorCode;
+    	                        
+	public function setOperatorCode($operatorCode){
+		$this->operatorCode = $operatorCode;
+         $this->apiParas["operatorCode"] = $operatorCode;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.ldop.alpha.provider.stock.increase";
-    }
+	public function getOperatorCode(){
+	  return $this->operatorCode;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $vendorCode;
+    	                        
+	public function setVendorCode($vendorCode){
+		$this->vendorCode = $vendorCode;
+         $this->apiParas["vendorCode"] = $vendorCode;
+	}
 
-    public function check()
-    {
+	public function getVendorCode(){
+	  return $this->vendorCode;
+	}
 
-    }
+                        	                   			private $vendorName;
+    	                        
+	public function setVendorName($vendorName){
+		$this->vendorName = $vendorName;
+         $this->apiParas["vendorName"] = $vendorName;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getVendorName(){
+	  return $this->vendorName;
+	}
 
-    private $operatorCode;
+                        	                   			private $providerId;
+    	                        
+	public function setProviderId($providerId){
+		$this->providerId = $providerId;
+         $this->apiParas["providerId"] = $providerId;
+	}
 
-    public function setOperatorCode($operatorCode)
-    {
-        $this->operatorCode             = $operatorCode;
-        $this->apiParas["operatorCode"] = $operatorCode;
-    }
+	public function getProviderId(){
+	  return $this->providerId;
+	}
 
-    public function getOperatorCode()
-    {
-        return $this->operatorCode;
-    }
+                        	                   			private $providerCode;
+    	                        
+	public function setProviderCode($providerCode){
+		$this->providerCode = $providerCode;
+         $this->apiParas["providerCode"] = $providerCode;
+	}
 
-    private $vendorCode;
+	public function getProviderCode(){
+	  return $this->providerCode;
+	}
 
-    public function setVendorCode($vendorCode)
-    {
-        $this->vendorCode             = $vendorCode;
-        $this->apiParas["vendorCode"] = $vendorCode;
-    }
+                        	                   			private $providerName;
+    	                        
+	public function setProviderName($providerName){
+		$this->providerName = $providerName;
+         $this->apiParas["providerName"] = $providerName;
+	}
 
-    public function getVendorCode()
-    {
-        return $this->vendorCode;
-    }
+	public function getProviderName(){
+	  return $this->providerName;
+	}
 
-    private $vendorName;
+                        	                   			private $branchCode;
+    	                        
+	public function setBranchCode($branchCode){
+		$this->branchCode = $branchCode;
+         $this->apiParas["branchCode"] = $branchCode;
+	}
 
-    public function setVendorName($vendorName)
-    {
-        $this->vendorName             = $vendorName;
-        $this->apiParas["vendorName"] = $vendorName;
-    }
+	public function getBranchCode(){
+	  return $this->branchCode;
+	}
 
-    public function getVendorName()
-    {
-        return $this->vendorName;
-    }
+                        	                   			private $branchName;
+    	                        
+	public function setBranchName($branchName){
+		$this->branchName = $branchName;
+         $this->apiParas["branchName"] = $branchName;
+	}
 
-    private $providerId;
+	public function getBranchName(){
+	  return $this->branchName;
+	}
 
-    public function setProviderId($providerId)
-    {
-        $this->providerId             = $providerId;
-        $this->apiParas["providerId"] = $providerId;
-    }
+                        	                   			private $amount;
+    	                        
+	public function setAmount($amount){
+		$this->amount = $amount;
+         $this->apiParas["amount"] = $amount;
+	}
 
-    public function getProviderId()
-    {
-        return $this->providerId;
-    }
+	public function getAmount(){
+	  return $this->amount;
+	}
 
-    private $providerCode;
+                        	                   			private $operatorTime;
+    	                        
+	public function setOperatorTime($operatorTime){
+		$this->operatorTime = $operatorTime;
+         $this->apiParas["operatorTime"] = $operatorTime;
+	}
 
-    public function setProviderCode($providerCode)
-    {
-        $this->providerCode             = $providerCode;
-        $this->apiParas["providerCode"] = $providerCode;
-    }
+	public function getOperatorTime(){
+	  return $this->operatorTime;
+	}
 
-    public function getProviderCode()
-    {
-        return $this->providerCode;
-    }
+                        	                   			private $operatorName;
+    	                        
+	public function setOperatorName($operatorName){
+		$this->operatorName = $operatorName;
+         $this->apiParas["operatorName"] = $operatorName;
+	}
 
-    private $providerName;
+	public function getOperatorName(){
+	  return $this->operatorName;
+	}
 
-    public function setProviderName($providerName)
-    {
-        $this->providerName             = $providerName;
-        $this->apiParas["providerName"] = $providerName;
-    }
+                        	                   			private $state;
+    	                        
+	public function setState($state){
+		$this->state = $state;
+         $this->apiParas["state"] = $state;
+	}
 
-    public function getProviderName()
-    {
-        return $this->providerName;
-    }
+	public function getState(){
+	  return $this->state;
+	}
 
-    private $branchCode;
-
-    public function setBranchCode($branchCode)
-    {
-        $this->branchCode             = $branchCode;
-        $this->apiParas["branchCode"] = $branchCode;
-    }
-
-    public function getBranchCode()
-    {
-        return $this->branchCode;
-    }
-
-    private $branchName;
-
-    public function setBranchName($branchName)
-    {
-        $this->branchName             = $branchName;
-        $this->apiParas["branchName"] = $branchName;
-    }
-
-    public function getBranchName()
-    {
-        return $this->branchName;
-    }
-
-    private $amount;
-
-    public function setAmount($amount)
-    {
-        $this->amount             = $amount;
-        $this->apiParas["amount"] = $amount;
-    }
-
-    public function getAmount()
-    {
-        return $this->amount;
-    }
-
-    private $operatorTime;
-
-    public function setOperatorTime($operatorTime)
-    {
-        $this->operatorTime             = $operatorTime;
-        $this->apiParas["operatorTime"] = $operatorTime;
-    }
-
-    public function getOperatorTime()
-    {
-        return $this->operatorTime;
-    }
-
-    private $operatorName;
-
-    public function setOperatorName($operatorName)
-    {
-        $this->operatorName             = $operatorName;
-        $this->apiParas["operatorName"] = $operatorName;
-    }
-
-    public function getOperatorName()
-    {
-        return $this->operatorName;
-    }
-
-    private $state;
-
-    public function setState($state)
-    {
-        $this->state             = $state;
-        $this->apiParas["state"] = $state;
-    }
-
-    public function getState()
-    {
-        return $this->state;
-    }
-
-}
+                            }
 
 
 

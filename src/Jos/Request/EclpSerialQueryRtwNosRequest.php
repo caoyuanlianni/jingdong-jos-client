@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpSerialQueryRtwNosRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.serial.queryRtwNos";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                   			private $deptNo;
+    	                        
+	public function setDeptNo($deptNo){
+		$this->deptNo = $deptNo;
+         $this->apiParas["deptNo"] = $deptNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.serial.queryRtwNos";
-    }
+	public function getDeptNo(){
+	  return $this->deptNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $status;
+    	                        
+	public function setStatus($status){
+		$this->status = $status;
+         $this->apiParas["status"] = $status;
+	}
 
-    public function check()
-    {
+	public function getStatus(){
+	  return $this->status;
+	}
 
-    }
+                                            		                                    	                   			private $startDate;
+    	                        
+	public function setStartDate($startDate){
+		$this->startDate = $startDate;
+         $this->apiParas["startDate"] = $startDate;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getStartDate(){
+	  return $this->startDate;
+	}
 
-    private $deptNo;
+                        	                   			private $endDate;
+    	                        
+	public function setEndDate($endDate){
+		$this->endDate = $endDate;
+         $this->apiParas["endDate"] = $endDate;
+	}
 
-    public function setDeptNo($deptNo)
-    {
-        $this->deptNo             = $deptNo;
-        $this->apiParas["deptNo"] = $deptNo;
-    }
+	public function getEndDate(){
+	  return $this->endDate;
+	}
 
-    public function getDeptNo()
-    {
-        return $this->deptNo;
-    }
+                        	                   			private $pageStart;
+    	                        
+	public function setPageStart($pageStart){
+		$this->pageStart = $pageStart;
+         $this->apiParas["pageStart"] = $pageStart;
+	}
 
-    private $status;
+	public function getPageStart(){
+	  return $this->pageStart;
+	}
 
-    public function setStatus($status)
-    {
-        $this->status             = $status;
-        $this->apiParas["status"] = $status;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function getStatus()
-    {
-        return $this->status;
-    }
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    private $startDate;
-
-    public function setStartDate($startDate)
-    {
-        $this->startDate             = $startDate;
-        $this->apiParas["startDate"] = $startDate;
-    }
-
-    public function getStartDate()
-    {
-        return $this->startDate;
-    }
-
-    private $endDate;
-
-    public function setEndDate($endDate)
-    {
-        $this->endDate             = $endDate;
-        $this->apiParas["endDate"] = $endDate;
-    }
-
-    public function getEndDate()
-    {
-        return $this->endDate;
-    }
-
-    private $pageStart;
-
-    public function setPageStart($pageStart)
-    {
-        $this->pageStart             = $pageStart;
-        $this->apiParas["pageStart"] = $pageStart;
-    }
-
-    public function getPageStart()
-    {
-        return $this->pageStart;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                                                    	}
 
 
 

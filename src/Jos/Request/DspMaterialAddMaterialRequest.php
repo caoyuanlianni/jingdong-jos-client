@@ -1,165 +1,135 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class DspMaterialAddMaterialRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.dsp.material.addMaterial";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                        	                   			private $materialName;
+    	                        
+	public function setMaterialName($materialName){
+		$this->materialName = $materialName;
+         $this->apiParas["materialName"] = $materialName;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.dsp.material.addMaterial";
-    }
+	public function getMaterialName(){
+	  return $this->materialName;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $effectiveDate;
+    	                        
+	public function setEffectiveDate($effectiveDate){
+		$this->effectiveDate = $effectiveDate;
+         $this->apiParas["effectiveDate"] = $effectiveDate;
+	}
 
-    public function check()
-    {
+	public function getEffectiveDate(){
+	  return $this->effectiveDate;
+	}
 
-    }
+                        	                   			private $expirationDate;
+    	                        
+	public function setExpirationDate($expirationDate){
+		$this->expirationDate = $expirationDate;
+         $this->apiParas["expirationDate"] = $expirationDate;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getExpirationDate(){
+	  return $this->expirationDate;
+	}
 
-    private $materialName;
+                        	                   			private $skuId;
+    	                        
+	public function setSkuId($skuId){
+		$this->skuId = $skuId;
+         $this->apiParas["skuId"] = $skuId;
+	}
 
-    public function setMaterialName($materialName)
-    {
-        $this->materialName             = $materialName;
-        $this->apiParas["materialName"] = $materialName;
-    }
+	public function getSkuId(){
+	  return $this->skuId;
+	}
 
-    public function getMaterialName()
-    {
-        return $this->materialName;
-    }
+                        	                   			private $mediaId;
+    	                        
+	public function setMediaId($mediaId){
+		$this->mediaId = $mediaId;
+         $this->apiParas["mediaId"] = $mediaId;
+	}
 
-    private $effectiveDate;
+	public function getMediaId(){
+	  return $this->mediaId;
+	}
 
-    public function setEffectiveDate($effectiveDate)
-    {
-        $this->effectiveDate             = $effectiveDate;
-        $this->apiParas["effectiveDate"] = $effectiveDate;
-    }
+                        	                        	                   			private $creativeId;
+    	                        
+	public function setCreativeId($creativeId){
+		$this->creativeId = $creativeId;
+         $this->apiParas["creativeId"] = $creativeId;
+	}
 
-    public function getEffectiveDate()
-    {
-        return $this->effectiveDate;
-    }
+	public function getCreativeId(){
+	  return $this->creativeId;
+	}
 
-    private $expirationDate;
+                        	                   			private $imgSrc;
+    	                        
+	public function setImgSrc($imgSrc){
+		$this->imgSrc = $imgSrc;
+         $this->apiParas["imgSrc"] = $imgSrc;
+	}
 
-    public function setExpirationDate($expirationDate)
-    {
-        $this->expirationDate             = $expirationDate;
-        $this->apiParas["expirationDate"] = $expirationDate;
-    }
+	public function getImgSrc(){
+	  return $this->imgSrc;
+	}
 
-    public function getExpirationDate()
-    {
-        return $this->expirationDate;
-    }
+                        	                   			private $url;
+    	                        
+	public function setUrl($url){
+		$this->url = $url;
+         $this->apiParas["url"] = $url;
+	}
 
-    private $skuId;
+	public function getUrl(){
+	  return $this->url;
+	}
 
-    public function setSkuId($skuId)
-    {
-        $this->skuId             = $skuId;
-        $this->apiParas["skuId"] = $skuId;
-    }
+                        	                   			private $width;
+    	                        
+	public function setWidth($width){
+		$this->width = $width;
+         $this->apiParas["width"] = $width;
+	}
 
-    public function getSkuId()
-    {
-        return $this->skuId;
-    }
+	public function getWidth(){
+	  return $this->width;
+	}
 
-    private $mediaId;
+                        	                   			private $height;
+    	                        
+	public function setHeight($height){
+		$this->height = $height;
+         $this->apiParas["height"] = $height;
+	}
 
-    public function setMediaId($mediaId)
-    {
-        $this->mediaId             = $mediaId;
-        $this->apiParas["mediaId"] = $mediaId;
-    }
+	public function getHeight(){
+	  return $this->height;
+	}
 
-    public function getMediaId()
-    {
-        return $this->mediaId;
-    }
-
-    private $creativeId;
-
-    public function setCreativeId($creativeId)
-    {
-        $this->creativeId             = $creativeId;
-        $this->apiParas["creativeId"] = $creativeId;
-    }
-
-    public function getCreativeId()
-    {
-        return $this->creativeId;
-    }
-
-    private $imgSrc;
-
-    public function setImgSrc($imgSrc)
-    {
-        $this->imgSrc             = $imgSrc;
-        $this->apiParas["imgSrc"] = $imgSrc;
-    }
-
-    public function getImgSrc()
-    {
-        return $this->imgSrc;
-    }
-
-    private $url;
-
-    public function setUrl($url)
-    {
-        $this->url             = $url;
-        $this->apiParas["url"] = $url;
-    }
-
-    public function getUrl()
-    {
-        return $this->url;
-    }
-
-    private $width;
-
-    public function setWidth($width)
-    {
-        $this->width             = $width;
-        $this->apiParas["width"] = $width;
-    }
-
-    public function getWidth()
-    {
-        return $this->width;
-    }
-
-    private $height;
-
-    public function setHeight($height)
-    {
-        $this->height             = $height;
-        $this->apiParas["height"] = $height;
-    }
-
-    public function getHeight()
-    {
-        return $this->height;
-    }
-
-}
+                            }
 
 
 

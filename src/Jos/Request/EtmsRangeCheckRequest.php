@@ -1,282 +1,234 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EtmsRangeCheckRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.etms.range.check";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                        	                   			private $salePlat;
+    	                        
+	public function setSalePlat($salePlat){
+		$this->salePlat = $salePlat;
+         $this->apiParas["salePlat"] = $salePlat;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.etms.range.check";
-    }
+	public function getSalePlat(){
+	  return $this->salePlat;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $customerCode;
+    	                        
+	public function setCustomerCode($customerCode){
+		$this->customerCode = $customerCode;
+         $this->apiParas["customerCode"] = $customerCode;
+	}
 
-    public function check()
-    {
+	public function getCustomerCode(){
+	  return $this->customerCode;
+	}
 
-    }
+                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    private $salePlat;
+                        	                   			private $goodsType;
+    	                        
+	public function setGoodsType($goodsType){
+		$this->goodsType = $goodsType;
+         $this->apiParas["goodsType"] = $goodsType;
+	}
 
-    public function setSalePlat($salePlat)
-    {
-        $this->salePlat             = $salePlat;
-        $this->apiParas["salePlat"] = $salePlat;
-    }
+	public function getGoodsType(){
+	  return $this->goodsType;
+	}
 
-    public function getSalePlat()
-    {
-        return $this->salePlat;
-    }
+                        	                   			private $wareHouseCode;
+    	                        
+	public function setWareHouseCode($wareHouseCode){
+		$this->wareHouseCode = $wareHouseCode;
+         $this->apiParas["wareHouseCode"] = $wareHouseCode;
+	}
 
-    private $customerCode;
+	public function getWareHouseCode(){
+	  return $this->wareHouseCode;
+	}
 
-    public function setCustomerCode($customerCode)
-    {
-        $this->customerCode             = $customerCode;
-        $this->apiParas["customerCode"] = $customerCode;
-    }
+                        	                   			private $receiveAddress;
+    	                        
+	public function setReceiveAddress($receiveAddress){
+		$this->receiveAddress = $receiveAddress;
+         $this->apiParas["receiveAddress"] = $receiveAddress;
+	}
 
-    public function getCustomerCode()
-    {
-        return $this->customerCode;
-    }
+	public function getReceiveAddress(){
+	  return $this->receiveAddress;
+	}
 
-    private $orderId;
+                        	                   			private $senderProvinceId;
+    	                        
+	public function setSenderProvinceId($senderProvinceId){
+		$this->senderProvinceId = $senderProvinceId;
+         $this->apiParas["senderProvinceId"] = $senderProvinceId;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getSenderProvinceId(){
+	  return $this->senderProvinceId;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $senderCityId;
+    	                        
+	public function setSenderCityId($senderCityId){
+		$this->senderCityId = $senderCityId;
+         $this->apiParas["senderCityId"] = $senderCityId;
+	}
 
-    private $goodsType;
+	public function getSenderCityId(){
+	  return $this->senderCityId;
+	}
 
-    public function setGoodsType($goodsType)
-    {
-        $this->goodsType             = $goodsType;
-        $this->apiParas["goodsType"] = $goodsType;
-    }
+                        	                   			private $senderCountyId;
+    	                        
+	public function setSenderCountyId($senderCountyId){
+		$this->senderCountyId = $senderCountyId;
+         $this->apiParas["senderCountyId"] = $senderCountyId;
+	}
 
-    public function getGoodsType()
-    {
-        return $this->goodsType;
-    }
+	public function getSenderCountyId(){
+	  return $this->senderCountyId;
+	}
 
-    private $wareHouseCode;
+                        	                   			private $senderTownId;
+    	                        
+	public function setSenderTownId($senderTownId){
+		$this->senderTownId = $senderTownId;
+         $this->apiParas["senderTownId"] = $senderTownId;
+	}
 
-    public function setWareHouseCode($wareHouseCode)
-    {
-        $this->wareHouseCode             = $wareHouseCode;
-        $this->apiParas["wareHouseCode"] = $wareHouseCode;
-    }
+	public function getSenderTownId(){
+	  return $this->senderTownId;
+	}
 
-    public function getWareHouseCode()
-    {
-        return $this->wareHouseCode;
-    }
+                        	                   			private $receiverProvinceId;
+    	                        
+	public function setReceiverProvinceId($receiverProvinceId){
+		$this->receiverProvinceId = $receiverProvinceId;
+         $this->apiParas["receiverProvinceId"] = $receiverProvinceId;
+	}
 
-    private $receiveAddress;
+	public function getReceiverProvinceId(){
+	  return $this->receiverProvinceId;
+	}
 
-    public function setReceiveAddress($receiveAddress)
-    {
-        $this->receiveAddress             = $receiveAddress;
-        $this->apiParas["receiveAddress"] = $receiveAddress;
-    }
+                        	                   			private $receiverCityId;
+    	                        
+	public function setReceiverCityId($receiverCityId){
+		$this->receiverCityId = $receiverCityId;
+         $this->apiParas["receiverCityId"] = $receiverCityId;
+	}
 
-    public function getReceiveAddress()
-    {
-        return $this->receiveAddress;
-    }
+	public function getReceiverCityId(){
+	  return $this->receiverCityId;
+	}
 
-    private $senderProvinceId;
+                        	                   			private $receiverCountyId;
+    	                        
+	public function setReceiverCountyId($receiverCountyId){
+		$this->receiverCountyId = $receiverCountyId;
+         $this->apiParas["receiverCountyId"] = $receiverCountyId;
+	}
 
-    public function setSenderProvinceId($senderProvinceId)
-    {
-        $this->senderProvinceId             = $senderProvinceId;
-        $this->apiParas["senderProvinceId"] = $senderProvinceId;
-    }
+	public function getReceiverCountyId(){
+	  return $this->receiverCountyId;
+	}
 
-    public function getSenderProvinceId()
-    {
-        return $this->senderProvinceId;
-    }
+                        	                   			private $receiverTownId;
+    	                        
+	public function setReceiverTownId($receiverTownId){
+		$this->receiverTownId = $receiverTownId;
+         $this->apiParas["receiverTownId"] = $receiverTownId;
+	}
 
-    private $senderCityId;
+	public function getReceiverTownId(){
+	  return $this->receiverTownId;
+	}
 
-    public function setSenderCityId($senderCityId)
-    {
-        $this->senderCityId             = $senderCityId;
-        $this->apiParas["senderCityId"] = $senderCityId;
-    }
+                        	                   			private $sendTime;
+    	                        
+	public function setSendTime($sendTime){
+		$this->sendTime = $sendTime;
+         $this->apiParas["sendTime"] = $sendTime;
+	}
 
-    public function getSenderCityId()
-    {
-        return $this->senderCityId;
-    }
+	public function getSendTime(){
+	  return $this->sendTime;
+	}
 
-    private $senderCountyId;
+                        	                   			private $isCod;
+    	                        
+	public function setIsCod($isCod){
+		$this->isCod = $isCod;
+         $this->apiParas["isCod"] = $isCod;
+	}
 
-    public function setSenderCountyId($senderCountyId)
-    {
-        $this->senderCountyId             = $senderCountyId;
-        $this->apiParas["senderCountyId"] = $senderCountyId;
-    }
+	public function getIsCod(){
+	  return $this->isCod;
+	}
 
-    public function getSenderCountyId()
-    {
-        return $this->senderCountyId;
-    }
+                        	                   			private $siteId;
+    	                        
+	public function setSiteId($siteId){
+		$this->siteId = $siteId;
+         $this->apiParas["siteId"] = $siteId;
+	}
 
-    private $senderTownId;
+	public function getSiteId(){
+	  return $this->siteId;
+	}
 
-    public function setSenderTownId($senderTownId)
-    {
-        $this->senderTownId             = $senderTownId;
-        $this->apiParas["senderTownId"] = $senderTownId;
-    }
+                        	                   			private $siteName;
+    	                        
+	public function setSiteName($siteName){
+		$this->siteName = $siteName;
+         $this->apiParas["siteName"] = $siteName;
+	}
 
-    public function getSenderTownId()
-    {
-        return $this->senderTownId;
-    }
+	public function getSiteName(){
+	  return $this->siteName;
+	}
 
-    private $receiverProvinceId;
+                        	                   			private $addedService;
+    	                        
+	public function setAddedService($addedService){
+		$this->addedService = $addedService;
+         $this->apiParas["addedService"] = $addedService;
+	}
 
-    public function setReceiverProvinceId($receiverProvinceId)
-    {
-        $this->receiverProvinceId             = $receiverProvinceId;
-        $this->apiParas["receiverProvinceId"] = $receiverProvinceId;
-    }
+	public function getAddedService(){
+	  return $this->addedService;
+	}
 
-    public function getReceiverProvinceId()
-    {
-        return $this->receiverProvinceId;
-    }
-
-    private $receiverCityId;
-
-    public function setReceiverCityId($receiverCityId)
-    {
-        $this->receiverCityId             = $receiverCityId;
-        $this->apiParas["receiverCityId"] = $receiverCityId;
-    }
-
-    public function getReceiverCityId()
-    {
-        return $this->receiverCityId;
-    }
-
-    private $receiverCountyId;
-
-    public function setReceiverCountyId($receiverCountyId)
-    {
-        $this->receiverCountyId             = $receiverCountyId;
-        $this->apiParas["receiverCountyId"] = $receiverCountyId;
-    }
-
-    public function getReceiverCountyId()
-    {
-        return $this->receiverCountyId;
-    }
-
-    private $receiverTownId;
-
-    public function setReceiverTownId($receiverTownId)
-    {
-        $this->receiverTownId             = $receiverTownId;
-        $this->apiParas["receiverTownId"] = $receiverTownId;
-    }
-
-    public function getReceiverTownId()
-    {
-        return $this->receiverTownId;
-    }
-
-    private $sendTime;
-
-    public function setSendTime($sendTime)
-    {
-        $this->sendTime             = $sendTime;
-        $this->apiParas["sendTime"] = $sendTime;
-    }
-
-    public function getSendTime()
-    {
-        return $this->sendTime;
-    }
-
-    private $isCod;
-
-    public function setIsCod($isCod)
-    {
-        $this->isCod             = $isCod;
-        $this->apiParas["isCod"] = $isCod;
-    }
-
-    public function getIsCod()
-    {
-        return $this->isCod;
-    }
-
-    private $siteId;
-
-    public function setSiteId($siteId)
-    {
-        $this->siteId             = $siteId;
-        $this->apiParas["siteId"] = $siteId;
-    }
-
-    public function getSiteId()
-    {
-        return $this->siteId;
-    }
-
-    private $siteName;
-
-    public function setSiteName($siteName)
-    {
-        $this->siteName             = $siteName;
-        $this->apiParas["siteName"] = $siteName;
-    }
-
-    public function getSiteName()
-    {
-        return $this->siteName;
-    }
-
-    private $addedService;
-
-    public function setAddedService($addedService)
-    {
-        $this->addedService             = $addedService;
-        $this->apiParas["addedService"] = $addedService;
-    }
-
-    public function getAddedService()
-    {
-        return $this->addedService;
-    }
-
-}
+                            }
 
 
 

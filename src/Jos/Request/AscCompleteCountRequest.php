@@ -1,178 +1,146 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class AscCompleteCountRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.asc.complete.count";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                        	                        	                                            		                                    	                   			private $buId;
+    	                        
+	public function setBuId($buId){
+		$this->buId = $buId;
+         $this->apiParas["buId"] = $buId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.asc.complete.count";
-    }
+	public function getBuId(){
+	  return $this->buId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $operatePin;
+    	                        
+	public function setOperatePin($operatePin){
+		$this->operatePin = $operatePin;
+         $this->apiParas["operatePin"] = $operatePin;
+	}
 
-    public function check()
-    {
+	public function getOperatePin(){
+	  return $this->operatePin;
+	}
 
-    }
+                        	                   			private $operateNick;
+    	                        
+	public function setOperateNick($operateNick){
+		$this->operateNick = $operateNick;
+         $this->apiParas["operateNick"] = $operateNick;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getOperateNick(){
+	  return $this->operateNick;
+	}
 
-    private $buId;
+                        	                   			private $serviceId;
+    	                        
+	public function setServiceId($serviceId){
+		$this->serviceId = $serviceId;
+         $this->apiParas["serviceId"] = $serviceId;
+	}
 
-    public function setBuId($buId)
-    {
-        $this->buId             = $buId;
-        $this->apiParas["buId"] = $buId;
-    }
+	public function getServiceId(){
+	  return $this->serviceId;
+	}
 
-    public function getBuId()
-    {
-        return $this->buId;
-    }
+                        	                   			private $orderId;
+    	                        
+	public function setOrderId($orderId){
+		$this->orderId = $orderId;
+         $this->apiParas["orderId"] = $orderId;
+	}
 
-    private $operatePin;
+	public function getOrderId(){
+	  return $this->orderId;
+	}
 
-    public function setOperatePin($operatePin)
-    {
-        $this->operatePin             = $operatePin;
-        $this->apiParas["operatePin"] = $operatePin;
-    }
+                        	                   			private $processResult;
+    	                        
+	public function setProcessResult($processResult){
+		$this->processResult = $processResult;
+         $this->apiParas["processResult"] = $processResult;
+	}
 
-    public function getOperatePin()
-    {
-        return $this->operatePin;
-    }
+	public function getProcessResult(){
+	  return $this->processResult;
+	}
 
-    private $operateNick;
+                        	                   			private $verificationCode;
+    	                        
+	public function setVerificationCode($verificationCode){
+		$this->verificationCode = $verificationCode;
+         $this->apiParas["verificationCode"] = $verificationCode;
+	}
 
-    public function setOperateNick($operateNick)
-    {
-        $this->operateNick             = $operateNick;
-        $this->apiParas["operateNick"] = $operateNick;
-    }
+	public function getVerificationCode(){
+	  return $this->verificationCode;
+	}
 
-    public function getOperateNick()
-    {
-        return $this->operateNick;
-    }
+                        	                   			private $orderType;
+    	                        
+	public function setOrderType($orderType){
+		$this->orderType = $orderType;
+         $this->apiParas["orderType"] = $orderType;
+	}
 
-    private $serviceId;
+	public function getOrderType(){
+	  return $this->orderType;
+	}
 
-    public function setServiceId($serviceId)
-    {
-        $this->serviceId             = $serviceId;
-        $this->apiParas["serviceId"] = $serviceId;
-    }
+                        	                   			private $customerPin;
+    	                        
+	public function setCustomerPin($customerPin){
+		$this->customerPin = $customerPin;
+         $this->apiParas["customerPin"] = $customerPin;
+	}
 
-    public function getServiceId()
-    {
-        return $this->serviceId;
-    }
+	public function getCustomerPin(){
+	  return $this->customerPin;
+	}
 
-    private $orderId;
+                        	                   			private $expressCode;
+    	                        
+	public function setExpressCode($expressCode){
+		$this->expressCode = $expressCode;
+         $this->apiParas["expressCode"] = $expressCode;
+	}
 
-    public function setOrderId($orderId)
-    {
-        $this->orderId             = $orderId;
-        $this->apiParas["orderId"] = $orderId;
-    }
+	public function getExpressCode(){
+	  return $this->expressCode;
+	}
 
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
+                        	                   			private $extJsonStr;
+    	                        
+	public function setExtJsonStr($extJsonStr){
+		$this->extJsonStr = $extJsonStr;
+         $this->apiParas["extJsonStr"] = $extJsonStr;
+	}
 
-    private $processResult;
+	public function getExtJsonStr(){
+	  return $this->extJsonStr;
+	}
 
-    public function setProcessResult($processResult)
-    {
-        $this->processResult             = $processResult;
-        $this->apiParas["processResult"] = $processResult;
-    }
-
-    public function getProcessResult()
-    {
-        return $this->processResult;
-    }
-
-    private $verificationCode;
-
-    public function setVerificationCode($verificationCode)
-    {
-        $this->verificationCode             = $verificationCode;
-        $this->apiParas["verificationCode"] = $verificationCode;
-    }
-
-    public function getVerificationCode()
-    {
-        return $this->verificationCode;
-    }
-
-    private $orderType;
-
-    public function setOrderType($orderType)
-    {
-        $this->orderType             = $orderType;
-        $this->apiParas["orderType"] = $orderType;
-    }
-
-    public function getOrderType()
-    {
-        return $this->orderType;
-    }
-
-    private $customerPin;
-
-    public function setCustomerPin($customerPin)
-    {
-        $this->customerPin             = $customerPin;
-        $this->apiParas["customerPin"] = $customerPin;
-    }
-
-    public function getCustomerPin()
-    {
-        return $this->customerPin;
-    }
-
-    private $expressCode;
-
-    public function setExpressCode($expressCode)
-    {
-        $this->expressCode             = $expressCode;
-        $this->apiParas["expressCode"] = $expressCode;
-    }
-
-    public function getExpressCode()
-    {
-        return $this->expressCode;
-    }
-
-    private $extJsonStr;
-
-    public function setExtJsonStr($extJsonStr)
-    {
-        $this->extJsonStr             = $extJsonStr;
-        $this->apiParas["extJsonStr"] = $extJsonStr;
-    }
-
-    public function getExtJsonStr()
-    {
-        return $this->extJsonStr;
-    }
-
-}
+                            }
 
 
 

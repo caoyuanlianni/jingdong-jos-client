@@ -1,61 +1,47 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EdiSdvSalesForecastNumberSearchRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.edi.sdv.sales.forecast.number.search";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $page;
+    	                        
+	public function setPage($page){
+		$this->page = $page;
+         $this->apiParas["page"] = $page;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.edi.sdv.sales.forecast.number.search";
-    }
+	public function getPage(){
+	  return $this->page;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    public function check()
-    {
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    }
-
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
-
-    private $page;
-
-    public function setPage($page)
-    {
-        $this->page             = $page;
-        $this->apiParas["page"] = $page;
-    }
-
-    public function getPage()
-    {
-        return $this->page;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-}
+                        	                            }
 
 
 

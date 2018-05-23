@@ -1,243 +1,201 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class LasImHfsArrivalPushRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.las.im.hfs.arrival.push";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $ordNo;
+    	                                                            
+	public function setOrdNo($ordNo){
+		$this->ordNo = $ordNo;
+         $this->apiParas["ord_no"] = $ordNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.las.im.hfs.arrival.push";
-    }
+	public function getOrdNo(){
+	  return $this->ordNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $opeN;
+    	                                                            
+	public function setOpeN($opeN){
+		$this->opeN = $opeN;
+         $this->apiParas["ope_n"] = $opeN;
+	}
 
-    public function check()
-    {
+	public function getOpeN(){
+	  return $this->opeN;
+	}
 
-    }
+                        	                   			private $serProNo;
+    	                                                                        
+	public function setSerProNo($serProNo){
+		$this->serProNo = $serProNo;
+         $this->apiParas["ser_pro_no"] = $serProNo;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getSerProNo(){
+	  return $this->serProNo;
+	}
 
-    private $ordNo;
+                        	                   			private $opeT;
+    	                                                            
+	public function setOpeT($opeT){
+		$this->opeT = $opeT;
+         $this->apiParas["ope_t"] = $opeT;
+	}
 
-    public function setOrdNo($ordNo)
-    {
-        $this->ordNo              = $ordNo;
-        $this->apiParas["ord_no"] = $ordNo;
-    }
+	public function getOpeT(){
+	  return $this->opeT;
+	}
 
-    public function getOrdNo()
-    {
-        return $this->ordNo;
-    }
+                        	                   			private $proNo;
+    	                                                            
+	public function setProNo($proNo){
+		$this->proNo = $proNo;
+         $this->apiParas["pro_no"] = $proNo;
+	}
 
-    private $opeN;
+	public function getProNo(){
+	  return $this->proNo;
+	}
 
-    public function setOpeN($opeN)
-    {
-        $this->opeN              = $opeN;
-        $this->apiParas["ope_n"] = $opeN;
-    }
+                        	                   			private $proN;
+    	                                                            
+	public function setProN($proN){
+		$this->proN = $proN;
+         $this->apiParas["pro_n"] = $proN;
+	}
 
-    public function getOpeN()
-    {
-        return $this->opeN;
-    }
+	public function getProN(){
+	  return $this->proN;
+	}
 
-    private $serProNo;
+                        	                   			private $citNo;
+    	                                                            
+	public function setCitNo($citNo){
+		$this->citNo = $citNo;
+         $this->apiParas["cit_no"] = $citNo;
+	}
 
-    public function setSerProNo($serProNo)
-    {
-        $this->serProNo               = $serProNo;
-        $this->apiParas["ser_pro_no"] = $serProNo;
-    }
+	public function getCitNo(){
+	  return $this->citNo;
+	}
 
-    public function getSerProNo()
-    {
-        return $this->serProNo;
-    }
+                        	                   			private $citN;
+    	                                                            
+	public function setCitN($citN){
+		$this->citN = $citN;
+         $this->apiParas["cit_n"] = $citN;
+	}
 
-    private $opeT;
+	public function getCitN(){
+	  return $this->citN;
+	}
 
-    public function setOpeT($opeT)
-    {
-        $this->opeT              = $opeT;
-        $this->apiParas["ope_t"] = $opeT;
-    }
+                        	                   			private $couNo;
+    	                                                            
+	public function setCouNo($couNo){
+		$this->couNo = $couNo;
+         $this->apiParas["cou_no"] = $couNo;
+	}
 
-    public function getOpeT()
-    {
-        return $this->opeT;
-    }
+	public function getCouNo(){
+	  return $this->couNo;
+	}
 
-    private $proNo;
+                        	                   			private $couN;
+    	                                                            
+	public function setCouN($couN){
+		$this->couN = $couN;
+         $this->apiParas["cou_n"] = $couN;
+	}
 
-    public function setProNo($proNo)
-    {
-        $this->proNo              = $proNo;
-        $this->apiParas["pro_no"] = $proNo;
-    }
+	public function getCouN(){
+	  return $this->couN;
+	}
 
-    public function getProNo()
-    {
-        return $this->proNo;
-    }
+                        	                   			private $add;
+    	                        
+	public function setAdd($add){
+		$this->add = $add;
+         $this->apiParas["add"] = $add;
+	}
 
-    private $proN;
+	public function getAdd(){
+	  return $this->add;
+	}
 
-    public function setProN($proN)
-    {
-        $this->proN              = $proN;
-        $this->apiParas["pro_n"] = $proN;
-    }
+                        	                   			private $poiN;
+    	                                                            
+	public function setPoiN($poiN){
+		$this->poiN = $poiN;
+         $this->apiParas["poi_n"] = $poiN;
+	}
 
-    public function getProN()
-    {
-        return $this->proN;
-    }
+	public function getPoiN(){
+	  return $this->poiN;
+	}
 
-    private $citNo;
+                        	                   			private $conTel;
+    	                                                            
+	public function setConTel($conTel){
+		$this->conTel = $conTel;
+         $this->apiParas["con_tel"] = $conTel;
+	}
 
-    public function setCitNo($citNo)
-    {
-        $this->citNo              = $citNo;
-        $this->apiParas["cit_no"] = $citNo;
-    }
+	public function getConTel(){
+	  return $this->conTel;
+	}
 
-    public function getCitNo()
-    {
-        return $this->citNo;
-    }
+                        	                   			private $conN;
+    	                                                            
+	public function setConN($conN){
+		$this->conN = $conN;
+         $this->apiParas["con_n"] = $conN;
+	}
 
-    private $citN;
+	public function getConN(){
+	  return $this->conN;
+	}
 
-    public function setCitN($citN)
-    {
-        $this->citN              = $citN;
-        $this->apiParas["cit_n"] = $citN;
-    }
+                        	                   			private $colCod;
+    	                                                            
+	public function setColCod($colCod){
+		$this->colCod = $colCod;
+         $this->apiParas["col_cod"] = $colCod;
+	}
 
-    public function getCitN()
-    {
-        return $this->citN;
-    }
+	public function getColCod(){
+	  return $this->colCod;
+	}
 
-    private $couNo;
+                        	                   			private $serNos;
+    	                                                            
+	public function setSerNos($serNos){
+		$this->serNos = $serNos;
+         $this->apiParas["ser_nos"] = $serNos;
+	}
 
-    public function setCouNo($couNo)
-    {
-        $this->couNo              = $couNo;
-        $this->apiParas["cou_no"] = $couNo;
-    }
+	public function getSerNos(){
+	  return $this->serNos;
+	}
 
-    public function getCouNo()
-    {
-        return $this->couNo;
-    }
-
-    private $couN;
-
-    public function setCouN($couN)
-    {
-        $this->couN              = $couN;
-        $this->apiParas["cou_n"] = $couN;
-    }
-
-    public function getCouN()
-    {
-        return $this->couN;
-    }
-
-    private $add;
-
-    public function setAdd($add)
-    {
-        $this->add             = $add;
-        $this->apiParas["add"] = $add;
-    }
-
-    public function getAdd()
-    {
-        return $this->add;
-    }
-
-    private $poiN;
-
-    public function setPoiN($poiN)
-    {
-        $this->poiN              = $poiN;
-        $this->apiParas["poi_n"] = $poiN;
-    }
-
-    public function getPoiN()
-    {
-        return $this->poiN;
-    }
-
-    private $conTel;
-
-    public function setConTel($conTel)
-    {
-        $this->conTel              = $conTel;
-        $this->apiParas["con_tel"] = $conTel;
-    }
-
-    public function getConTel()
-    {
-        return $this->conTel;
-    }
-
-    private $conN;
-
-    public function setConN($conN)
-    {
-        $this->conN              = $conN;
-        $this->apiParas["con_n"] = $conN;
-    }
-
-    public function getConN()
-    {
-        return $this->conN;
-    }
-
-    private $colCod;
-
-    public function setColCod($colCod)
-    {
-        $this->colCod              = $colCod;
-        $this->apiParas["col_cod"] = $colCod;
-    }
-
-    public function getColCod()
-    {
-        return $this->colCod;
-    }
-
-    private $serNos;
-
-    public function setSerNos($serNos)
-    {
-        $this->serNos              = $serNos;
-        $this->apiParas["ser_nos"] = $serNos;
-    }
-
-    public function getSerNos()
-    {
-        return $this->serNos;
-    }
-
-}
+                            }
 
 
 

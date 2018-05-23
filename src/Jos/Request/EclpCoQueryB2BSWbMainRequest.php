@@ -1,74 +1,58 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpCoQueryB2BSWbMainRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.co.queryB2BSWbMain";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                   			private $deptNo;
+    	                        
+	public function setDeptNo($deptNo){
+		$this->deptNo = $deptNo;
+         $this->apiParas["deptNo"] = $deptNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.co.queryB2BSWbMain";
-    }
+	public function getDeptNo(){
+	  return $this->deptNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $newWBType;
+    	                        
+	public function setNewWBType($newWBType){
+		$this->newWBType = $newWBType;
+         $this->apiParas["newWBType"] = $newWBType;
+	}
 
-    public function check()
-    {
+	public function getNewWBType(){
+	  return $this->newWBType;
+	}
 
-    }
+                        	                   			private $no;
+    	                        
+	public function setNo($no){
+		$this->no = $no;
+         $this->apiParas["no"] = $no;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getNo(){
+	  return $this->no;
+	}
 
-    private $deptNo;
-
-    public function setDeptNo($deptNo)
-    {
-        $this->deptNo             = $deptNo;
-        $this->apiParas["deptNo"] = $deptNo;
-    }
-
-    public function getDeptNo()
-    {
-        return $this->deptNo;
-    }
-
-    private $newWBType;
-
-    public function setNewWBType($newWBType)
-    {
-        $this->newWBType             = $newWBType;
-        $this->apiParas["newWBType"] = $newWBType;
-    }
-
-    public function getNewWBType()
-    {
-        return $this->newWBType;
-    }
-
-    private $no;
-
-    public function setNo($no)
-    {
-        $this->no             = $no;
-        $this->apiParas["no"] = $no;
-    }
-
-    public function getNo()
-    {
-        return $this->no;
-    }
-
-}
+                        	}
 
 
 

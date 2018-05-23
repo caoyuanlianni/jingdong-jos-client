@@ -1,100 +1,80 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class SellerPromotionActivitymodeAddRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.seller.promotion.activitymode.add";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $promoId;
+    	                                                            
+	public function setPromoId($promoId){
+		$this->promoId = $promoId;
+         $this->apiParas["promo_id"] = $promoId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.seller.promotion.activitymode.add";
-    }
+	public function getPromoId(){
+	  return $this->promoId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $numBound;
+    	                                                            
+	public function setNumBound($numBound){
+		$this->numBound = $numBound;
+         $this->apiParas["num_bound"] = $numBound;
+	}
 
-    public function check()
-    {
+	public function getNumBound(){
+	  return $this->numBound;
+	}
 
-    }
+                        	                   			private $freqBound;
+    	                                                            
+	public function setFreqBound($freqBound){
+		$this->freqBound = $freqBound;
+         $this->apiParas["freq_bound"] = $freqBound;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getFreqBound(){
+	  return $this->freqBound;
+	}
 
-    private $promoId;
+                        	                   			private $perMaxNum;
+    	                                                                        
+	public function setPerMaxNum($perMaxNum){
+		$this->perMaxNum = $perMaxNum;
+         $this->apiParas["per_max_num"] = $perMaxNum;
+	}
 
-    public function setPromoId($promoId)
-    {
-        $this->promoId              = $promoId;
-        $this->apiParas["promo_id"] = $promoId;
-    }
+	public function getPerMaxNum(){
+	  return $this->perMaxNum;
+	}
 
-    public function getPromoId()
-    {
-        return $this->promoId;
-    }
+                        	                   			private $perMinNum;
+    	                                                                        
+	public function setPerMinNum($perMinNum){
+		$this->perMinNum = $perMinNum;
+         $this->apiParas["per_min_num"] = $perMinNum;
+	}
 
-    private $numBound;
+	public function getPerMinNum(){
+	  return $this->perMinNum;
+	}
 
-    public function setNumBound($numBound)
-    {
-        $this->numBound              = $numBound;
-        $this->apiParas["num_bound"] = $numBound;
-    }
-
-    public function getNumBound()
-    {
-        return $this->numBound;
-    }
-
-    private $freqBound;
-
-    public function setFreqBound($freqBound)
-    {
-        $this->freqBound              = $freqBound;
-        $this->apiParas["freq_bound"] = $freqBound;
-    }
-
-    public function getFreqBound()
-    {
-        return $this->freqBound;
-    }
-
-    private $perMaxNum;
-
-    public function setPerMaxNum($perMaxNum)
-    {
-        $this->perMaxNum               = $perMaxNum;
-        $this->apiParas["per_max_num"] = $perMaxNum;
-    }
-
-    public function getPerMaxNum()
-    {
-        return $this->perMaxNum;
-    }
-
-    private $perMinNum;
-
-    public function setPerMinNum($perMinNum)
-    {
-        $this->perMinNum               = $perMinNum;
-        $this->apiParas["per_min_num"] = $perMinNum;
-    }
-
-    public function getPerMinNum()
-    {
-        return $this->perMinNum;
-    }
-
-}
+                                                    	}
 
 
 

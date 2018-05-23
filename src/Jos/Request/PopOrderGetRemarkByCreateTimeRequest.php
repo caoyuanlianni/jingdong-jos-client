@@ -1,87 +1,69 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class PopOrderGetRemarkByCreateTimeRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.pop.order.getRemarkByCreateTime";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                   			private $startTime;
+    	                        
+	public function setStartTime($startTime){
+		$this->startTime = $startTime;
+         $this->apiParas["startTime"] = $startTime;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.pop.order.getRemarkByCreateTime";
-    }
+	public function getStartTime(){
+	  return $this->startTime;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $endTime;
+    	                        
+	public function setEndTime($endTime){
+		$this->endTime = $endTime;
+         $this->apiParas["endTime"] = $endTime;
+	}
 
-    public function check()
-    {
+	public function getEndTime(){
+	  return $this->endTime;
+	}
 
-    }
+                        	                   			private $page;
+    	                        
+	public function setPage($page){
+		$this->page = $page;
+         $this->apiParas["page"] = $page;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getPage(){
+	  return $this->page;
+	}
 
-    private $startTime;
+                        	                   			private $sortTime;
+    	                        
+	public function setSortTime($sortTime){
+		$this->sortTime = $sortTime;
+         $this->apiParas["sortTime"] = $sortTime;
+	}
 
-    public function setStartTime($startTime)
-    {
-        $this->startTime             = $startTime;
-        $this->apiParas["startTime"] = $startTime;
-    }
+	public function getSortTime(){
+	  return $this->sortTime;
+	}
 
-    public function getStartTime()
-    {
-        return $this->startTime;
-    }
-
-    private $endTime;
-
-    public function setEndTime($endTime)
-    {
-        $this->endTime             = $endTime;
-        $this->apiParas["endTime"] = $endTime;
-    }
-
-    public function getEndTime()
-    {
-        return $this->endTime;
-    }
-
-    private $page;
-
-    public function setPage($page)
-    {
-        $this->page             = $page;
-        $this->apiParas["page"] = $page;
-    }
-
-    public function getPage()
-    {
-        return $this->page;
-    }
-
-    private $sortTime;
-
-    public function setSortTime($sortTime)
-    {
-        $this->sortTime             = $sortTime;
-        $this->apiParas["sortTime"] = $sortTime;
-    }
-
-    public function getSortTime()
-    {
-        return $this->sortTime;
-    }
-
-}
+                            }
 
 
 

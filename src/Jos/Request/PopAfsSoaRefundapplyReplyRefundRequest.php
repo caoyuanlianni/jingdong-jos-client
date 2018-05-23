@@ -1,113 +1,91 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class PopAfsSoaRefundapplyReplyRefundRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.pop.afs.soa.refundapply.replyRefund";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                        	                   			private $status;
+    	                        
+	public function setStatus($status){
+		$this->status = $status;
+         $this->apiParas["status"] = $status;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.pop.afs.soa.refundapply.replyRefund";
-    }
+	public function getStatus(){
+	  return $this->status;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $id;
+    	                        
+	public function setId($id){
+		$this->id = $id;
+         $this->apiParas["id"] = $id;
+	}
 
-    public function check()
-    {
+	public function getId(){
+	  return $this->id;
+	}
 
-    }
+                        	                   			private $checkUserName;
+    	                        
+	public function setCheckUserName($checkUserName){
+		$this->checkUserName = $checkUserName;
+         $this->apiParas["checkUserName"] = $checkUserName;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getCheckUserName(){
+	  return $this->checkUserName;
+	}
 
-    private $status;
+                        	                   			private $remark;
+    	                        
+	public function setRemark($remark){
+		$this->remark = $remark;
+         $this->apiParas["remark"] = $remark;
+	}
 
-    public function setStatus($status)
-    {
-        $this->status             = $status;
-        $this->apiParas["status"] = $status;
-    }
+	public function getRemark(){
+	  return $this->remark;
+	}
 
-    public function getStatus()
-    {
-        return $this->status;
-    }
+                        	                   			private $rejectType;
+    	                        
+	public function setRejectType($rejectType){
+		$this->rejectType = $rejectType;
+         $this->apiParas["rejectType"] = $rejectType;
+	}
 
-    private $id;
+	public function getRejectType(){
+	  return $this->rejectType;
+	}
 
-    public function setId($id)
-    {
-        $this->id             = $id;
-        $this->apiParas["id"] = $id;
-    }
+                        	                   			private $outWareStatus;
+    	                        
+	public function setOutWareStatus($outWareStatus){
+		$this->outWareStatus = $outWareStatus;
+         $this->apiParas["outWareStatus"] = $outWareStatus;
+	}
 
-    public function getId()
-    {
-        return $this->id;
-    }
+	public function getOutWareStatus(){
+	  return $this->outWareStatus;
+	}
 
-    private $checkUserName;
-
-    public function setCheckUserName($checkUserName)
-    {
-        $this->checkUserName             = $checkUserName;
-        $this->apiParas["checkUserName"] = $checkUserName;
-    }
-
-    public function getCheckUserName()
-    {
-        return $this->checkUserName;
-    }
-
-    private $remark;
-
-    public function setRemark($remark)
-    {
-        $this->remark             = $remark;
-        $this->apiParas["remark"] = $remark;
-    }
-
-    public function getRemark()
-    {
-        return $this->remark;
-    }
-
-    private $rejectType;
-
-    public function setRejectType($rejectType)
-    {
-        $this->rejectType             = $rejectType;
-        $this->apiParas["rejectType"] = $rejectType;
-    }
-
-    public function getRejectType()
-    {
-        return $this->rejectType;
-    }
-
-    private $outWareStatus;
-
-    public function setOutWareStatus($outWareStatus)
-    {
-        $this->outWareStatus             = $outWareStatus;
-        $this->apiParas["outWareStatus"] = $outWareStatus;
-    }
-
-    public function getOutWareStatus()
-    {
-        return $this->outWareStatus;
-    }
-
-}
+                            }
 
 
 

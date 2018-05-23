@@ -1,126 +1,102 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EclpGoodsQueryGoodsRecordRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.eclp.goods.queryGoodsRecord";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                    	                                            		                                    	                   			private $deptNo;
+    	                        
+	public function setDeptNo($deptNo){
+		$this->deptNo = $deptNo;
+         $this->apiParas["deptNo"] = $deptNo;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.eclp.goods.queryGoodsRecord";
-    }
+	public function getDeptNo(){
+	  return $this->deptNo;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                   			private $isvGoodsNo;
+    	                        
+	public function setIsvGoodsNo($isvGoodsNo){
+		$this->isvGoodsNo = $isvGoodsNo;
+         $this->apiParas["isvGoodsNo"] = $isvGoodsNo;
+	}
 
-    public function check()
-    {
+	public function getIsvGoodsNo(){
+	  return $this->isvGoodsNo;
+	}
 
-    }
+                        	                   			private $goodsNo;
+    	                        
+	public function setGoodsNo($goodsNo){
+		$this->goodsNo = $goodsNo;
+         $this->apiParas["goodsNo"] = $goodsNo;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getGoodsNo(){
+	  return $this->goodsNo;
+	}
 
-    private $deptNo;
+                        	                   			private $pageNo;
+    	                        
+	public function setPageNo($pageNo){
+		$this->pageNo = $pageNo;
+         $this->apiParas["pageNo"] = $pageNo;
+	}
 
-    public function setDeptNo($deptNo)
-    {
-        $this->deptNo             = $deptNo;
-        $this->apiParas["deptNo"] = $deptNo;
-    }
+	public function getPageNo(){
+	  return $this->pageNo;
+	}
 
-    public function getDeptNo()
-    {
-        return $this->deptNo;
-    }
+                        	                   			private $pageSize;
+    	                        
+	public function setPageSize($pageSize){
+		$this->pageSize = $pageSize;
+         $this->apiParas["pageSize"] = $pageSize;
+	}
 
-    private $isvGoodsNo;
+	public function getPageSize(){
+	  return $this->pageSize;
+	}
 
-    public function setIsvGoodsNo($isvGoodsNo)
-    {
-        $this->isvGoodsNo             = $isvGoodsNo;
-        $this->apiParas["isvGoodsNo"] = $isvGoodsNo;
-    }
+                        	                   			private $startDate;
+    	                        
+	public function setStartDate($startDate){
+		$this->startDate = $startDate;
+         $this->apiParas["startDate"] = $startDate;
+	}
 
-    public function getIsvGoodsNo()
-    {
-        return $this->isvGoodsNo;
-    }
+	public function getStartDate(){
+	  return $this->startDate;
+	}
 
-    private $goodsNo;
+                        	                   			private $endDate;
+    	                        
+	public function setEndDate($endDate){
+		$this->endDate = $endDate;
+         $this->apiParas["endDate"] = $endDate;
+	}
 
-    public function setGoodsNo($goodsNo)
-    {
-        $this->goodsNo             = $goodsNo;
-        $this->apiParas["goodsNo"] = $goodsNo;
-    }
+	public function getEndDate(){
+	  return $this->endDate;
+	}
 
-    public function getGoodsNo()
-    {
-        return $this->goodsNo;
-    }
-
-    private $pageNo;
-
-    public function setPageNo($pageNo)
-    {
-        $this->pageNo             = $pageNo;
-        $this->apiParas["pageNo"] = $pageNo;
-    }
-
-    public function getPageNo()
-    {
-        return $this->pageNo;
-    }
-
-    private $pageSize;
-
-    public function setPageSize($pageSize)
-    {
-        $this->pageSize             = $pageSize;
-        $this->apiParas["pageSize"] = $pageSize;
-    }
-
-    public function getPageSize()
-    {
-        return $this->pageSize;
-    }
-
-    private $startDate;
-
-    public function setStartDate($startDate)
-    {
-        $this->startDate             = $startDate;
-        $this->apiParas["startDate"] = $startDate;
-    }
-
-    public function getStartDate()
-    {
-        return $this->startDate;
-    }
-
-    private $endDate;
-
-    public function setEndDate($endDate)
-    {
-        $this->endDate             = $endDate;
-        $this->apiParas["endDate"] = $endDate;
-    }
-
-    public function getEndDate()
-    {
-        return $this->endDate;
-    }
-
-}
+                            }
 
 
 

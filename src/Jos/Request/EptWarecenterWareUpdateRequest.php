@@ -1,282 +1,234 @@
 <?php
-
-namespace Jos\Request;
-
-use Jos\RequestCheckUtil;
-
 class EptWarecenterWareUpdateRequest
 {
-    private $apiParas = array();
+	private $apiParas = array();
+	
+	public function getApiMethodName(){
+	  return "jingdong.ept.warecenter.ware.update";
+	}
+	
+	public function getApiParas(){
+		return json_encode($this->apiParas);
+	}
+	
+	public function check(){
+		
+	}
+	
+	public function putOtherTextParam($key, $value){
+		$this->apiParas[$key] = $value;
+		$this->$key = $value;
+	}
+                                                        		                                    	                   			private $wareId;
+    	                        
+	public function setWareId($wareId){
+		$this->wareId = $wareId;
+         $this->apiParas["wareId"] = $wareId;
+	}
 
-    public function getApiMethodName()
-    {
-        return "jingdong.ept.warecenter.ware.update";
-    }
+	public function getWareId(){
+	  return $this->wareId;
+	}
 
-    public function getApiParas()
-    {
-        return json_encode($this->apiParas);
-    }
+                        	                        	                   			private $title;
+    	                        
+	public function setTitle($title){
+		$this->title = $title;
+         $this->apiParas["title"] = $title;
+	}
 
-    public function check()
-    {
+	public function getTitle(){
+	  return $this->title;
+	}
 
-    }
+                        	                   			private $itemNum;
+    	                        
+	public function setItemNum($itemNum){
+		$this->itemNum = $itemNum;
+         $this->apiParas["itemNum"] = $itemNum;
+	}
 
-    public function putOtherTextParam($key, $value)
-    {
-        $this->apiParas[$key] = $value;
-        $this->$key           = $value;
-    }
+	public function getItemNum(){
+	  return $this->itemNum;
+	}
 
-    private $wareId;
+                        	                   			private $transportId;
+    	                        
+	public function setTransportId($transportId){
+		$this->transportId = $transportId;
+         $this->apiParas["transportId"] = $transportId;
+	}
 
-    public function setWareId($wareId)
-    {
-        $this->wareId             = $wareId;
-        $this->apiParas["wareId"] = $wareId;
-    }
+	public function getTransportId(){
+	  return $this->transportId;
+	}
 
-    public function getWareId()
-    {
-        return $this->wareId;
-    }
+                        	                   			private $attributes;
+    	                        
+	public function setAttributes($attributes){
+		$this->attributes = $attributes;
+         $this->apiParas["attributes"] = $attributes;
+	}
 
-    private $title;
+	public function getAttributes(){
+	  return $this->attributes;
+	}
 
-    public function setTitle($title)
-    {
-        $this->title             = $title;
-        $this->apiParas["title"] = $title;
-    }
+                        	                   			private $imgByte;
+    	                        
+	public function setImgByte($imgByte){
+		$this->imgByte = $imgByte;
+         $this->apiParas["imgByte"] = $imgByte;
+	}
 
-    public function getTitle()
-    {
-        return $this->title;
-    }
+	public function getImgByte(){
+	  return $this->imgByte;
+	}
 
-    private $itemNum;
+                        	                   			private $recommendTpid;
+    	                        
+	public function setRecommendTpid($recommendTpid){
+		$this->recommendTpid = $recommendTpid;
+         $this->apiParas["recommendTpid"] = $recommendTpid;
+	}
 
-    public function setItemNum($itemNum)
-    {
-        $this->itemNum             = $itemNum;
-        $this->apiParas["itemNum"] = $itemNum;
-    }
+	public function getRecommendTpid(){
+	  return $this->recommendTpid;
+	}
 
-    public function getItemNum()
-    {
-        return $this->itemNum;
-    }
+                        	                   			private $customTpid;
+    	                        
+	public function setCustomTpid($customTpid){
+		$this->customTpid = $customTpid;
+         $this->apiParas["customTpid"] = $customTpid;
+	}
 
-    private $transportId;
+	public function getCustomTpid(){
+	  return $this->customTpid;
+	}
 
-    public function setTransportId($transportId)
-    {
-        $this->transportId             = $transportId;
-        $this->apiParas["transportId"] = $transportId;
-    }
+                        	                   			private $brandId;
+    	                        
+	public function setBrandId($brandId){
+		$this->brandId = $brandId;
+         $this->apiParas["brandId"] = $brandId;
+	}
 
-    public function getTransportId()
-    {
-        return $this->transportId;
-    }
+	public function getBrandId(){
+	  return $this->brandId;
+	}
 
-    private $attributes;
+                        	                   			private $deliveryDays;
+    	                        
+	public function setDeliveryDays($deliveryDays){
+		$this->deliveryDays = $deliveryDays;
+         $this->apiParas["deliveryDays"] = $deliveryDays;
+	}
 
-    public function setAttributes($attributes)
-    {
-        $this->attributes             = $attributes;
-        $this->apiParas["attributes"] = $attributes;
-    }
+	public function getDeliveryDays(){
+	  return $this->deliveryDays;
+	}
 
-    public function getAttributes()
-    {
-        return $this->attributes;
-    }
+                        	                   			private $keywords;
+    	                        
+	public function setKeywords($keywords){
+		$this->keywords = $keywords;
+         $this->apiParas["keywords"] = $keywords;
+	}
 
-    private $imgByte;
+	public function getKeywords(){
+	  return $this->keywords;
+	}
 
-    public function setImgByte($imgByte)
-    {
-        $this->imgByte             = $imgByte;
-        $this->apiParas["imgByte"] = $imgByte;
-    }
+                        	                   			private $description;
+    	                        
+	public function setDescription($description){
+		$this->description = $description;
+         $this->apiParas["description"] = $description;
+	}
 
-    public function getImgByte()
-    {
-        return $this->imgByte;
-    }
+	public function getDescription(){
+	  return $this->description;
+	}
 
-    private $recommendTpid;
+                        	                   			private $packInfo;
+    	                        
+	public function setPackInfo($packInfo){
+		$this->packInfo = $packInfo;
+         $this->apiParas["packInfo"] = $packInfo;
+	}
 
-    public function setRecommendTpid($recommendTpid)
-    {
-        $this->recommendTpid             = $recommendTpid;
-        $this->apiParas["recommendTpid"] = $recommendTpid;
-    }
+	public function getPackInfo(){
+	  return $this->packInfo;
+	}
 
-    public function getRecommendTpid()
-    {
-        return $this->recommendTpid;
-    }
+                        	                   			private $netWeight;
+    	                        
+	public function setNetWeight($netWeight){
+		$this->netWeight = $netWeight;
+         $this->apiParas["netWeight"] = $netWeight;
+	}
 
-    private $customTpid;
+	public function getNetWeight(){
+	  return $this->netWeight;
+	}
 
-    public function setCustomTpid($customTpid)
-    {
-        $this->customTpid             = $customTpid;
-        $this->apiParas["customTpid"] = $customTpid;
-    }
+                        	                   			private $weight;
+    	                        
+	public function setWeight($weight){
+		$this->weight = $weight;
+         $this->apiParas["weight"] = $weight;
+	}
 
-    public function getCustomTpid()
-    {
-        return $this->customTpid;
-    }
+	public function getWeight(){
+	  return $this->weight;
+	}
 
-    private $brandId;
+                        	                   			private $packLong;
+    	                        
+	public function setPackLong($packLong){
+		$this->packLong = $packLong;
+         $this->apiParas["packLong"] = $packLong;
+	}
 
-    public function setBrandId($brandId)
-    {
-        $this->brandId             = $brandId;
-        $this->apiParas["brandId"] = $brandId;
-    }
+	public function getPackLong(){
+	  return $this->packLong;
+	}
 
-    public function getBrandId()
-    {
-        return $this->brandId;
-    }
+                        	                   			private $packWide;
+    	                        
+	public function setPackWide($packWide){
+		$this->packWide = $packWide;
+         $this->apiParas["packWide"] = $packWide;
+	}
 
-    private $deliveryDays;
+	public function getPackWide(){
+	  return $this->packWide;
+	}
 
-    public function setDeliveryDays($deliveryDays)
-    {
-        $this->deliveryDays             = $deliveryDays;
-        $this->apiParas["deliveryDays"] = $deliveryDays;
-    }
+                        	                   			private $packHeight;
+    	                        
+	public function setPackHeight($packHeight){
+		$this->packHeight = $packHeight;
+         $this->apiParas["packHeight"] = $packHeight;
+	}
 
-    public function getDeliveryDays()
-    {
-        return $this->deliveryDays;
-    }
+	public function getPackHeight(){
+	  return $this->packHeight;
+	}
 
-    private $keywords;
+                        	                   			private $upc;
+    	                        
+	public function setUpc($upc){
+		$this->upc = $upc;
+         $this->apiParas["upc"] = $upc;
+	}
 
-    public function setKeywords($keywords)
-    {
-        $this->keywords             = $keywords;
-        $this->apiParas["keywords"] = $keywords;
-    }
+	public function getUpc(){
+	  return $this->upc;
+	}
 
-    public function getKeywords()
-    {
-        return $this->keywords;
-    }
-
-    private $description;
-
-    public function setDescription($description)
-    {
-        $this->description             = $description;
-        $this->apiParas["description"] = $description;
-    }
-
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    private $packInfo;
-
-    public function setPackInfo($packInfo)
-    {
-        $this->packInfo             = $packInfo;
-        $this->apiParas["packInfo"] = $packInfo;
-    }
-
-    public function getPackInfo()
-    {
-        return $this->packInfo;
-    }
-
-    private $netWeight;
-
-    public function setNetWeight($netWeight)
-    {
-        $this->netWeight             = $netWeight;
-        $this->apiParas["netWeight"] = $netWeight;
-    }
-
-    public function getNetWeight()
-    {
-        return $this->netWeight;
-    }
-
-    private $weight;
-
-    public function setWeight($weight)
-    {
-        $this->weight             = $weight;
-        $this->apiParas["weight"] = $weight;
-    }
-
-    public function getWeight()
-    {
-        return $this->weight;
-    }
-
-    private $packLong;
-
-    public function setPackLong($packLong)
-    {
-        $this->packLong             = $packLong;
-        $this->apiParas["packLong"] = $packLong;
-    }
-
-    public function getPackLong()
-    {
-        return $this->packLong;
-    }
-
-    private $packWide;
-
-    public function setPackWide($packWide)
-    {
-        $this->packWide             = $packWide;
-        $this->apiParas["packWide"] = $packWide;
-    }
-
-    public function getPackWide()
-    {
-        return $this->packWide;
-    }
-
-    private $packHeight;
-
-    public function setPackHeight($packHeight)
-    {
-        $this->packHeight             = $packHeight;
-        $this->apiParas["packHeight"] = $packHeight;
-    }
-
-    public function getPackHeight()
-    {
-        return $this->packHeight;
-    }
-
-    private $upc;
-
-    public function setUpc($upc)
-    {
-        $this->upc             = $upc;
-        $this->apiParas["upc"] = $upc;
-    }
-
-    public function getUpc()
-    {
-        return $this->upc;
-    }
-
-}
+                            }
 
 
 
