@@ -1,4 +1,3 @@
-
 <?php
 namespace Jos\Request;
 use Jos\RequestCheckUtil;
