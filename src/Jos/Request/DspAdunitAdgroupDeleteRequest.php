@@ -1,4 +1,7 @@
+
 <?php
+namespace Jos\Request;
+use Jos\RequestCheckUtil;
 class DspAdunitAdgroupDeleteRequest
 {
 	private $apiParas = array();

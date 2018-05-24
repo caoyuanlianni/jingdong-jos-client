@@ -1,4 +1,7 @@
+
 <?php
+namespace Jos\Request;
+use Jos\RequestCheckUtil;
 class EdiSdvCustomerOrderNumberGetRequest
 {
 	private $apiParas = array();

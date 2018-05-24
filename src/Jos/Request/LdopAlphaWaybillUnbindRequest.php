@@ -1,4 +1,7 @@
+
 <?php
+namespace Jos\Request;
+use Jos\RequestCheckUtil;
 class LdopAlphaWaybillUnbindRequest
 {
 	private $apiParas = array();

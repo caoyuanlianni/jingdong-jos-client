@@ -1,4 +1,7 @@
+
 <?php
+namespace Jos\Request;
+use Jos\RequestCheckUtil;
 class EclpCoQueryB2BSWbMainRequest
 {
 	private $apiParas = array();

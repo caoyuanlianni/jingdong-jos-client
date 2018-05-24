@@ -1,4 +1,7 @@
+
 <?php
+namespace Jos\Request;
+use Jos\RequestCheckUtil;
 class SellerPromotionV2UnitLimitCreateRequest
 {
 	private $apiParas = array();

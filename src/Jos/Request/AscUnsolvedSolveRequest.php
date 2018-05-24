@@ -1,4 +1,7 @@
+
 <?php
+namespace Jos\Request;
+use Jos\RequestCheckUtil;
 class AscUnsolvedSolveRequest
 {
 	private $apiParas = array();

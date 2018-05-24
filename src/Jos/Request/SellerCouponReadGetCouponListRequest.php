@@ -1,4 +1,7 @@
+
 <?php
+namespace Jos\Request;
+use Jos\RequestCheckUtil;
 class SellerCouponReadGetCouponListRequest
 {
 	private $apiParas = array();

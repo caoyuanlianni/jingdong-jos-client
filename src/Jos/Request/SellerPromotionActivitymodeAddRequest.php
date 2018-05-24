@@ -1,4 +1,7 @@
+
 <?php
+namespace Jos\Request;
+use Jos\RequestCheckUtil;
 class SellerPromotionActivitymodeAddRequest
 {
 	private $apiParas = array();
